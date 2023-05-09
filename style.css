@@ -13,9 +13,9 @@ p {
 
 header {
     width: 100%;
-    height: 50px;
+    height: 80px;
     background-color: #FBFFA5;
-    background-image: url('images/fundo-header.svg');
+
     box-shadow: 0px 5px 16px #6d3e00;
 }
 
@@ -32,18 +32,16 @@ header {
     list-style: none;
     margin: 0;
     background-color: #FBFFA5;
-
 }
 
 .logotipo {
     float: left;
     background-color: #FBFFA5;
-    padding: 0 20px;
 }
 
 .logotipo p {
     margin: 0;
-    line-height: 50px;
+    line-height: 80px;
     font-weight: 800;
     font-size: 16pt;
     color:#AD6300;
@@ -52,7 +50,7 @@ header {
 .menu li {
     float: left;
     margin: 0 15px;
-    line-height: 50px;
+    line-height: 80px;
 }
 
 .menu li a {
@@ -63,13 +61,13 @@ header {
 
 .esquerda {
     width: 50%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
     float: left;
 }
 
 .direita {
     width: 50%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
     float: right;
 }
 
@@ -161,4 +159,49 @@ header {
     width: 100%;
     height: 100vh;
     background-color: #FFF;
+}
+
+.sobre-esquerda {
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.sobre-direita {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    float: right;
+}
+
+.sobre-direita h1 {
+    text-align: center;
+}
+
+.balao-fala{
+    margin: 0 auto; 
+    background: #7e57c2;
+    font-family: 'open sans';
+    font-size: 0.85em;
+    line-height: 1.6em;  
+    border-radius: 15px;
+    width: 300px;
+    height: auto;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.balao-fala:after{ /*Triangulo*/
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #7e57c2;
+    top: -20px;
+    left: 20%;
 }
