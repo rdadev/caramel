@@ -1,7 +1,8 @@
 .cadastramento {
-    background-image: url('../images/fundo-cadastro.jpg');
+    background-image: url('../images/fundo-cadastro-parceiro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
 }
 
 .container {
@@ -9,9 +10,10 @@
 }
 
 .entrada {
-    background-image: url('../images/fundo-login.jpg');
+    background-image: url('../images/fundo-petshop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .linkacao {
@@ -27,28 +29,18 @@
 
 .containerzinho {
     background-color: #f8f8f8;
-    width: 42%;
-    height: 80vh;
+    width: 43%;
+    height: fit-content;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #00000021;
 }
 
-.logon {
-    min-height: 550px;
-    max-height: 560px;
+.esquerda {
+    margin: 7vh 2%;
+}
+
+.direita {
     margin: 7vh 55%;
-}
-
-.registro {
-    min-height: 645px;
-    max-height: 655px;
-    margin: 7vh 2%;
-}
-
-.endereco {
-    min-height: 760px;
-    max-height: 770px;
-    margin: 7vh 2%;
 }
 
 .logo {
@@ -73,7 +65,7 @@
 }
 
 .formulario {
-    margin: 30px 0;
+    padding: 20px 0 30px 0;
 }
 
 .entradas {

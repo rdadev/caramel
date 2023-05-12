@@ -2,6 +2,7 @@ body {
     background-image: url('../images/fundo-entregador.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
 }
 
 .container {
@@ -22,27 +23,17 @@ body {
 .containerzinho {
     background-color: #f8f8f8;
     width: 42%;
-    height: 80vh;
+    height: fit-content;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #00000021;
 }
 
-.registro {
-    min-height: 645px;
-    max-height: 655px;
+.esquerda {
     margin: 7vh 2%;
 }
 
-.logon {
-    min-height: 550px;
-    max-height: 560px;
+.direita {
     margin: 7vh 55%;
-}
-
-.dados {
-    min-height: 710px;
-    max-height: 720px;
-    margin: 7vh 2%;
 }
 
 .logo {
@@ -61,13 +52,14 @@ body {
 
 .containerzinho p {
     width: 80%;
+    height: fit-content;
     margin: 10px auto;
     text-align: center;
     font-size: 12pt;
 }
 
 .formulario {
-    margin: 30px 0;
+    padding: 20px 0 30px 0;
 }
 
 .entradas {
@@ -224,14 +216,13 @@ body {
         width: 75%;
         margin: 30px auto;
     }
-
-    .containerzinho {
-        min-height: unset;
-        max-height: unset;
-    }
 }
 
 @media screen and (max-width: 750px) {  
+    .containerzinho p {
+        width: 90%;
+    }
+    
     .formulario {
         width: 100%;
         margin: 30px 0;
