@@ -14,15 +14,20 @@
         <div class="container">
             <div class="containerzinho">
                 <div class="logotipo logo"><a href="../index.html">Caramel</a></div>
-                <h1>Seja um entregador</h1>
-                <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
-                <form class="formulario" action="cadastro2.html">
-                    <input class="entradas" type="text" placeholder="Nome completo" required/>
-                    <input class="entradas" type="text" maxlength="11" placeholder="CPF (somente números)" required/>
-                    <input class="entradas" type="email" placeholder="Seu melhor email" required/>
-                    <input class="entradas" type="password" minlength="8" placeholder="Crie uma senha" required/>
-                    <input class="botao" type="submit" value="Continuar"/>
-                    <span class="acao">Já é entregador parceiro? <a class="linkacao" href="login.html">Fazer login</a></span>
+                <h1>Alguns detalhes</h1>
+                <p>Para a sua segurança é necessário confirmar alguns dados antes de continuar</p>
+                <form class="formulario" method="post" action="">
+                    <select class="entradas">
+                        <option value="" selected>Veículo</option>
+                        <option value="1">Moto</option>
+                        <option value="3">Carro</option>
+                        <option value="2">Bicicleta</option>
+                    </select>
+                    <input class="entradas" type="text" maxlength="11" placeholder="CNH (somente números)" required/>
+                    <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Primeira habilitação" required/>
+                    <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Vencimento" required/>
+                    <input class="botao" type="submit" value="Confirmar"/>
+                    <span class="acao">Já é entregador parceiro? <a class="linkacao" href="login.html">Login</a></span>
                 </form>
             </div>
         </div>

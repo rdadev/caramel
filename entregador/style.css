@@ -59,13 +59,14 @@ body {
 .entradas {
     border: 1px solid #d4d4d4;
     background-color: #FFF;
-    width: calc(100% - 85px);
+    width: 90%;
     padding: 15px 20px;
     margin: 10px auto;
     border-radius: 5px;
     font-size: 12pt;
     font-weight: 400;
     display: block;
+    box-sizing: border-box;
 }
 
 .botao {
@@ -143,15 +144,7 @@ body {
         margin: 30px 0;
     }
 
-    .entradas {
-        width: calc(100% - 45px);
-    }
-
-    .botao {
-        width: 100%;
-    }
-
-    .recuperacao {
+    .entradas, .botao, .recuperacao {
         width: 100%;
     }
 }
