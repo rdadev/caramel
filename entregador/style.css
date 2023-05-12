@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/fundo-login.jpg');
+    background-image: url('../images/fundo-cadastro.jpg');
     background-size: cover;
     height: 100vh;
 }
@@ -19,11 +19,16 @@ body {
     background-color: #f8f8f8;
     width: 42%;
     height: 80vh;
-    min-height: 550px;
-    max-height: 560px;
-    margin: 7vh 55%;
+    min-height: 640px;
+    max-height: 650px;
+    margin: 7vh 5%;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #00000021;
+}
+
+.endereco {
+    min-height: 760px;
+    max-height: 770px;
 }
 
 .logo {
@@ -41,7 +46,7 @@ body {
 }
 
 .containerzinho p {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     text-align: center;
     font-size: 12pt;
@@ -88,12 +93,21 @@ body {
     cursor: pointer;
 }
 
-.recuperacao {
-    font-size: 12pt;
-    text-align: right;
-    text-decoration: none;
+.termos {
+    margin-top: 25px;
+    width: 100%;
     display: block;
-    width: calc(100% - 25px);
+}
+
+.termos p {
+    width: 95%;
+    font-size: 12pt;
+    margin: auto;
+}
+
+.termos a {
+    font-size: 12pt;
+    text-decoration: none;
     color: var(--principal);
     font-weight: 600;
 }

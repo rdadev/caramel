@@ -1,7 +1,13 @@
-body {
+.cadastramento {
     background-image: url('../images/fundo-cadastro.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+}
+
+.entrada {
+    background-image: url('../images/fundo-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .linkacao {
@@ -19,16 +25,26 @@ body {
     background-color: #f8f8f8;
     width: 42%;
     height: 80vh;
-    min-height: 640px;
-    max-height: 650px;
-    margin: 7vh 5%;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #00000021;
+}
+
+.logon {
+    min-height: 550px;
+    max-height: 560px;
+    margin: 7vh 55%;
+}
+
+.registro {
+    min-height: 645px;
+    max-height: 655px;
+    margin: 7vh 2%;
 }
 
 .endereco {
     min-height: 760px;
     max-height: 770px;
+    margin: 7vh 2%;
 }
 
 .logo {
@@ -91,6 +107,16 @@ body {
     background-color: var(--hover);
     border: 1px solid var(--hover);
     cursor: pointer;
+}
+
+.recuperacao {
+    font-size: 12pt;
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    width: calc(100% - 25px);
+    color: var(--principal);
+    font-weight: 600;
 }
 
 .termos {
