@@ -1,11 +1,17 @@
-body {
-    background-image: url('../images/fundo-entregador.jpg');
+.cadastramento {
+    background-image: url('../images/fundo-cadastro.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .container {
     min-height: 100vh;
+}
+
+.entrada {
+    background-image: url('../images/fundo-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .linkacao {
@@ -27,21 +33,21 @@ body {
     box-shadow: 0px 0px 15px #00000021;
 }
 
-.registro {
-    min-height: 645px;
-    max-height: 655px;
-    margin: 7vh 2%;
-}
-
 .logon {
     min-height: 550px;
     max-height: 560px;
     margin: 7vh 55%;
 }
 
-.dados {
-    min-height: 710px;
-    max-height: 720px;
+.registro {
+    min-height: 645px;
+    max-height: 655px;
+    margin: 7vh 2%;
+}
+
+.endereco {
+    min-height: 760px;
+    max-height: 770px;
     margin: 7vh 2%;
 }
 
@@ -137,77 +143,8 @@ body {
     font-weight: 600;
 }
 
-.corpo {
-    background-image: none;
-    background-color: #f8f8f8;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.caixa {
-    display: none;
-    width: 80%;
-    height: auto;
-    min-height: 60vh;
-    overflow: hidden;
-    margin: 12vh auto;
-}
-
-.aviso {
-    display: none;
-}
-
-.aviso h1 {
-    text-align: center;
-    font-size: 28pt;
-    line-height: 1.7;
-}
-
-.aviso p {
-    text-align: center;
-    font-size: 13pt;
-    max-width: 50%;
-    margin: auto;
-}
-
-.aviso a {
-    text-align: center;
-    margin: auto;
-    display: block;
-    background-color: var(--principal);
-    width: fit-content;
-    margin-top: 30px;
-    padding: 12px 30px;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 13pt;
-    font-weight: 600;
-    transition: background-color ease 0.2s;
-}
-
-.aviso a:hover {
-    background-color: var(--hover);
-}
-
-.aviso img {
-    width: 170px;
-    height: auto;
-    overflow: hidden;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-.logor {
-    display: none;
-    height: 100px;
-    text-align: center;
-    float: none;
-    margin: 0 0 20px 0;
-}
-
 @media screen and (max-width: 950px) { 
-    body, .cadastramento{
+    body, .entrada, .cadastramento{
         background-image: none;
         background-color: #f8f8f8;
     }
@@ -239,20 +176,5 @@ body {
 
     .entradas, .botao, .recuperacao {
         width: 100%;
-    }
-
-    .aviso p {
-        max-width: 85%;
-    }
-}
-
-/* Acima de 600px o site não exibe o conteúdo */
-@media screen and (min-width: 600px) {
-    .portal {
-        display: none;
-    }
-
-    .aviso, .logor, .caixa {
-        display: block;
     }
 }
