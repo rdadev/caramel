@@ -139,7 +139,7 @@
 }
 
 @media screen and (max-width: 950px) { 
-    body{
+    body, .entrada, .cadastramento{
         background-image: none;
         background-color: #f8f8f8;
     }
