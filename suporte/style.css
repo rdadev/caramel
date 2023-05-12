@@ -1,0 +1,121 @@
+.titulo {
+    padding-top: 100px;
+    width: 100%;
+    height: 200px;
+    background-color: var(--inicio);
+}
+
+.titulo h1 {
+    text-align: center;
+    font-size: 35pt;
+    position: relative;
+    top: 50px;
+}
+
+.conteudo {
+    margin: 30px 0;
+}
+
+.conteudo h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.secoes {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.secoes .esquerda {
+    float: left;
+    margin-left: 0;
+}
+
+.secoes .direita {
+    float: right;
+    margin-right: 0;
+}
+
+.secao {
+    height: auto;
+    overflow: hidden;
+    width: calc(50% - 10px);
+    padding: 25px;
+    text-decoration: none;
+    margin: 10px;
+    border: 1px solid #cacaca;
+    border-radius: 8px;
+    min-height: 100px;
+    box-sizing: border-box;
+    display: block;
+    transition: ease 0.2s;
+}
+
+.secao div {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.secao svg {
+    width: 32px;
+}
+
+.secao:hover {
+    cursor: pointer;
+    background-color: var(--principal);
+    border: 1px solid var(--hover);
+}
+
+.titulo-botao {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 16px;
+    transition: color ease 0.2s;
+}
+
+.secao:hover .titulo-botao, .secao:hover .descricao{
+    color: #FFF;
+}
+
+.icone {
+    fill: var(--texto-secundario);
+    transition: fill ease 0.2s;
+}
+
+.secao:hover .icone {
+    fill: #FFF;
+}
+
+
+@media screen and (max-width: 850px) {
+    .titulo h1 {
+        font-size: 30pt;
+        width: 85%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo h1 {
+        font-size: 28pt;
+    }
+
+    .secoes .esquerda, .secoes .direita {
+        float: none;
+    }
+
+    .secao {
+        margin: 20px 0;
+        width: 100%;
+    }
+}

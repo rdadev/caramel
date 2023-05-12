@@ -4,57 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <title>Caramel App</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Caramel</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logotipo"><p>Caramel</p></div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
+    <div class="carregamento"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z" fill="#FFFFFF"/></svg></div>
+    <header id="cabecalho">
+        <div id="box" class="container">
+            <div class="hamburger" onclick="abrirMenuMobile()" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="34px" height="34px"><path d="M106.087 834.811v-89.26h748.92v89.26h-748.92Zm0-214.608v-89.261h748.92v89.261h-748.92Zm0-213.754v-89.42h748.92v89.42h-748.92Z" fill="#4e4e4e"/></svg></div>
+            <div class="logotipo"><a href="index.html">Caramel</a></div>
+            <nav id="menus" class="navegacao">
+                <div id="fechar" class="esconder" onclick="fecharMenuMobile()">Fechar</div>
+                <ul id="lista" class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parceiros/index.html">Parceiros</a></li>
+                    <li><a href="entregadores/index.html">Entregadores</a></li>
+                    <li><a href="suporte/index.html">Suporte</a></li>
+                    <li><a href="sobre/index.html">Sobre</a></li>
+                </ul>
+                <ul id="acoes" class="botoes">
+                    <li class="principal"><a href="login/index.html">Entrar</a></li>
+                    <li class="secundario"><a href="cadastro/index.html">Cadastrar</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <section class="principal"> 
+    <section class="inicio">
         <div class="container">
-            <div class="esquerda">
-                    <h1>Caramel</h1>
-                    <p>PETiu, chegou.</p>
+            <div class="pesquisa">
+                <h1>Pediu, chegou</h1>
+                <p>Aqui tem tudo para o seu pet com descontos exclusivos</p>
+                <form class="busca" action="" method="post">
+                    <input class="ginput" type="text" placeholder="Digite aqui o que você precisa"/>
+                    <input class="gbotao" type="submit" value="Buscar"/>
+                </form>
             </div>
-            <div class="direita">
-                <div class="container-login">
-                    <h1>Entrar</h1>
-                    <form class="login" formaction="submit">
-                        <input class="entrada" type="email" placeholder="Digite seu e-mail"/>
-                        <br/>
-                        <input class="entrada" type="password" placeholder="Digite sua senha"/>
-                        <br/>
-                        <input class="btentrada" type="submit" value="Entrar"/>
-                    </form>
-
-                    <p class="senha"><a href="#">Esqueceu a senha?</a></p>
+            <div class="cards">
+                <div class="destaques">
+                    <a href="#">
+                        <div class="destaquezinho des1">
+                            <h2>Produtos</h2>
+                            <p>Ver opções</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="destaques">
+                    <a href="#">
+                        <div class="destaquezinho des2">
+                            <h2>Lojas</h2>
+                            <p>Buscar lojas</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="destaques dst">
+                    <a href="#">
+                        <div class="destaquezinho des3">
+                            <h2>Promoções</h2>
+                            <p>Resgatar cupons</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="sobre">
+    <section class="lojas">
         <div class="container">
-            <div class="sobre-esquerda">
-                <h1>Serviços</h1>
+            <h2>As melhores lojas</h2>
+            <br/><br/><br/>
+            <div class="lojinhas">
+                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                <div class="descricao">
+                    <h4>Nome da loja</h4>
+                    <p>Bairro</p>
+                </div>
             </div>
-            <div class="sobre-direita">
-                <h1>Sobre</h1>
-                <div class="balao-fala">
-                    <p>  Mussum Ipsum, cacilds vidis litro abertis. Viva Forevis aptent taciti sociosqu ad litora torquent. Suco de cevadiss deixa as pessoas mais interessantis. Interagi no mé, cursus quis, vehicula ac nisi. Si num tem leite então bota uma pinga aí cumpadi!  </p>
+            <div class="lojinhas">
+                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                <div class="descricao">
+                    <h4>Nome da loja</h4>
+                    <p>Bairro</p>
+                </div>
+            </div>
+            <div class="lojinhas">
+                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                <div class="descricao">
+                    <h4>Nome da loja</h4>
+                    <p>Bairro</p>
+                </div>
+            </div>
+            <div class="lojinhas">
+                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                <div class="descricao">
+                    <h4>Nome da loja</h4>
+                    <p>Bairro</p>
+                </div>
+            </div>
+            <div class="lojinhas">
+                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                <div class="descricao">
+                    <h4>Nome da loja</h4>
+                    <p>Bairro</p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="cadastros">
+        <div class="container">
+            <div class="miolo mprimario">
+                <div class="miolinho esquerda"><img src="images/entregador.png" alt="Entregador"/></div>
+                <div class="miolinho direita">
+                    <h2>Quer entregar pedidos pelo Caramel?</h2>
+                    <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
+                    <a href="entregadores/index.html">Saiba mais</a>
+                </div>
+            </div>
+            <div class="miolo msecundario">
+                <div class="miolinho esquerda"><img src="images/loja.png" alt="Loja"/></div>
+                <div class="miolinho direita">
+                    <h2>Seja uma loja parceira para vender online</h2>
+                    <p>Sua força de vendas online para produtos de petshop e derivados, começe agora mesmo</p>
+                    <a href="parceiros/index.html">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="copyright"><p>Copyright © 2023 Grupo Caramel Software</p></div>
+            <div class="links">
+                <ul>
+                    <li><a href="sobre/index.html">Sobre</a></li>
+                    <li><a href="privacidade/index.html">Privacidade</a></li>
+                    <li><a href="termos/index.html">Termos</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
