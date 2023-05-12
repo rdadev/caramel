@@ -4,6 +4,10 @@
     background-size: cover;
 }
 
+.container {
+    min-height: 100vh;
+}
+
 .entrada {
     background-image: url('../images/fundo-login.jpg');
     background-repeat: no-repeat;

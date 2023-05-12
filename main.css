@@ -82,6 +82,8 @@ header {
     height: 0;
     background-color: var(--principal);
     position: fixed;
+    left: 0;
+    top: 0;
     z-index: 2;
     visibility: hidden;
     animation: carregar 0.8s;
