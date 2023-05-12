@@ -5,15 +5,15 @@
     background-position: top;
 }
 
-.container {
-    min-height: 100vh;
-}
-
 .entrada {
     background-image: url('../images/fundo-login.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+}
+
+.cadastramento, .entrada {
+    min-height: 100vh;
 }
 
 .linkacao {
@@ -29,7 +29,7 @@
 
 .containerzinho {
     background-color: #f8f8f8;
-    width: 42%;
+    width: 43%;
     height: fit-content;
     border-radius: 15px;
     box-shadow: 0px 0px 15px #00000021;
@@ -136,7 +136,7 @@
 }
 
 @media screen and (max-width: 950px) { 
-    body, .entrada, .cadastramento{
+    .entrada, .cadastramento{
         background-image: none;
         background-color: #f8f8f8;
     }
