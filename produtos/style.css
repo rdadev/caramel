@@ -1,41 +1,116 @@
-.titulo {
-    padding-top: 50px;
+header {
     width: 100%;
-    height: 200px;
+    height: 75px;
+    background-color: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #cacaca;
+}
+
+.logotipo {
+    float: left;
+    font-family: 'Pacifico', cursive;
+    margin-right: 20px;
+}
+
+.logotipo a {
+    font-size: 20pt;
+    line-height: 75px;
+    color: var(--principal);
+    transition: color ease 0.2s;
+}
+
+.navbusca {
+    float: left;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+}
+
+.navbusca ul {
+    list-style: none;
+}
+
+.navbusca ul li {
+    float: left;
+    line-height: 75px;
+    margin: 0 10px;
+}
+
+.navbusca ul li a {
+    font-size: 11pt;
+    color: var(--texto-cabecalho);
+}
+
+.navbusca ul li a:hover {
+    color: var(--hover);
+}
+
+.buscar {
+    width: auto;
+    float: left;
+    height: 75px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 75px;
+    margin: 0 20px;
+    min-width: 35%;
+    box-sizing: border-box;
+}
+
+.buscar input {
+    border: none;
     background-color: var(--inicio);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 11pt;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.titulo h1 {
-    text-align: center;
-    font-size: 35pt;
-    position: relative;
-    top: 25px;
+.btsbusca {
+    float: right;
+    display: block;
+    list-style: none;
 }
 
-.conteudo p {
-    margin: 20px 0;
-    line-height: 1.2;
+.btsbusca li {
+    float: right;
+    line-height: 90px;
+    margin: 0 10px;
 }
 
-.conteudo {
-    margin: 30px 0;
+.btsbusca li a svg {
+    width: 28px;
+    height: 28px;
 }
 
-@media screen and (max-width: 850px) {
-    .titulo {
-        height: 150px;
-        padding-top: 40px;
-    }
-
-    .titulo h1 {
-        font-size: 30pt;
-        width: 85%;
-        margin: auto;
-    }
+.btsbusca li a svg path {
+    fill: var(--principal);
 }
 
-@media screen and (max-width: 600px) {
-    .titulo h1 {
-        font-size: 28pt;
-    }
+.principais {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.proxlojas {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.proxlojinhas {
+    width: calc(33.333% - 30px);
+    height: 180px;
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    border-radius: 10px;
+    float: left;
+    margin: 15px;
 }
