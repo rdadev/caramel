@@ -421,6 +421,12 @@ footer .container {
 @media screen and (max-width: 600px) {
     .loja img {
         float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .loja h4, .loja p {
+        text-align: center;
     }
 }
 
@@ -431,6 +437,12 @@ footer .container {
 
     .loja img {
         float: left;
+        display: inline;
+        margin-right: 20px;
+    }
+
+    .loja h4, .loja p {
+        text-align: left;
     }
 }
 
