@@ -86,7 +86,7 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 100;
     visibility: hidden;
     animation: carregar 0.8s;
 }
@@ -219,7 +219,7 @@ header {
 }
 
 .blur {
-    filter: blur(3px);
+    filter: blur(20px);
 }
 
 .navegacao .esconder {
@@ -411,10 +411,6 @@ header {
     font-weight: 600;
     margin-left: 5px;
     position: absolute;
-}
-
-.lojas .container {
-    width: 100%;
 }
 
 .lojinhas {
