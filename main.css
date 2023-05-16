@@ -14,6 +14,11 @@
     --texto-rodape: #313131;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes carregar {
     0%{visibility: visible; width: 100vw; height: 100vh;}
     100%{visibility: hidden; width: 100vw; height: 100vh;}
@@ -30,13 +35,16 @@
     100% {left: 0%;}
 }
 
+@keyframes voltar {
+    0% {left: 0%;}
+    100% {left: -100%;}
+}
+
 html, input, select {
     font-family: 'Kulim Park', Arial, Helvetica, sans-serif;
 }
 
 html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li {
-    margin: 0;
-    padding: 0;
     color: var(--texto-principal);
     font-weight: 400;
 }
@@ -66,7 +74,7 @@ nav ::selection {
 }
 
 input:active, input:focus, select:active, select:focus {
-    outline: 0;
+    outline: none;
     border: 1px solid var(--principal);
 }
 
@@ -219,7 +227,7 @@ header {
 }
 
 .blur {
-    filter: blur(20px);
+    filter: blur(5px);
 }
 
 .navegacao .esconder {
@@ -252,6 +260,7 @@ header {
     width: 100%;
     padding: 0px 25px;
     box-sizing: border-box;
+    line-height: 50px;
 }
 
 .bmobile .principal a {
