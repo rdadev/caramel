@@ -56,7 +56,6 @@ header {
     line-height: 75px;
     margin: 0 20px;
     min-width: 35%;
-    box-sizing: border-box;
 }
 
 .buscar input {
@@ -66,7 +65,11 @@ header {
     border-radius: 10px;
     font-size: 11pt;
     width: 100%;
-    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.buscar input:active, .buscar input:focus {
+    background-color: #e7e7e7;
 }
 
 .buttons {
@@ -109,7 +112,6 @@ section {
     width: calc(25% - 20px);
     height: 150px;
     margin: 0 10px;
-    box-sizing: border-box;
     float: left;
     border-radius: 15px;
     padding: 25px;
@@ -146,7 +148,6 @@ section {
     height: auto;
     overflow: hidden;
     min-height: 142px;
-    box-sizing: border-box;
     padding: 15px;
     float: left;
     border-radius: 10px;
@@ -192,7 +193,6 @@ section {
     border: 1px solid var(--principal);
     color: var(--principal);
     display: block;
-    box-sizing: border-box;
     border-radius: 6px;
     font-weight: 600;
     transition: background-color ease 0.2s;
@@ -215,7 +215,6 @@ section {
     width: calc(33.333% - 20px);
     height: 455px;
     overflow: hidden;
-    box-sizing: border-box;
     float: left;
     border-radius: 10px;
     margin: 10px;
@@ -355,12 +354,11 @@ footer .container {
     height: 70px;
     float: left;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .mobnav svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     margin: auto;
     display: block;
 }
@@ -380,7 +378,7 @@ footer .container {
         width: 1050px;
     }
 
-    .navbusca, .buscar, .conta {
+    footer, .navbusca, .buscar, .conta {
         display: none;
     }
 

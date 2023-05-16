@@ -74,11 +74,10 @@
     width: 90%;
     padding: 15px 20px;
     margin: 10px auto;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12pt;
     font-weight: 400;
     display: block;
-    box-sizing: border-box;
 }
 
 .botao {
@@ -86,10 +85,10 @@
     background-color: var(--principal);
     color: #FFFFFF;
     font-weight: 700;
-    width: calc(100% - 45px);
+    width: 90%;
     padding: 15px 20px;
     margin: 30px auto;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12pt;
     display: block;
     transition: background-color ease 0.2s;

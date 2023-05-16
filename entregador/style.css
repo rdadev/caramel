@@ -68,11 +68,10 @@ body {
     width: 90%;
     padding: 15px 20px;
     margin: 10px auto;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12pt;
     font-weight: 400;
     display: block;
-    box-sizing: border-box;
 }
 
 .botao {
@@ -80,10 +79,10 @@ body {
     background-color: var(--principal);
     color: #FFFFFF;
     font-weight: 700;
-    width: calc(100% - 45px);
+    width: 90%;
     padding: 15px 20px;
     margin: 30px auto;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12pt;
     display: block;
     transition: background-color ease 0.2s;
@@ -171,7 +170,7 @@ body {
     width: fit-content;
     margin-top: 30px;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 7px;
     color: #FFF;
     font-size: 13pt;
     font-weight: 600;
@@ -214,7 +213,6 @@ body {
     height: 70px;
     float: left;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .mobnav svg {
@@ -235,7 +233,6 @@ body {
     height: 70px;
     background-color: transparent;
     padding:0 25px;
-    box-sizing: border-box;
 }
 
 .portal header h1 {

@@ -1,6 +1,6 @@
 // Sombra do cabeçalho ao rolar
 $(document).on("scroll",function(){
-    if($(document).scrollTop()>35){
+    if($(document).scrollTop()>30){
         $("#cabecalho").removeClass("encaixado").addClass("sombreado"); 
     } else{
         $("#cabecalho").removeClass("sombreado").addClass("encaixado");

@@ -54,7 +54,6 @@ a {
     border: 1px solid var(--bordas);
     border-radius: 8px;
     min-height: 100px;
-    box-sizing: border-box;
     display: block;
     transition: ease 0.2s;
 }
@@ -71,8 +70,11 @@ a {
 
 .secao:hover {
     cursor: pointer;
-    background-color: var(--principal);
     border: 1px solid var(--hover);
+}
+
+.secao:hover .titulo-botao {
+    color: var(--hover);
 }
 
 .titulo-botao {
@@ -83,17 +85,9 @@ a {
     transition: color ease 0.2s;
 }
 
-.secao:hover .titulo-botao, .secao:hover .descricao{
-    color: #FFF;
-}
-
 .icone {
     fill: var(--texto-secundario);
     transition: fill ease 0.2s;
-}
-
-.secao:hover .icone {
-    fill: #FFF;
 }
 
 

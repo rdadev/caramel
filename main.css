@@ -17,6 +17,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @keyframes carregar {
@@ -172,7 +173,7 @@ header {
 .botoes .principal a{
     background-color: var(--principal);
     color: #FFF;
-    border-radius: 5px;
+    border-radius: 7px;
     font-weight: 600;
     padding: 12px 25px;
     transition: background-color ease 0.2s;
@@ -193,6 +194,14 @@ header {
     float: left;
     line-height: 120px;
     margin: 0 15px 0 0;
+}
+
+.hamburger svg {
+    transition: transform 0.2s;
+}
+
+.hamburger svg:hover {
+    transform: rotate(90deg);
 }
 
 .mobile {
@@ -228,6 +237,7 @@ header {
 
 .blur {
     filter: blur(5px);
+    transition: filter 0.2s;
 }
 
 .navegacao .esconder {
@@ -255,11 +265,10 @@ header {
 }
 
 .bmobile .principal a, .bmobile .secundario a {
-    border-radius: 5px;
+    border-radius: 7px;
     font-weight: 600;
     width: 100%;
     padding: 0px 25px;
-    box-sizing: border-box;
     line-height: 50px;
 }
 
@@ -305,17 +314,15 @@ header {
     background-color: #FFF;
     width: 60%;
     padding: 17px 25px;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 12pt;
-    box-sizing: border-box;
 }
 
 .gbotao {
     background-color: var(--principal);
     border: 1px solid var(--principal);
     padding: 17px 40px;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 7px;
     font-size: 12pt;
     font-weight: 600;
     color: #FFF;
@@ -358,7 +365,6 @@ header {
     background-repeat: no-repeat;
     background-size: 45%;
     transition: opacity ease 0.2s;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -379,7 +385,7 @@ header {
 .destaquezinho p {
     background-color: #00000057;
     padding: 8px 18px;
-    border-radius: 5px;
+    border-radius: 7px;
     width: fit-content;
     color: #FFF;
     font-size: 12pt;
@@ -435,7 +441,6 @@ header {
     float: left;
     margin: 0 5px;
     padding: 15px 0;
-    box-sizing: border-box;
     transition: box-shadow ease 0.2s;
 }
 
@@ -523,7 +528,7 @@ header {
     color: #FFF;
     font-weight: 600;
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 7px;
     display: block;
     width: fit-content;
     transition: background-color ease 0.2s;
