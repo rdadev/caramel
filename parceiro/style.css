@@ -1,3 +1,7 @@
+a {
+    letter-spacing: -0.3px;
+}
+
 .cadastramento {
     background-image: url('../images/fundo-cadastro-parceiro.jpg');
     background-repeat: no-repeat;
@@ -27,8 +31,12 @@
     font-size: 12pt;
 }
 
+.linkacao:hover, .recuperacao:hover {
+    text-decoration: underline;
+}
+
 .containerzinho {
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
     width: 43%;
     height: fit-content;
     border-radius: 15px;
@@ -47,7 +55,7 @@
     text-align: center;
     float: none;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .containerzinho h1{
@@ -72,7 +80,8 @@
     border: 1px solid #d4d4d4;
     background-color: #FFF;
     width: 90%;
-    padding: 15px 20px;
+    height: 50px;
+    padding: 20px;
     margin: 10px auto;
     border-radius: 7px;
     font-size: 12pt;
@@ -86,7 +95,8 @@
     color: #FFFFFF;
     font-weight: 700;
     width: 90%;
-    padding: 15px 20px;
+    height: 50px;
+    padding: 0 20px;
     margin: 30px auto;
     border-radius: 7px;
     font-size: 12pt;
@@ -134,32 +144,42 @@
     font-weight: 600;
 }
 
+.termos a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 950px) { 
-    body, .entrada, .cadastramento{
+    .entrada, .cadastramento{
         background-image: none;
         background-color: #f8f8f8;
     }
 
     .containerzinho {
-        width: 100%;
+        width: 70%;
         height: auto;
-        margin: 0;
-        border-radius: 0;
+        border: 1px solid #cacaca;
         box-shadow: none;
+        margin: 5vh auto;
     }
 
     .formulario {
-        width: 75%;
+        width: 100%;
         margin: 30px auto;
-    }
-
-    .containerzinho {
-        min-height: unset;
-        max-height: unset;
     }
 }
 
-@media screen and (max-width: 750px) {  
+@media screen and (max-width: 650px) {  
+    .containerzinho {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .containerzinho p {
+        width: 90%;
+    }
+
     .formulario {
         width: 100%;
         margin: 30px 0;

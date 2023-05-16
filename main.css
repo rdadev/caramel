@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    backface-visibility: hidden;
 }
 
 @keyframes carregar {
@@ -175,7 +176,7 @@ header {
     color: #FFF;
     border-radius: 7px;
     font-weight: 600;
-    padding: 12px 25px;
+    padding: 14px 25px;
     transition: background-color ease 0.2s;
 }
 
@@ -194,14 +195,6 @@ header {
     float: left;
     line-height: 120px;
     margin: 0 15px 0 0;
-}
-
-.hamburger svg {
-    transition: transform 0.2s;
-}
-
-.hamburger svg:hover {
-    transform: rotate(90deg);
 }
 
 .mobile {
@@ -326,7 +319,8 @@ header {
     border: 1px solid #d4d4d4;
     background-color: #FFF;
     width: 60%;
-    padding: 17px 25px;
+    padding: 0 25px;
+    height: 55px;
     border-radius: 7px;
     font-size: 12pt;
 }
@@ -334,11 +328,13 @@ header {
 .gbotao {
     background-color: var(--principal);
     border: 1px solid var(--principal);
-    padding: 17px 40px;
     border-radius: 7px;
     font-size: 12pt;
     font-weight: 600;
     color: #FFF;
+    padding: 0 25px;
+    width: 13%;
+    height: 55px;
     transition: background-color ease 0.2s;
 }
 
@@ -401,7 +397,7 @@ header {
     border-radius: 7px;
     width: fit-content;
     color: #FFF;
-    font-size: 12pt;
+    font-size: 11pt;
     float: left;
 }
 
@@ -540,7 +536,7 @@ header {
     background-color: var(--principal);
     color: #FFF;
     font-weight: 600;
-    padding: 12px 25px;
+    padding: 14px 25px;
     border-radius: 7px;
     display: block;
     width: fit-content;
@@ -553,6 +549,7 @@ header {
 
 .miolinho img {
     width: 90%;
+    height: auto;
 }
 
 footer {

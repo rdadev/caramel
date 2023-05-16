@@ -55,7 +55,7 @@ header {
     margin: 0;
     line-height: 75px;
     margin: 0 20px;
-    min-width: 35%;
+    min-width: 32%;
 }
 
 .buscar input {
@@ -187,9 +187,10 @@ section {
 }
 
 .vertudo {
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: auto;
     text-align: center;
-    padding: 12px 25px;
+    padding: 14px 25px;
     border: 1px solid var(--principal);
     color: var(--principal);
     display: block;
@@ -213,7 +214,7 @@ section {
 
 .produto {
     width: calc(33.333% - 20px);
-    height: 455px;
+    height: auto;
     overflow: hidden;
     float: left;
     border-radius: 10px;
@@ -229,6 +230,9 @@ section {
 .produtos .imagem {
     border-radius: 10px 10px 0 0;
     padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .produto .imagem img {
@@ -241,6 +245,9 @@ section {
 
 .descritivo {
     padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .descritivo h4 {
@@ -248,15 +255,27 @@ section {
     color: var(--texto-principal);
     margin-bottom: 20px;
     overflow: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.1;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     height: 42px;
 }
 
-.descreve {
+.descricao {
     font-size: 11pt;
     color: var(--texto-secundario);
     font-weight: 400;
     margin-bottom: 20px;
-    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.1;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 50px;
 }
 
 .local {
@@ -266,7 +285,7 @@ section {
 }
 
 .preco {
-    font-size: 19pt;
+    font-size: 18pt;
     color: var(--texto-principal);
     font-weight: 800;
 }
@@ -278,27 +297,9 @@ section {
     margin-bottom: 20px;
     background-color: var(--principal);
     padding: 5px 15px;
-    border-radius: 7px;
+    border-radius: 50px;
     width: fit-content;
     display: block;
-}
-
-.limite2 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 1.1;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.limite3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 1.1;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
 
 footer {
@@ -363,13 +364,17 @@ footer .container {
     display: block;
 }
 
+.mobnav svg path {
+    fill: var(--texto-secundario);
+}
+
 .mobnav p {
     text-align: center;
     margin: 3px;
     font-size: 11pt;
 }
 
-.conta {
+.conta, .pedidos {
     display: block;
 }
 
@@ -378,7 +383,7 @@ footer .container {
         width: 1050px;
     }
 
-    footer, .navbusca, .buscar, .conta {
+    footer, .navbusca, .buscar, .conta, .pedidos {
         display: none;
     }
 
@@ -389,6 +394,10 @@ footer .container {
     .mobnavs {
         display: block;
     }
+
+    .secfinal {
+        margin: 50px auto 90px auto;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -398,10 +407,6 @@ footer .container {
 }
 
 @media screen and (max-width: 720px) {
-    .produto {
-        width: calc(100% - 20px);
-    }
-
     .loja {
         padding: 10px;
     }
@@ -417,6 +422,42 @@ footer .container {
 }
 
 @media screen and (max-width: 600px) {
+    .produto {
+        width: calc(100% - 20px);
+    }
+
+    .produto .imagem {
+        width: 30%;
+        float: right;
+    }
+
+    .descritivo {
+        float: left;
+        width: 70%;
+    }
+
+    .descritivo h4 {
+        height: 38px;
+    }
+
+    .descricao {
+        -webkit-line-clamp: 2;
+        height: 32px;
+    }
+
+    .produto .imagem img {
+        height: 110px;
+    }
+    
+    .peso {
+        float: left;
+    }
+
+    .local, .preco {
+        float: left;
+        width: 100%;
+    }
+
     .loja img {
         float: none;
         display: block;
@@ -426,21 +467,48 @@ footer .container {
     .loja h4, .loja p {
         text-align: center;
     }
+
+    .loja h4, .descritivo h4{
+        font-size: 13pt;
+    }
+
+    .loja p, .descreve {
+        font-size: 10.5pt;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
     .loja {
         width: calc(100% - 20px);
+        min-height: 110px;
     }
 
     .loja img {
         float: left;
-        display: inline;
+        display: block;
         margin-right: 20px;
     }
 
     .loja h4, .loja p {
         text-align: left;
+    }
+
+    .produto .imagem img {
+        height: 70px;
+    }
+
+    .produto {
+        width: calc(100% - 20px);
+    }
+
+    .produto .imagem, .descritivo {
+        width: 100%;
+        float: none;
+    }
+
+    .produto .imagem img {
+        height: 110px;
     }
 }
 

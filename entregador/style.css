@@ -1,3 +1,7 @@
+a {
+    letter-spacing: -0.3px;
+}
+
 body {
     background-image: url('../images/fundo-entregador.jpg');
     background-repeat: no-repeat;
@@ -20,8 +24,12 @@ body {
     font-size: 12pt;
 }
 
+.linkacao:hover, .recuperacao:hover {
+    text-decoration: underline;
+}
+
 .containerzinho {
-    background-color: #f8f8f8;
+    background-color: #f9f9f9;
     width: 43%;
     height: fit-content;
     border-radius: 15px;
@@ -40,7 +48,7 @@ body {
     text-align: center;
     float: none;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .containerzinho h1{
@@ -66,7 +74,8 @@ body {
     border: 1px solid #d4d4d4;
     background-color: #FFF;
     width: 90%;
-    padding: 15px 20px;
+    height: 50px;
+    padding: 20px;
     margin: 10px auto;
     border-radius: 7px;
     font-size: 12pt;
@@ -80,13 +89,15 @@ body {
     color: #FFFFFF;
     font-weight: 700;
     width: 90%;
-    padding: 15px 20px;
+    height: 50px;
+    padding: 0 20px;
     margin: 30px auto;
     border-radius: 7px;
     font-size: 12pt;
     display: block;
     transition: background-color ease 0.2s;
 }
+
 
 .acao {
     text-align: center;
@@ -126,6 +137,10 @@ body {
     text-decoration: none;
     color: var(--principal);
     font-weight: 600;
+}
+
+.termos a:hover {
+    text-decoration: underline;
 }
 
 .corpo {
