@@ -76,8 +76,8 @@ nav ::selection {
 }
 
 input:active, input:focus, select:active, select:focus {
-    outline: none;
     border: 1px solid var(--principal);
+    outline: none;
     transition: border ease 0.1s;
 }
 
@@ -290,7 +290,7 @@ header {
     color: var(--texto-cabecalho);
 }
 
-.inicio {
+.store {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -298,14 +298,14 @@ header {
     background-color: var(--inicio);
 }
 
-.inicio h1 {
+.store h1 {
     text-align: center;
     font-size: 30pt;
     line-height: 1.7;
     font-weight: 600;
 }
 
-.inicio p {
+.store p {
     text-align: center;
     font-size: 13pt;
     color: var(--texto-secundario);
@@ -693,7 +693,7 @@ footer .container {
 }
 
 @media screen and (max-width: 650px) {
-    .inicio h1 {
+    .store h1 {
         font-size: 25pt;
     }
 

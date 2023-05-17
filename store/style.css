@@ -229,7 +229,7 @@ section {
 
 .produtos .imagem {
     border-radius: 10px 10px 0 0;
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -275,7 +275,7 @@ section {
     line-height: 1.1;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    height: 50px;
+    height: 48px;
 }
 
 .local {
@@ -308,6 +308,10 @@ footer {
 
 footer .container {
     border: none;
+}
+
+.checkout .container {
+    margin-bottom: 40px;
 }
 
 .cadastros {
@@ -415,16 +419,18 @@ footer .container {
     color: var(--texto-secundario);
 }
 
-.carrinho .fechar svg {
+.carrinho .fechar button {
     float: left;
     cursor: pointer;
+    border: none;
+    background: none;
 }
 
 .carrinho .fechar svg path {
     fill: var(--texto-secundario);
 }
 
-.carrinho .content {
+.content {
     padding: 20px;
     width: 100%;
     height: auto;
@@ -432,13 +438,13 @@ footer .container {
     margin-bottom: 130px;
 }
 
-.carrinho .content h4 {
+.content h4 {
     font-weight: 400;
     color: var(--texto-secundario);
     font-size: 11pt;
 }
 
-.carrinho .content .titulo {
+.content .titulo {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -446,20 +452,20 @@ footer .container {
     border-bottom: 1px solid #cacaca;
 }
 
-.carrinho .content .titulo h3 {
+.content .titulo h3 {
     font-weight: 600;
     color: var(--texto-principal);
     font-size: 15pt;
     float: left;
 }
 
-.carrinho .content .titulo a {
+.content .titulo a {
     float: right;
     font-size: 13pt;
     color: var(--principal);
 }
 
-.carrinho .content .item {
+.content .item {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -467,19 +473,19 @@ footer .container {
     border-bottom: 1px solid #cacaca;
 }
 
-.carrinho .content .item .cproduto {
+.content .item .cproduto {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
 
-.carrinho .content .item .cproduto p {
+.content .item .cproduto p {
     font-size: 12pt;
     float: left;
-    width: 70%;
+    width: 65%;
 }
 
-.carrinho .content .item .cproduto h3 {
+.content .item .cproduto h3 {
     font-weight: 600;
     color: var(--texto-principal);
     font-size: 13pt;
@@ -487,7 +493,7 @@ footer .container {
     margin: 7px 0;
 }
 
-.carrinho .content .item .acoes {
+.content .item .acoes {
     font-size: 11pt;
     font-weight: 600;
     color: var(--texto-tertiario);
@@ -540,6 +546,16 @@ footer .container {
     font-weight: 800;
 }
 
+.tcheckout {
+    position: inherit;
+    background-color: transparent;
+    padding: 0 20px;
+}
+
+.sm {
+    margin: 0;
+}
+
 .botao {
     border: 1px solid var(--principal);
     background-color: var(--principal);
@@ -559,6 +575,167 @@ footer .container {
 .botao:hover {
     background-color: var(--hover);
     border: 1px solid var(--hover);
+}
+
+.lgcheckout {
+    text-align: center;
+    float: none;
+}
+
+.checkout .esquerda {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
+.checkout .direita {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    float: right;
+}
+
+.checkcart {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 12px;
+    padding: 20px;
+    float: right;
+}
+
+.dados {
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+}
+
+.dados h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: var(--texto-principal);
+}
+
+.dados h3 {
+    margin: 30px 0 20px 0;
+    font-size: 13pt;
+    font-weight: 400;
+    color: var(--texto-secundario);
+}
+
+.endereco, .logistica {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.endereco img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    float: left;
+    margin-right: 15px;
+}
+
+.endereco .local {
+    float: left;
+    margin-top: 3px;
+    width: fit-content;
+}
+
+.endereco .local h4 {
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.endereco .local h5 {
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.endereco .acao {
+    float: right;
+    margin-top: 3px;
+    width: fit-content;
+}
+
+.endereco .acao a {
+    color: var(--principal);
+}
+
+.logistica {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.logistica .tipoent {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    float: left;
+    margin-right: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logistica .select, .pagamentos .select {
+    border: 2px solid var(--principal);
+}
+
+.logistica .tipoent .p1 {
+    font-size: 12pt;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.logistica .tipoent .p2, .logistica .tipoent .p3 {
+    font-size: 10.5pt;
+}
+
+.logistica .tipoent .p3 {
+    color: var(--principal);
+    font-weight: 800;
+}
+
+.pagamentos {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.pagto {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    margin-bottom: 17px;
+    padding: 20px;
+    cursor:pointer;
+}
+
+.pagto .p1 {
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.pagto .p2 {
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--texto-secundario);
+}
+
+.pagto svg {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 15px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -583,13 +760,23 @@ footer .container {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 970px) {
     .produto {
         width: calc(50% - 20px);
     }
+
+    .checkout .esquerda, .checkout .direita {
+        width: 70%;
+        float: none;
+    }
+
+    .checkcart {
+        float: none;
+        margin-top: 20px;
+    }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 750px) {
     .loja {
         padding: 10px;
     }
@@ -601,6 +788,25 @@ footer .container {
 
     .loja h4 {
         margin: 10px 0px 10px;
+    }
+
+    .checkout .esquerda, .checkout .direita {
+        width: 100%;
+        float: none;
+    }
+
+    .dados {
+        width: 100%;
+    }
+
+    .checkcart {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tcheckout {
+        max-width: none;
     }
 }
 
@@ -692,6 +898,42 @@ footer .container {
 
     .produto .imagem img {
         height: 110px;
+    }
+
+    .endereco .local h4, .endereco .local h5 {
+        font-size: 12pt;
+    }
+
+    .dados h1 {
+        font-size: 18pt;
+    }
+
+    .dados h3 {
+        font-size: 11pt;
+    }
+
+    .logistica .tipoent .p1, .logistica .tipoent .p2, .logistica .tipoent .p3 {
+        font-size: 11pt;
+    }
+
+    .pagto .p1 {
+        font-size: 11pt;
+    }
+
+    .pagto .p2 {
+        font-size: 10pt;
+    }
+
+    .content .titulo h3 {
+        font-size: 13pt;
+    }
+
+    .content .titulo a {
+        font-size: 11.5pt;
+    }
+
+    .content .item .cproduto p {
+        font-size: 10.5pt;
     }
 }
 

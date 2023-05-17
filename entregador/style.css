@@ -278,6 +278,10 @@ body {
     float: left;
 }
 
+.veiculos {
+    padding: 0 15px;
+}
+
 @media screen and (max-width: 950px) { 
     body, .cadastramento{
         background-image: none;
