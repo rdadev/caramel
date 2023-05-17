@@ -9,7 +9,8 @@
     --inicio: #f3f3f3;
     --bordas: #dddddd;
     --texto-principal: #000000;
-    --texto-secundario: #4e4e4e;
+    --texto-secundario: #525252;
+    --texto-tertiario: #8b8b8b;
     --texto-cabecalho: #111111;
     --texto-rodape: #313131;
 }
@@ -19,6 +20,7 @@
     padding: 0;
     box-sizing: border-box;
     backface-visibility: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 @keyframes carregar {
@@ -42,7 +44,7 @@
     100% {left: -100%;}
 }
 
-html, input, select {
+html, input, select, button {
     font-family: 'Kulim Park', Arial, Helvetica, sans-serif;
 }
 
@@ -52,13 +54,11 @@ html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.40px;
     font-weight: 600;
 }
 
 a, p {
     font-size: 13pt;
-    letter-spacing: -0.1px;
 }
 
 a {
@@ -78,6 +78,7 @@ nav ::selection {
 input:active, input:focus, select:active, select:focus {
     outline: none;
     border: 1px solid var(--principal);
+    transition: border ease 0.1s;
 }
 
 header {

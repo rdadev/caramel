@@ -37,3 +37,10 @@ function fecharMenuMobile() {
         $("#acoes").removeClass("bmobile").addClass("botoes");
     }, 350);
 };
+
+// Abrir e fechar carrinho 
+function abrirCarrinho() {
+    $("#cart").toggleClass("poscarrinho");
+    $("#total").toggleClass("postotal");
+    $("#blockpage").toggleClass("mostrar");
+};
