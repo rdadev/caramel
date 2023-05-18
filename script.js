@@ -45,13 +45,19 @@ function abrirCarrinho() {
     $("#blockpage").toggleClass("mostrar");
 };
 
+const rdPix = document.querySelector("#pag1");
+
 // Função do rádio logistica checkout
 function logCheckout() {
     if ($("#log1").prop("checked")) {
+        $("#lbd").addClass("fantasma");
+        rdPix.checked = true;
+        pagCheckout();
         $(".tipoent").removeClass("select");
         $("#boxlog1").addClass("select");
     } else if ($("#log2").prop("checked")) {
         $(".tipoent").removeClass("select");
+        $("#lbd").removeClass("fantasma");
         $("#boxlog2").addClass("select");
     };
 };
@@ -67,5 +73,8 @@ function pagCheckout() {
     } else if ($("#pag3").prop("checked")) {
         $(".pagto").removeClass("select");
         $("#boxpag3").addClass("select");
+    } else if ($("#pag4").prop("checked")) {
+        $(".pagto").removeClass("select");
+        $("#boxpag4").addClass("select");
     };
 };
