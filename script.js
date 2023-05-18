@@ -120,3 +120,8 @@ function rmQuantProduto(cod) {
         document.querySelector(cod).value = soma;
     }
 };
+
+// Abre pesquisa no mobile
+function abrirPesquisa() {
+    
+};

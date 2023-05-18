@@ -386,6 +386,17 @@ footer .container {
     font-size: 10pt;
 }
 
+.bt .mobnav {
+    width: 100%;
+}
+
+.mobnavs button {
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+
 .conta, .pedidos {
     display: block;
 }
