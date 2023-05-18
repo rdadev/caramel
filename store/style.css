@@ -225,6 +225,7 @@ section {
     margin: 10px;
     transition: box-shadow ease 0.2s;
     border: 1px solid var(--bordas);
+    cursor: pointer;
 }
 
 .produto:hover {
@@ -334,7 +335,7 @@ footer .container {
     height: auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space:nowrap;
+    white-space: nowrap;
     scrollbar-width: 0;
 }
 
@@ -401,6 +402,7 @@ footer .container {
     transition: ease all 0.3s;
     overflow: auto;
     scrollbar-width: 0;    
+    margin: 0;
 }
 
 .carrinho::-webkit-scrollbar {
@@ -744,6 +746,73 @@ footer .container {
     display: none;
 }
 
+.mdproduto {
+    width: 70%;
+    max-width: 1100px;
+    height: 500px;
+    min-height: 480px;
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;  
+}
+
+.mdproduto .conteudo .esquerda, .mdproduto .conteudo .direita {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+.mdproduto .conteudo .esquerda {
+    float: left;
+}
+
+.mdproduto .conteudo .direita {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 390px;
+}
+
+.mdproduto .conteudo img {
+    width: 180px;
+    max-width: 50%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+}
+
+.mdproduto .conteudo h4 {
+    font-size: 15pt;
+    margin-bottom: 15px;
+}
+
+.mdproduto .quantidade {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 7px;
+}
+
+.mdproduto .quantidade button {
+    width: 8%;
+    font-size: 16pt;
+    font-weight: 800;
+    color: var(--texto-secundario);
+}
+
+.mdproduto .quantidade input {
+    width: 80%;
+    height: 48px;
+    text-align: center;
+    border: none;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1050px) {
     .promocional .container {
         width: 1050px;
@@ -763,6 +832,18 @@ footer .container {
 
     .secfinal {
         margin: 50px auto 90px auto;
+    }
+
+    .mdproduto {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        margin: auto 0 0 0;
+        overflow: scroll;
+        scrollbar-width: 0;
+    }
+
+    .mdproduto::-webkit-scrollbar {
+        width: 0;
     }
 }
 
@@ -813,6 +894,28 @@ footer .container {
 
     .tcheckout {
         max-width: none;
+    }
+
+    .mdproduto {
+        height: fit-content;
+    }
+
+    .mdproduto .conteudo .esquerda, .mdproduto .conteudo .direita {
+        width: 100%;
+        float: none;
+    }
+
+    .mdproduto .conteudo .direita {
+        height: auto;
+    }
+
+    .mdproduto .conteudo img {
+        width: 110px;
+        margin-bottom: 35px;
+    }
+
+    .mdproduto .conteudo .botoes {
+        margin-top: 20px;
     }
 }
 
@@ -869,6 +972,10 @@ footer .container {
 
     .loja p, .descreve {
         font-size: 10.5pt;
+    }
+
+    .mdproduto .conteudo img {
+        width: 95px;
     }
     
 }
@@ -940,6 +1047,10 @@ footer .container {
 
     .content .item .cproduto p {
         font-size: 10.5pt;
+    }
+
+    .mdproduto .quantidade input {
+        width: 78%;
     }
 }
 

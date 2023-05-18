@@ -52,6 +52,7 @@ html, input, select, button, fieldset, form {
 
 button, input[type=submit] {
     cursor: pointer;
+	outline: none;
 }
 
 html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li {
@@ -237,7 +238,7 @@ header {
 }
 
 .blur {
-    filter: blur(5px);
+    filter: blur(4px);
     transition: filter 0.2s;
 }
 
@@ -598,6 +599,39 @@ footer .links ul li{
 
 footer .container {
     border-top: 1px solid var(--bordas);
+}
+
+dialog {
+	border: none;
+	margin: auto;
+    padding: 25px;
+	border-radius: 15px;
+	width: 650px;
+	outline: none;
+	transition: 0.2s;
+	box-shadow: 0 0 20px #00000025;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+	background-color: #00000094;
+}
+
+dialog .cabeca {
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+	margin-bottom: 20px;
+}
+
+dialog .cabeca h1 {
+	float: left;
+	font-size: 18pt;
+	font-weight: 600;
+}
+
+dialog .cabeca .fechar {
+	float: right;
 }
 
 /* O JUMP DO GATO NO RESPONSIVO */

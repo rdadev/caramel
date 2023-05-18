@@ -78,3 +78,45 @@ function pagCheckout() {
         $("#boxpag4").addClass("select");
     };
 };
+
+// Abre o modal
+function abrirModal(elemento) {
+    const modal = document.querySelector(elemento);
+    $("header").addClass("blur");
+    $("section").addClass("blur");
+    $("footer").addClass("blur");
+    modal.showModal();
+};
+
+// Fecha o modal
+function fecharModal(elemento) {
+    const modal = document.querySelector(elemento);
+    removeBlur();
+    modal.close();
+};
+
+// Remover blur do fundo
+function removeBlur() {
+    $("header").removeClass("blur");
+    $("section").removeClass("blur");
+    $("footer").removeClass("blur");
+};
+
+// Adicionar quantidade de produto no carrinho
+function adQuantProduto() {
+    var atual = document.querySelector("#qtdeprod").value;
+    var soma = parseInt(atual) + 1;
+    document.querySelector("#qtdeprod").value = soma;
+};
+
+// Remove quantidade de produto no carrinho
+function rmQuantProduto() {
+    var atual = document.querySelector("#qtdeprod").value;
+    if (atual == 1) {
+
+    }
+    else {
+        var soma = parseInt(atual) - 1;
+        document.querySelector("#qtdeprod").value = soma;
+    }
+};

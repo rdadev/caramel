@@ -97,7 +97,7 @@
         <div class="container">
             <h1>Produtos em alta</h1>
             <div class="produtos">
-                <a href="#"><div class="produto">
+                <div class="produto" onclick="abrirModal('#prod1')">
                     <div class="imagem"><img src="../images/produto1.jpg" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Golden Special Adultos Sabor Frango e Carne 15Kg</h4>
@@ -106,8 +106,37 @@
                         <p class="local">Vendido por <b>Aviário Cãopeão</b></p>
                         <p class="preco">R$ 89,90</p>
                     </div>
-                </div></a>
-                <a href="#"><div class="produto">
+                </div>
+                <dialog id="prod1" class="mdproduto" onkeydown="removeBlur()">
+                    <div class="cabeca">
+                        <h1>Produto</h1>
+                        <button class="fechar" type="button" onclick="fecharModal('#prod1')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+                    </div>
+                    <div class="conteudo">
+                        <div class="esquerda">
+                            <img src="../images/produto1.jpg" alt="Produto"/>
+                        </div>
+                        <div class="direita">
+                            <div class="mdsc">
+                                <h4>Ração Golden Special Adultos Sabor Frango e Carne 15Kg</h4>
+                                <p class="descricao">Golden Formula Adultos Frango e Carne utiliza proteína de carne bovina e não sabores artificiais e contém o nível ideal de todos os nutrientes.</p>
+                                <p class="peso">Pacote 15Kg</p>
+                                <p class="local">Vendido por <b>Aviário Cãopeão</b></p>
+                                <p class="preco">R$ 89,90</p>
+                            </div>
+                            <div class="botoes">
+                                <div class="quantidade">
+                                    <button type="button" onclick="rmQuantProduto()">-</button>
+                                    <input id="qtdeprod" type="text" value="1" disabled/>
+                                    <button type="button" onclick="adQuantProduto()">+</button>
+                                </div>
+                                <button type="button" class="botao" onclick="fecharModal('#prod1');abrirCarrinho();">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
+
+                <div class="produto">
                     <div class="imagem"><img src="../images/produto2.png" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Special Dog Gold Adultos Sabor Carne (Granel)</h4>
@@ -116,8 +145,8 @@
                         <p class="local">Vendido por <b>Mundo Pet</b></p>
                         <p class="preco">R$ 15,90</p>
                     </div>
-                </div></a>
-                <a href="#"><div class="produto">
+                </div>
+                <div class="produto">
                     <div class="imagem"><img src="../images/produto3.png" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Premier Raças Pequenas Filhotes 20Kg</h4>
@@ -126,8 +155,8 @@
                         <p class="local">Vendido por <b>Petshop Cão & Cia</b></p>
                         <p class="preco">R$ 129,90</p>
                     </div>
-                </div></a>
-                <a href="#"><div class="produto">
+                </div>
+                <div class="produto">
                     <div class="imagem"><img src="../images/produto1.jpg" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Golden Special Adultos Sabor Frango e Carne 11Kg</h4>
@@ -136,8 +165,8 @@
                         <p class="local">Vendido por <b>Aviário Cãopeão</b></p>
                         <p class="preco">R$ 59,90</p>
                     </div>
-                </div></a>
-                <a href="#"><div class="produto">
+                </div>
+                <div class="produto">
                     <div class="imagem"><img src="../images/produto3.png" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Premier Raças Pequenas Filhote (Granel)</h4>
@@ -146,8 +175,8 @@
                         <p class="local">Vendido por <b>Mundo Pet</b></p>
                         <p class="preco">R$ 15,90</p>
                     </div>
-                </div></a>
-                <a href="#"><div class="produto">
+                </div>
+                <div class="produto">
                     <div class="imagem"><img src="../images/produto2.png" alt="Produto"/></div>
                     <div class="descritivo">
                         <h4>Ração Premier Raças Pequenas Filhotes 15Kg</h4>
@@ -156,7 +185,7 @@
                         <p class="local">Vendido por <b>Petshop Cão & Cia</b></p>
                         <p class="preco">R$ 89,90</p>
                     </div>
-                </div></a>
+                </div>
             </div>
             <a class="vertudo" href="#">Ver tudo</a>
         </div>
@@ -179,7 +208,7 @@
             <p>Conta</p>
         </div></a>
     </section>
-    <div id="cart" class="carrinho">
+    <section id="cart" class="carrinho">
         <div class="fechar"><span>Meu carrinho</span><button type="button" onclick="abrirCarrinho()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
         <div class="content">
             <h4>Seu pedido em</h4>
@@ -213,8 +242,7 @@
             <span><h3 style="float: left">Total</h3><h3 style="float: right">R$ 50,19</h3></span>
             <a href="checkout.html" class="botao">Finalizar pedido</a>
         </div>
-    </div>
-    
+    </section>
     <footer>
         <div class="container">
             <div class="copyright"><p>Copyright © 2023 Caramel</p></div>
