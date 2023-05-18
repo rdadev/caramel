@@ -242,8 +242,9 @@ section {
 
 .produto .imagem img {
     width: auto;
+    max-width: 160px;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     margin: auto;
     display: block;
 }
@@ -776,17 +777,20 @@ footer .container {
 }
 
 .mdproduto .conteudo img {
-    width: 180px;
-    max-width: 50%;
-    height: auto;
+    width: 360px;
+    max-width: 70%;
+    max-height: 350px;
     overflow: hidden;
     margin: auto;
     display: block;
+    object-fit: contain;
 }
 
 .mdproduto .conteudo h4 {
     font-size: 15pt;
     margin-bottom: 15px;
+    color: var(--texto-principal);
+    font-weight: 600;
 }
 
 .mdproduto .quantidade {
@@ -802,6 +806,7 @@ footer .container {
     font-size: 16pt;
     font-weight: 800;
     color: var(--texto-secundario);
+    line-height: 48px;
 }
 
 .mdproduto .quantidade input {
@@ -910,8 +915,9 @@ footer .container {
     }
 
     .mdproduto .conteudo img {
-        width: 110px;
+        width: 180px;
         margin-bottom: 35px;
+        max-height: 165px;
     }
 
     .mdproduto .conteudo .botoes {
@@ -945,6 +951,8 @@ footer .container {
 
     .produto .imagem img {
         height: 110px;
+        object-fit: contain;
+        max-width: 90px;
     }
     
     .peso {
