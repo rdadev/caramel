@@ -111,7 +111,6 @@ a {
 .botao:hover {
     background-color: var(--hover);
     border: 1px solid var(--hover);
-    cursor: pointer;
 }
 
 .acao {

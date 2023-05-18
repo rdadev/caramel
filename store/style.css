@@ -95,7 +95,6 @@ header {
 .buttons button {
     background: none;
     border:none;
-    cursor: pointer;
 }
 
 section {
@@ -428,7 +427,6 @@ footer .container {
 
 .carrinho .fechar button {
     float: left;
-    cursor: pointer;
     border: none;
     background: none;
 }
@@ -509,7 +507,6 @@ footer .container {
     float: left;
     margin-top: 10px;
     margin-right: 30px;
-    cursor: pointer;
 }
 
 .subtotais span {
@@ -626,7 +623,7 @@ footer .container {
 }
 
 .dados h3 {
-    margin: 30px 0 20px 0;
+    margin: 20px 0;
     font-size: 13pt;
     font-weight: 400;
     color: var(--texto-secundario);
@@ -667,10 +664,8 @@ footer .container {
     float: right;
     margin-top: 3px;
     width: fit-content;
-}
-
-.endereco .acao a {
     color: var(--principal);
+    font-size: 13pt;
 }
 
 .logistica {
@@ -743,6 +738,10 @@ footer .container {
     height: 40px;
     float: left;
     margin-right: 15px;
+}
+
+.fantasma {
+    display: none;
 }
 
 @media screen and (max-width: 1050px) {

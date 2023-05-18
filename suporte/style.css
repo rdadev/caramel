@@ -68,7 +68,6 @@ a {
 }
 
 .secao:hover {
-    cursor: pointer;
     border: 1px solid var(--hover);
 }
 

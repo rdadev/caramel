@@ -44,3 +44,28 @@ function abrirCarrinho() {
     $("#total").toggleClass("postotal");
     $("#blockpage").toggleClass("mostrar");
 };
+
+// Função do rádio logistica checkout
+function logCheckout() {
+    if ($("#log1").prop("checked")) {
+        $(".tipoent").removeClass("select");
+        $("#boxlog1").addClass("select");
+    } else if ($("#log2").prop("checked")) {
+        $(".tipoent").removeClass("select");
+        $("#boxlog2").addClass("select");
+    };
+};
+
+// Função do rádio pagamento checkout
+function pagCheckout() {
+    if ($("#pag1").prop("checked")) {
+        $(".pagto").removeClass("select");
+        $("#boxpag1").addClass("select");
+    } else if ($("#pag2").prop("checked")) {
+        $(".pagto").removeClass("select");
+        $("#boxpag2").addClass("select");
+    } else if ($("#pag3").prop("checked")) {
+        $(".pagto").removeClass("select");
+        $("#boxpag3").addClass("select");
+    };
+};

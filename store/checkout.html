@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/icon" href="../images/icon.ico"/>
-    <link rel="stylesheet" type="text/css" href="../main.css"/>
+    <link rel="stylesheet" type="text/css" href="../global.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Caramel</title>
 </head>
@@ -21,50 +21,67 @@
         <div class="container">
             <div class="esquerda">
                 <div class="dados">
-                    <h1>Finalize seu pedido</h1>
-                    <h3>Endereço da entrega</h3>
-                    <div class="endereco">
-                        <img src="../images/endereco.png" alt="Mapa"/>
-                        <span class="local">
-                            <h4>Avenida Uniopet, 99</h4>
-                            <h5>Bloco A - Curitiba/PR</h5>
-                        </span>
-                        <span class="acao">
-                            <a href="##">Mudar</a>
-                        </span>
-                    </div>
-                    <h3>Entrega</h3>
-                    <div class="logistica">
-                        <div class="tipoent select">
-                            <p class="p1">Entrega</p>
-                            <p class="p2">35 - 45 min</p>
-                            <p class="p3">R$ 5,90</p>
-                        </div>
-                        <div class="tipoent">
-                            <p class="p1">Retirada</p>
-                            <p class="p2">10 min</p>
-                            <p class="p3">Grátis</p>
-                        </div>
-                    </div>
-                    <h3>Pagamento</h3>
-                    <div class="pagamentos">
-                        <div class="pagto select">
-                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><defs/><g fill="#cacaca" fill-rule="evenodd"><path d="M112.57 391.19c20.056 0 38.928-7.808 53.12-22l76.693-76.692c5.385-5.404 14.765-5.384 20.15 0l76.989 76.989c14.191 14.172 33.045 21.98 53.12 21.98h15.098l-97.138 97.139c-30.326 30.344-79.505 30.344-109.85 0l-97.415-97.416h9.232zm280.068-271.294c-20.056 0-38.929 7.809-53.12 22l-76.97 76.99c-5.551 5.53-14.6 5.568-20.15-.02l-76.711-76.693c-14.192-14.191-33.046-21.999-53.12-21.999h-9.234l97.416-97.416c30.344-30.344 79.523-30.344 109.867 0l97.138 97.138h-15.116z"/><path d="M22.758 200.753l58.024-58.024h31.787c13.84 0 27.384 5.605 37.172 15.394l76.694 76.693c7.178 7.179 16.596 10.768 26.033 10.768 9.417 0 18.854-3.59 26.014-10.75l76.989-76.99c9.787-9.787 23.331-15.393 37.171-15.393h37.654l58.3 58.302c30.343 30.344 30.343 79.523 0 109.867l-58.3 58.303H392.64c-13.84 0-27.384-5.605-37.171-15.394l-76.97-76.99c-13.914-13.894-38.172-13.894-52.066.02l-76.694 76.674c-9.788 9.788-23.332 15.413-37.172 15.413H80.782L22.758 310.62c-30.344-30.345-30.344-79.524 0-109.868"/></g></svg>
-                            <p class="p1">Pagar com Pix</p>
-                            <p class="p2">Use o QR Code ou copie o código gerado</p>
-                        </div>
-                        <div class="pagto">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path fill="#cacaca" d="M880 316v520q0 24-18 42t-42 18H140q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42ZM140 425h680V316H140v109Zm0 129v282h680V554H140Zm0 282V316v520Z"/></svg>
-                            <p class="p1">Pagar com crédito</p>
-                            <p class="p2">Use o cartão de crédito para pagamento</p>
-                        </div>
-                        <div class="pagto">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path fill="#cacaca" d="M880 316v520q0 24-18 42t-42 18H140q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42ZM140 425h680V316H140v109Zm0 129v282h680V554H140Zm0 282V316v520Z"/></svg>
-                            <p class="p1">Pagar com débito</p>
-                            <p class="p2">Use o cartão de débito para pagamento</p>
-                        </div>
-                    </div>
-                    <a href="pedidos.html" class="botao">Fazer pedido</a>
+                    <form method="" action="pedidos.html">
+                        <legend><h1>Finalize seu pedido</h1></legend>
+                        <fieldset class="endereco">
+                            <h3>Endereço da entrega</h3>
+                                <img src="../images/endereco.png" alt="Mapa"/>
+                                <span class="local">
+                                    <h4>Avenida Uniopet, 99</h4>
+                                    <h5>Bloco A - Curitiba/PR</h5>
+                                </span>
+                                <button type="button" class="acao">Mudar</button>
+                        </fieldset>
+                        <fieldset class="logistica">
+                            <h3>Entrega</h3>
+                                <label for="log1">
+                                    <div id="boxlog1" class="tipoent select">
+                                        <p class="p1">Entrega</p><p class="p2">35 - 45 min</p>
+                                        <p class="p3">R$ 5,90</p>
+                                    </div>
+                                </label>
+                                <input id="log1" class="fantasma" onchange="logCheckout()" type="radio" name="logistica" value="1" checked/>                 
+                                
+                                <label for="log2">
+                                    <div id="boxlog2" class="tipoent">
+                                        <p class="p1">Retirada</p>
+                                        <p class="p2">10 min</p>
+                                        <p class="p3">Grátis</p>
+                                    </div>
+                                </label>
+                                <input id="log2" class="fantasma" onchange="logCheckout()" type="radio" name="logistica" value="0"/>        
+                        </fieldset>
+                        <fieldset class="pagamentos">
+                            <h3>Pagamento</h3>
+                            <label for="pag1">
+                                <div id="boxpag1" class="pagto select">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><defs/><g fill="#cacaca" fill-rule="evenodd"><path d="M112.57 391.19c20.056 0 38.928-7.808 53.12-22l76.693-76.692c5.385-5.404 14.765-5.384 20.15 0l76.989 76.989c14.191 14.172 33.045 21.98 53.12 21.98h15.098l-97.138 97.139c-30.326 30.344-79.505 30.344-109.85 0l-97.415-97.416h9.232zm280.068-271.294c-20.056 0-38.929 7.809-53.12 22l-76.97 76.99c-5.551 5.53-14.6 5.568-20.15-.02l-76.711-76.693c-14.192-14.191-33.046-21.999-53.12-21.999h-9.234l97.416-97.416c30.344-30.344 79.523-30.344 109.867 0l97.138 97.138h-15.116z"/><path d="M22.758 200.753l58.024-58.024h31.787c13.84 0 27.384 5.605 37.172 15.394l76.694 76.693c7.178 7.179 16.596 10.768 26.033 10.768 9.417 0 18.854-3.59 26.014-10.75l76.989-76.99c9.787-9.787 23.331-15.393 37.171-15.393h37.654l58.3 58.302c30.343 30.344 30.343 79.523 0 109.867l-58.3 58.303H392.64c-13.84 0-27.384-5.605-37.171-15.394l-76.97-76.99c-13.914-13.894-38.172-13.894-52.066.02l-76.694 76.674c-9.788 9.788-23.332 15.413-37.172 15.413H80.782L22.758 310.62c-30.344-30.345-30.344-79.524 0-109.868"/></g></svg>
+                                    <p class="p1">Pagar com Pix</p>
+                                    <p class="p2">Use o QR Code ou copie o código gerado</p>
+                                </div>
+                            </label>
+                            <input id="pag1" class="fantasma" onchange="pagCheckout()" type="radio" name="pagamento" value="0" checked/>        
+
+                            <label for="pag2">
+                                <div id="boxpag2" class="pagto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path fill="#cacaca" d="M880 316v520q0 24-18 42t-42 18H140q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42ZM140 425h680V316H140v109Zm0 129v282h680V554H140Zm0 282V316v520Z"/></svg>
+                                    <p class="p1">Pagar com crédito</p>
+                                    <p class="p2">Use o cartão de crédito para pagamento</p>
+                                </div>
+                            </label>
+                            <input id="pag2" class="fantasma" onchange="pagCheckout()" type="radio" name="pagamento" value="1"/>        
+
+                            <label for="pag3">
+                                <div id="boxpag3" class="pagto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path fill="#cacaca" d="M880 316v520q0 24-18 42t-42 18H140q-24 0-42-18t-18-42V316q0-24 18-42t42-18h680q24 0 42 18t18 42ZM140 425h680V316H140v109Zm0 129v282h680V554H140Zm0 282V316v520Z"/></svg>
+                                    <p class="p1">Pagar com débito</p>
+                                    <p class="p2">Use o cartão de débito para pagamento</p>
+                                </div>
+                            </label>
+                            <input id="pag3" class="fantasma" onchange="pagCheckout()" type="radio" name="pagamento" value="2"/>        
+                        </fieldset>
+                    </form>
+                    <input type="submit" class="botao" value="Fazer pedido"/>
                 </div>
             </div>
             <div class="direita">
