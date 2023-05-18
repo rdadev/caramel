@@ -103,20 +103,20 @@ function removeBlur() {
 };
 
 // Adicionar quantidade de produto no carrinho
-function adQuantProduto() {
-    var atual = document.querySelector("#qtdeprod").value;
+function adQuantProduto(cod) {
+    var atual = document.querySelector(cod).value;
     var soma = parseInt(atual) + 1;
-    document.querySelector("#qtdeprod").value = soma;
+    document.querySelector(cod).value = soma;
 };
 
 // Remove quantidade de produto no carrinho
-function rmQuantProduto() {
-    var atual = document.querySelector("#qtdeprod").value;
+function rmQuantProduto(cod) {
+    var atual = document.querySelector(cod).value;
     if (atual == 1) {
 
     }
     else {
         var soma = parseInt(atual) - 1;
-        document.querySelector("#qtdeprod").value = soma;
+        document.querySelector(cod).value = soma;
     }
 };
