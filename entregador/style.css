@@ -78,8 +78,6 @@ body {
     padding: 20px;
     margin: 10px auto;
     border-radius: 7px;
-    font-size: 12pt;
-    font-weight: 400;
     display: block;
 }
 
@@ -288,24 +286,31 @@ body {
     }
 
     .containerzinho {
-        width: 100%;
+        width: 70%;
         height: auto;
-        margin: 0;
-        border-radius: 0;
+        border: 1px solid #cacaca;
         box-shadow: none;
+        margin: 5vh auto;
     }
 
     .formulario {
-        width: 75%;
+        width: 100%;
         margin: 30px auto;
     }
 }
 
 @media screen and (max-width: 750px) {  
+    .containerzinho {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+
     .containerzinho p {
         width: 90%;
     }
-    
+
     .formulario {
         width: 100%;
         margin: 30px 0;

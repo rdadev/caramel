@@ -741,7 +741,7 @@ footer .container {
     -webkit-user-select:none;  
     -moz-user-select:none;     
     -ms-user-select:none;      
-    user-select:none;  
+    user-select:none;
 }
 
 .mdproduto .conteudo .esquerda, .mdproduto .conteudo .direita {
@@ -845,6 +845,55 @@ footer .container {
     width: 550px;
 }
 
+.lblocal {
+    font-weight: 600;
+    color: var(--texto-principal);
+    padding-top: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#mdendereco {
+    width: 800px;
+}
+
+.endsm {
+    height: auto;
+    overflow: hidden;
+    float: left; 
+    width: 32%;
+}
+
+.endcm {
+    height: auto;
+    overflow: hidden;
+    float: left; 
+    width: 32%;
+    margin: 0 2%;
+}
+
+.endrcm {
+    height: auto;
+    overflow: hidden;
+    float: left; 
+    width: 50%; 
+    margin-right: 2%;
+}
+
+.endrsm {
+    height: auto;
+    overflow: hidden;
+    float: left; 
+    width: 48%; 
+}
+
+.cep {
+    width: 150px; 
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 1050px) {
     .promocional .container {
         width: 1050px;
@@ -884,10 +933,15 @@ footer .container {
         scrollbar-width: 0;
         animation: modalmob 0.3s;
         will-change: bottom;
+        border:none;
     }
 
     .mdproduto::-webkit-scrollbar {
         display: none;
+    }
+
+    #mdendereco {
+        width: auto;
     }
 }
 
@@ -1051,6 +1105,13 @@ footer .container {
         width: 95px;
     }
     
+    .cep, .endsm, .endcm, .endrsm, .endrcm {
+        width: 100%;
+    }
+
+    .endcm {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 400px) {

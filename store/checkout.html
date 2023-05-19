@@ -29,10 +29,31 @@
                             <h3>Endereço da entrega</h3>
                                 <img src="../images/endereco.png" alt="Mapa"/>
                                 <span class="local">
-                                    <h4>Avenida Uniopet, 99</h4>
-                                    <h5>Bloco A - Curitiba/PR</h5>
+                                    <h4 id="place">Avenida Uniopet, 99</h4>
+                                    <h5 id="complement">Bloco A - Curitiba/PR</h5>
                                 </span>
-                                <button type="button" class="acao">Mudar</button>
+                                <button type="button" class="acao" onclick="abrirModal('#mdendereco')">Mudar</button>
+                                <dialog id="mdendereco" onkeydown="removeBlur()">
+                                    <div class="cabeca">
+                                        <h1>Entrega</h1>
+                                        <button class="mdfechar" type="button" onclick="fecharModal('#mdendereco');"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+                                    </div>
+                                    <div class="conteudo">
+                                        <label class="lblocal" for="cep">CEP</label>
+                                        <input class="txti cep" id="cep" type="text" value="80230-030" name="cep"/>
+                                        <div class="endsm"><label class="lblocal" for="cidade">Cidade</label>
+                                        <input class="txti" id="cidade" type="text" value="Curitiba" name="cidade"/></div>
+                                        <div class="endcm"><label class="lblocal" for="estado">Estado</label>
+                                        <input class="txti" id="estado" type="text" value="PR" name="estado"/></div>
+                                        <div class="endsm"><label class="lblocal" for="bairro">Bairro</label>
+                                        <input class="txti" id="bairro" type="text" value="Rebouças" name="bairro"/></div>
+                                        <div class="endrcm"><label class="lblocal" for="logradouro">Logradouro</label>
+                                        <input class="txti" id="logradouro" type="text" value="Avenida Uniopet, 99" name="logradouro"/></div>
+                                        <div class="endrsm"><label class="lblocal" for="complemento">Complemento</label>
+                                        <input class="txti" id="complemento" type="text" value="Bloco A" name="complemento" value=""/></div>
+                                        <button class="bta" type="button" onclick="fecharModal('#mdendereco'); exibeEndereco();" style="display: inline;">Alterar</button>
+                                    </div>
+                                </dialog>
                         </fieldset>
                         <fieldset class="logistica">
                             <h3>Entrega</h3>
@@ -93,7 +114,7 @@
                         </fieldset>
                         <fieldset class="observacao">
                             <h3>Observações</h3>
-                            <input class="txti" type="text" placeholder="Ex.: Colocar os petiscos separados da ração"/>
+                            <input class="txti" type="text" placeholder="Ex.: Colocar os petiscos separados da ração" name="observacao" value=""/>
                         </fieldset>
                         <input type="submit" class="bta" value="Fazer pedido"/>
                     </form>
@@ -107,7 +128,8 @@
                             <h3>Petshop Mundopet</h3>
                             <a href="exemplo1.html">Ver opções</a>
                         </div>
-                        <div class="item">
+                    <ul class="items">
+                        <li class="item">
                             <div class="cproduto">           
                                 <p>2x Ração Special Dog Gold Adultos Sabor Carne (Granel)</p>
                                 <h3>R$ 31,80</h3>
@@ -141,8 +163,8 @@
                                 </div>
                             </dialog>
                             <button type="button" class="acoes">Remover</button>
-                        </div>
-                        <div class="item">
+                        </li>
+                        <li class="item">
                             <div class="cproduto">           
                                 <p>1x Coleira Super Reforçada Vermelha Para Cães Adultos</p>
                                 <h3>R$ 11,50</h3>
@@ -176,7 +198,8 @@
                                 </div>
                             </dialog>
                             <button type="button" class="acoes">Remover</button>
-                        </div>
+                        </li>
+                    </ul>
                         <div class="item subtotais" style="border-bottom: none">
                             <span><p style="float: left">Subtotal</p><p style="float: right">R$ 43,30</p></span>
                             <span><p style="float: left">Taxa de entrega</p><p style="float: right">R$ 5,90</p></span>

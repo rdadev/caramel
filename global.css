@@ -10,9 +10,10 @@
     --inicio: #f3f3f3;
     --bordas: #dddddd;
     --texto-principal: #000000;
-    --texto-secundario: #525252;
+    --texto-secundario: #4b4b4b;
     --texto-tertiario: #8b8b8b;
     --texto-cabecalho: #111111;
+    --texto-placeholder: #6e6e6e;
     --texto-rodape: #313131;
 }
 
@@ -62,7 +63,15 @@ html, input, select, button, fieldset, form {
 }
 
 input, select {
+    color: var(--texto-secundario);
     letter-spacing: -0.2px;
+    font-size: 12.3pt;
+    font-weight: 600;
+}
+
+input::placeholder {
+    color: var(--texto-placeholder);
+    font-weight: 400;
 }
 
 input:disabled {
@@ -79,7 +88,11 @@ html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    font-weight: 800;
+}
+
+h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
@@ -353,6 +366,11 @@ header {
     height: 55px;
     border-radius: 7px;
     font-size: 12pt;
+    color: var(--texto-principal);
+}
+
+.ginput::placeholder {
+    color: #727272;
 }
 
 .gbotao {
@@ -624,7 +642,7 @@ footer .container {
 }
 
 dialog {
-	border: none;
+	border: 1px solid #c7c7c7;
 	margin: auto;
     padding: 25px;
     background-color: #FFF;
@@ -671,9 +689,8 @@ dialog::-webkit-scrollbar {
     padding: 20px;
     margin: 10px auto;
     border-radius: 7px;
-    font-size: 12pt;
-    font-weight: 400;
     display: block;
+    color: var(--texto-secundario);
 }
 
 .bta {
@@ -826,6 +843,7 @@ dialog::-webkit-scrollbar {
         animation: modalmob 0.3s;
         will-change: bottom;
         max-width: none;
+        border: none;
     }
 }
 

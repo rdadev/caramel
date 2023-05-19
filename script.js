@@ -129,7 +129,7 @@ function rmQuantProduto(cod) {
 
 // Abre pesquisa no mobile
 function abrirPesquisa() {
-    var largura = window.screen.width;
+    var largura = window.innerWidth;
     if (largura < 1050) {
         $(".logotipo").toggleClass("fantasma");
         $(".buttons").toggleClass("fantasma");
@@ -138,3 +138,21 @@ function abrirPesquisa() {
         inp.focus();
     };
 };
+
+// Exibir endereço alterado no checkout
+function exibeEndereco() {
+    const inpendereco = document.querySelector('#logradouro');
+    const inpcomplemento = document.querySelector('#complemento');
+    const inpcidade = document.querySelector('#cidade');
+    const inpestado = document.querySelector('#estado');
+
+    let endereco = inpendereco.value;
+    let complemento = inpcomplemento.value;
+    let cidade = inpcidade.value;
+    let estado = inpestado.value;
+
+    const titulo1 = document.querySelector('#place');
+    const titulo2 = document.querySelector('#complement');
+    titulo1.textContent = endereco;
+    titulo2.textContent = complemento+' - '+cidade+'/'+estado;
+}
