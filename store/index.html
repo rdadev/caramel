@@ -27,7 +27,7 @@
                 </ul>
             </nav>
             <form class="buscar" method="" action="busca.html">
-                <input type="text" placeholder="Digite e tecle enter para buscar"/>
+                <input id="buscagem" type="text" placeholder="Digite e tecle enter para buscar" onfocusout="abrirPesquisa()"/>
             </form>
             <ul class="buttons">
                 <li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" ><path d="M179.761 941.978q-27.698 0-48.034-20.265-20.336-20.266-20.336-47.865V278.152q0-27.697 20.336-48.033 20.336-20.337 48.034-20.337h292.674v68.37H179.761v595.696h292.674v68.13H179.761Zm486.478-182.369-48.978-48.5 101.043-101.044H371.891v-68.13h344.413L615.261 440.891l48.978-48.5L848.609 577l-182.37 182.609Z"/></svg></a></li>
@@ -132,7 +132,7 @@
                                     <input id="qtprod1" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod1')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod1');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod1');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                                     <input id="qtprod2" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod2')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod2');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod2');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                                     <input id="qtprod3" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod3')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod3');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod3');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                                     <input id="qtprod4" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod4')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod4');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod4');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -292,7 +292,7 @@
                                     <input id="qtprod5" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod5')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod5');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod5');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
                                     <input id="qtprod6" type="text" value="1" disabled/>
                                     <button type="button" onclick="adQuantProduto('#qtprod6')">+</button>
                                 </div>
-                                <button type="button" class="botao" onclick="fecharModal('#prod6');abrirCarrinho();">Adicionar</button>
+                                <button type="button" class="bta" onclick="fecharModal('#prod6');abrirCarrinho();">Adicionar</button>
                             </div>
                         </div>
                     </div>
@@ -449,7 +449,7 @@
         </div>
         <div id="total" class="totais">
             <span><h3 style="float: left">Total</h3><h3 style="float: right">R$ 50,19</h3></span>
-            <a href="checkout.html" class="botao">Finalizar pedido</a>
+            <a href="checkout.html" class="bta">Finalizar pedido</a>
         </div>
     </section>
     <footer>

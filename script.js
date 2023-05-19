@@ -91,15 +91,21 @@ function abrirModal(elemento) {
 // Fecha o modal
 function fecharModal(elemento) {
     const modal = document.querySelector(elemento);
-    removeBlur();
+    $("header").removeClass("blur");
+    $("section").removeClass("blur");
+    $("footer").removeClass("blur");
     modal.close();
 };
 
 // Remover blur do fundo
 function removeBlur() {
-    $("header").removeClass("blur");
-    $("section").removeClass("blur");
-    $("footer").removeClass("blur");
+    document.onkeydown = function(e) {
+        if(e.key === 'Escape') {
+            $("header").removeClass("blur");
+            $("section").removeClass("blur");
+            $("footer").removeClass("blur");
+        };
+    };
 };
 
 // Adicionar quantidade de produto no carrinho
@@ -123,5 +129,12 @@ function rmQuantProduto(cod) {
 
 // Abre pesquisa no mobile
 function abrirPesquisa() {
-    
+    var largura = window.screen.width;
+    if (largura < 1050) {
+        $(".logotipo").toggleClass("fantasma");
+        $(".buttons").toggleClass("fantasma");
+        $(".buscar").toggleClass("buscamob");
+        const inp = document.querySelector("#buscagem");
+        inp.focus();
+    };
 };
