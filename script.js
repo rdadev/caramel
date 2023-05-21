@@ -183,3 +183,9 @@ function exibeEndereco() {
     titulo1.textContent = endereco;
     titulo2.textContent = complemento+" - "+cidade+"/"+estado;
 };
+
+// Passar termo de pesquisa para a página de pesquisa
+function passaPesquisa() {
+    const busca = document.querySelector("#buscagem");
+    sessionStorage.setItem('termoBusca', busca.value);
+};

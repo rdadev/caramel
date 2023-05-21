@@ -26,7 +26,7 @@
                     <li><a href="index.html">Outros</a></li>
                 </ul>
             </nav>
-            <form class="buscar" method="" action="busca.html">
+            <form class="buscar" method="" action="busca.html" onsubmit="passaPesquisa()">
                 <input id="buscagem" type="text" placeholder="Digite e tecle enter para buscar" onfocusout="abrirPesquisa()"/>
             </form>
             <ul class="buttons">
@@ -39,7 +39,7 @@
     </header>
     <section class="secfinal">
         <div class="container">
-            <h1>Resultado da busca "ração"</h1>
+            <h1>Resultado da busca "<span id="termo"></span>"</h1>
             <div class="produtos">
 
                 <!-- PRODUTO 001 -->
@@ -189,7 +189,7 @@
             <h4>Seu pedido em</h4>
             <div class="titulo">
                 <h3>Petshop Mundopet</h3>
-                <a href="exemplo1.html">Ver opções</a>
+                <a href="petshop.html">Ver opções</a>
             </div>
             <ul>
                 <li class="item">
@@ -288,5 +288,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        window.onload = function retomaPesquisa() {
+            var termo = document.querySelector("#termo");
+            termo.textContent = sessionStorage.getItem('termoBusca');
+        };
+    </script>
 </body>
 </html>
