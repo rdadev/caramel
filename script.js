@@ -2,9 +2,36 @@
 $(document).on("scroll",function(){
     if($(document).scrollTop()>30){
         $("#cabecalho").removeClass("encaixado").addClass("sombreado"); 
-    } else{
+    } else {
         $("#cabecalho").removeClass("sombreado").addClass("encaixado");
-    }
+    };
+});
+
+// Navegação dos formulários de cadastro (troca de fieldset)
+$(function() {
+    var atual, anterior, proximo;
+
+    $(".prox").click(function() {
+        $(".carregamento").css("animation", "none");
+        setTimeout(function() { 
+            $(".carregamento").css("animation", "carregar 0.7s"); 
+        }, 10);
+        atual = $(this).parent();
+        proximo = $(this).parent().next();
+        atual.hide();
+        proximo.show();
+    });
+
+    $(".prev").click(function() {
+        $(".carregamento").css("animation", "none");
+        setTimeout(function() { 
+            $(".carregamento").css("animation", "carregar 0.7s"); 
+        }, 10);
+        atual = $(this).parent();
+        anterior = $(this).parent().prev();
+        atual.hide();
+        anterior.show();
+    });
 });
 
 // Abrir menu para dispositivos móveis
@@ -100,7 +127,7 @@ function fecharModal(elemento) {
 // Remover blur do fundo
 function removeBlur() {
     document.onkeydown = function(e) {
-        if(e.key === 'Escape') {
+        if(e.key === "Escape") {
             $("header").removeClass("blur");
             $("section").removeClass("blur");
             $("footer").removeClass("blur");
@@ -141,18 +168,18 @@ function abrirPesquisa() {
 
 // Exibir endereço alterado no checkout
 function exibeEndereco() {
-    const inpendereco = document.querySelector('#logradouro');
-    const inpcomplemento = document.querySelector('#complemento');
-    const inpcidade = document.querySelector('#cidade');
-    const inpestado = document.querySelector('#estado');
+    const inpendereco = document.querySelector("#logradouro");
+    const inpcomplemento = document.querySelector("#complemento");
+    const inpcidade = document.querySelector("#cidade");
+    const inpestado = document.querySelector("#estado");
 
     let endereco = inpendereco.value;
     let complemento = inpcomplemento.value;
     let cidade = inpcidade.value;
     let estado = inpestado.value;
 
-    const titulo1 = document.querySelector('#place');
-    const titulo2 = document.querySelector('#complement');
+    const titulo1 = document.querySelector("#place");
+    const titulo2 = document.querySelector("#complement");
     titulo1.textContent = endereco;
-    titulo2.textContent = complemento+' - '+cidade+'/'+estado;
-}
+    titulo2.textContent = complemento+" - "+cidade+"/"+estado;
+};

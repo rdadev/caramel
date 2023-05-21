@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /* TABELA DE PARÂMETROS DECLARADA GLOBAL */
 :root {
@@ -22,7 +21,8 @@
     padding: 0;
     box-sizing: border-box;
     backface-visibility: hidden;
-    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
 }
 
 @keyframes carregar {
@@ -57,7 +57,7 @@
 }
 
 html, input, select, button, fieldset, form {
-    font-family: 'Kulim Park', Arial, Helvetica, Tahoma, Ubuntu, sans-serif;
+    font-family: 'Kulim Park', system-ui, -apple-system, BlinkMacSystemFont, Arial, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica', sans-serif;
     border: none;
     background: none;
 }

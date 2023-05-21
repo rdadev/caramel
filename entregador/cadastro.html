@@ -7,6 +7,8 @@
     <link rel="icon" type="image/icon" href="../images/icon.ico"/>
     <link rel="stylesheet" type="text/css" href="../global.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    <script type="text/javascript" src="../script.js" defer></script>
     <title>Caramel</title>
 </head>
 <body>
@@ -17,13 +19,29 @@
                 <div class="logotipo logo"><a href="../index.html">Caramel</a></div>
                 <h1>Seja um entregador</h1>
                 <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
-                <form class="formulario" action="cadastro2.html">
-                    <input class="entradas" type="text" placeholder="Nome completo" />
-                    <input class="entradas" type="text" maxlength="11" placeholder="CPF (somente números)" />
-                    <input class="entradas" type="email" placeholder="Seu melhor email" />
-                    <input class="entradas" type="password" minlength="8" placeholder="Crie uma senha" />
-                    <input class="botao" type="submit" value="Continuar"/>
-                    <span class="acao">Já é entregador parceiro? <a class="linkacao" href="login.html">Fazer login</a></span>
+                <form class="formulario" action="">
+                    <fieldset>
+                        <input class="entradas" type="text" placeholder="Nome completo" />
+                        <input class="entradas" type="text" maxlength="11" placeholder="CPF (somente números)" />
+                        <input class="entradas" type="email" placeholder="Seu melhor email" />
+                        <input class="entradas" type="password" minlength="8" placeholder="Crie uma senha" />
+                        <button class="prox botao" type="button">Próximo</button>
+                        <span class="acao">Já é entregador parceiro? <a class="linkacao" href="login.html">Fazer login</a></span>    
+                    </fieldset>
+                    <fieldset>
+                        <select class="entradas veiculos">
+                            <option value="" selected>Veículo</option>
+                            <option value="1">Moto</option>
+                            <option value="3">Carro</option>
+                            <option value="2">Bicicleta</option>
+                        </select>
+                        <input class="entradas" type="text" placeholder="Placa" />
+                        <input class="entradas" type="text" maxlength="11" placeholder="CNH (somente números)" />
+                        <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Primeira habilitação" />
+                        <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Vencimento" />
+                        <span class="termos"><p>Ao clicar em confirmar você concorda com a <a href="../privacidade/index.html" target="_blank">política de privacidade</a> e os <a href="../termos/index.html" target="_blank">termos</a> da plataforma</p></span>
+                        <input class="botao" type="submit" value="Confirmar"/>
+                    </fieldset>
                 </form>
             </div>
         </div>

@@ -70,6 +70,10 @@ body {
     padding: 20px 0 30px 0;
 }
 
+.formulario fieldset:not(:first-of-type) {
+    display: none;
+}
+
 .entradas {
     border: 1px solid #d4d4d4;
     background-color: #FFF;
@@ -277,6 +281,10 @@ body {
 
 .veiculos {
     padding: 0 15px;
+}
+
+.forgot {
+    margin: 15vh 55%;
 }
 
 @media screen and (max-width: 950px) { 
