@@ -33,105 +33,107 @@
             </nav>
         </div>
     </header>
-    <section class="inicio">
-        <div class="container">
-            <div class="pesquisa">
-                <h1>PETiu, chegou!</h1>
-                <p>Aqui tem tudo para o seu pet com descontos exclusivos</p>
-                <form class="busca" method="" action="store/busca.html" onsubmit="passaPesquisa()">
-                    <input id="buscagem" class="ginput" type="text" placeholder="Digite aqui o que você precisa" required/>
-                    <input class="gbotao" type="submit" value="Buscar"/>
-                </form>
-            </div>
-            <div class="cards">
-                <div class="destaques">
-                    <a href="store/index.html">
-                        <div class="destaquezinho des1">
-                            <h2>Produtos</h2>
-                            <p>Encontrar opções</p>
-                        </div>
-                    </a>
+    <main>
+        <section class="inicio">
+            <div class="container">
+                <div class="pesquisa">
+                    <h1>PETiu, chegou!</h1>
+                    <p>Aqui tem tudo para o seu pet com descontos exclusivos</p>
+                    <form class="busca" method="" action="store/busca.html" onsubmit="passaPesquisa()" autocomplete="off">
+                        <input id="buscagem" class="ginput" type="text" placeholder="Digite aqui o que você precisa" required/>
+                        <input class="gbotao" type="submit" value="Buscar"/>
+                    </form>
                 </div>
-                <div class="destaques">
-                    <a href="store/lojas.html">
-                        <div class="destaquezinho des2">
-                            <h2>Lojas</h2>
-                            <p>Buscar lojas</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="destaques dst">
-                    <a href="store/index.html">
-                        <div class="destaquezinho des3">
-                            <h2>Promoções</h2>
-                            <p>Ver promoções</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="lojas">
-        <div class="container">
-            <h2>As melhores lojas</h2>
-            <br/><br/><br/>
-            <div class="lojinhas">
-                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
-                <div class="descricao">
-                    <h4>Aviário Cãopeão</h4>
-                    <p>Hauer</p>
+                <div class="cards">
+                    <div class="destaques">
+                        <a href="store/index.html">
+                            <div class="destaquezinho des1">
+                                <h2>Produtos</h2>
+                                <p>Encontrar opções</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="destaques">
+                        <a href="store/lojas.html">
+                            <div class="destaquezinho des2">
+                                <h2>Lojas</h2>
+                                <p>Buscar lojas</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="destaques dst">
+                        <a href="store/index.html">
+                            <div class="destaquezinho des3">
+                                <h2>Promoções</h2>
+                                <p>Ver promoções</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="lojinhas">
-                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
-                <div class="descricao">
-                    <h4>Amicão Petshop</h4>
-                    <p>Água Verde</p>
+        </section>
+        <section class="lojas">
+            <div class="container">
+                <h2>As melhores lojas</h2>
+                <br/><br/><br/>
+                <div class="lojinhas">
+                    <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                    <div class="descricao">
+                        <h4>Aviário Cãopeão</h4>
+                        <p>Hauer</p>
+                    </div>
+                </div>
+                <div class="lojinhas">
+                    <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                    <div class="descricao">
+                        <h4>Amicão Petshop</h4>
+                        <p>Água Verde</p>
+                    </div>
+                </div>
+                <div class="lojinhas">
+                    <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                    <div class="descricao">
+                        <h4>Happy Dog</h4>
+                        <p>Centro</p>
+                    </div>
+                </div>
+                <div class="lojinhas">
+                    <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                    <div class="descricao">
+                        <h4>Mundo Pet</h4>
+                        <p>Rebouças</p>
+                    </div>
+                </div>
+                <div class="lojinhas">
+                    <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
+                    <div class="descricao">
+                        <h4>Paraíso Pet</h4>
+                        <p>Batel</p>
+                    </div>
                 </div>
             </div>
-            <div class="lojinhas">
-                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
-                <div class="descricao">
-                    <h4>Happy Dog</h4>
-                    <p>Centro</p>
+        </section>
+        <section class="cadastros">
+            <div class="container">
+                <div class="miolo mprimario">
+                    <div class="miolinho esquerda"><img src="images/entregador.png" alt="Entregador"/></div>
+                    <div class="miolinho direita">
+                        <h2>Fazer entrega de pedidos no Caramel</h2>
+                        <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
+                        <a href="entregador/cadastro.html">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="miolo msecundario">
+                    <div class="miolinho esquerda"><img src="images/loja.png" alt="Loja"/></div>
+                    <div class="miolinho direita">
+                        <h2>Seja uma loja parceira para vender online</h2>
+                        <p>Sua força de vendas online para produtos de petshop e derivados, começe agora mesmo</p>
+                        <a href="parceiro/cadastro.html">Saiba mais</a>
+                    </div>
                 </div>
             </div>
-            <div class="lojinhas">
-                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
-                <div class="descricao">
-                    <h4>Mundo Pet</h4>
-                    <p>Rebouças</p>
-                </div>
-            </div>
-            <div class="lojinhas">
-                <img src="images/logotipo-petshop.jpg" alt="Loja tal"/>
-                <div class="descricao">
-                    <h4>Paraíso Pet</h4>
-                    <p>Batel</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="cadastros">
-        <div class="container">
-            <div class="miolo mprimario">
-                <div class="miolinho esquerda"><img src="images/entregador.png" alt="Entregador"/></div>
-                <div class="miolinho direita">
-                    <h2>Fazer entrega de pedidos no Caramel</h2>
-                    <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
-                    <a href="entregador/cadastro.html">Saiba mais</a>
-                </div>
-            </div>
-            <div class="miolo msecundario">
-                <div class="miolinho esquerda"><img src="images/loja.png" alt="Loja"/></div>
-                <div class="miolinho direita">
-                    <h2>Seja uma loja parceira para vender online</h2>
-                    <p>Sua força de vendas online para produtos de petshop e derivados, começe agora mesmo</p>
-                    <a href="parceiro/cadastro.html">Saiba mais</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <div class="copyright"><p>Copyright © 2023 Caramel</p></div>

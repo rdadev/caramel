@@ -90,10 +90,12 @@ html, body, a, p, h1, h2, h3, h4, h5, h6, ul, li {
 
 h1 {
     font-weight: 800;
+    letter-spacing: -0.25px;
 }
 
 h2, h3, h4, h5, h6 {
     font-weight: 600;
+    letter-spacing: -0.15px;
 }
 
 a, p {
@@ -732,7 +734,8 @@ dialog::-webkit-scrollbar {
 
 .btb:hover {
     border: 1px solid var(--hover);
-    color: var(--hover);
+    background-color: var(--hover);
+    color: #FFF;
 }
 
 .sm {

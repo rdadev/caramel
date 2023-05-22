@@ -26,7 +26,7 @@
                     <li><a href="../store/index.html">Outros</a></li>
                 </ul>
             </nav>
-            <form class="buscar" method="" action="../store/busca.html" onsubmit="passaPesquisa()">
+            <form class="buscar" method="" action="../store/busca.html" onsubmit="passaPesquisa()" autocomplete="off">
                 <input id="buscagem" type="text" placeholder="Digite e tecle enter para buscar" onfocusout="abrirPesquisa()"/>
             </form>
             <ul class="buttons">
@@ -38,173 +38,176 @@
         </div>
     </header>
 
-    <section>
-        <div class="container">
-            <h1>Meus dados</h1>
-            <p>Edite suas informações pessoais aqui</p>
-            <form class="cadastrin" method="" action="conta.html">
-                <fieldset class="esq">
-                    <label for="nome">Nome completo</label>
-                    <input class="txti" id="nome" type="text" placeholder="Caramelo do Brasil" value="Brasiliano Teste da Silva"/>
-                    <label for="email">Email</label>
-                    <input class="txti" id="nome" type="text" placeholder="email@email.com.br" value="teste@teste.com.br"/>
-                    <label for="email">Celular</label>
-                    <input class="txti" id="nome" type="text" placeholder="(00) 00000-0000" value="(41) 1020-3040"/>
-                    <label for="cpf">CPF</label>
-                    <input class="txti" id="cpf" type="text" placeholder="000.000.000-00" value="123.456.789-10" disabled/>                    
-                    <label>Credenciais</label>
-                    <button type="button" class="btb" onclick="abrirModal('#alterpass')">Clique para alterar sua senha</button>
-                </fieldset>
-                <fieldset class="dir">
-                    <label for="cep">CEP</label>
-                    <input class="txti" id="cep" type="text" value="80230-030"/>
-                    <label for="cidade">Cidade</label>
-                    <input class="txti" id="cidade" type="text" value="Curitiba"/>
-                    <label for="estado">Estado</label>
-                    <input class="txti" id="estado" type="text" value="PR"/>
-                    <label for="bairro">Bairro</label>
-                    <input class="txti" id="bairro" type="text" value="Rebouças"/>
-                    <label for="logradouro">Logradouro</label>
-                    <input class="txti" id="logradouro" type="text" value="Av. Presidente Getúlio Vargas, 892"/>
-                    <label for="complemento">Complemento</label>
-                    <input class="txti" id="complemento" type="text" value="Opet"/>
-                    <input class="bta btfit" type="submit" value="Salvar alterações"/>
-                    <a class="btb btfit" href="../store/index.html">Cancelar</a>
-                </fieldset>
-            </form>
-        </div>
-    </section>
-    <dialog id="alterpass" class="pass" onkeydown="removeBlur()">
-        <div class="cabeca">
-            <h1>Alteração de senha</h1>
-            <button class="mdfechar" type="button" onclick="fecharModal('#alterpass')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
-        </div>
-        <div class="conteudo">
-            <form class="alterpass" method="" action="conta.html">
-                <fieldset>
-                    <label for="antpass">Senha atual</label>
-                    <input class="txti" id="antpass" type="password" placeholder="********"/>
-                    <label for="newpass">Nova senha</label>
-                    <input class="txti" id="newpass" type="password" placeholder="********"/>
-                    <label for="cofpass">Confirmar</label>
-                    <input class="txti" id="cofpass" type="password" placeholder="********"/>
-                    <input class="bta" type="submit" value="Alterar" style="margin-top: 25px;"/>
-                </fieldset>
-            </form>
-        </div>
-    </dialog>
-    <section class="mobnavs">
-        <a href="../store/index.html"><div class="mobnav">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M222.152 873.848h143.783V621.935h228.13v251.913h143.783V486.957L480 293.63 222.152 487.036v386.812Zm-68.13 68.13V452.891L480 208.348l326.218 244.543v489.087H528.565V687.435h-97.13v254.543H154.022ZM480 583.239Z"/></svg>
-            <p>Home</p>
-        </div></a>
-        <button class="bt" type="button" onclick="abrirPesquisa()"><div class="mobnav">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M795.761 941.696 531.326 677.5q-29.761 25.264-69.6 39.415-39.84 14.15-85.161 14.15-109.835 0-185.95-76.195Q114.5 578.674 114.5 471t76.196-183.87q76.195-76.195 184.369-76.195t183.87 76.195q75.695 76.196 75.695 184.02 0 43.328-13.641 82.97-13.641 39.641-40.924 74.402L845.5 891.957l-49.739 49.739ZM375.65 662.935q79.73 0 135.29-56.245Q566.5 550.446 566.5 471t-55.595-135.69q-55.595-56.245-135.255-56.245-80.494 0-136.757 56.245Q182.63 391.554 182.63 471t56.228 135.69q56.227 56.245 136.792 56.245Z"/></svg>
-            <p>Pesquisa</p>
-        </div></button>
-        <a href="../store/pedidos.html"><div class="mobnav">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M222.957 987q-47.377 0-80.374-32.996-32.996-32.997-32.996-80.486V742.652h129.869V171.935l61.235 60.956 60.996-60.956 60.756 60.956 61.235-60.956 60.757 60.956 61.195-60.956 60.957 60.956 61.196-60.956 60.956 60.956 61.674-60.956V873.63q0 47.377-33.066 80.374Q784.281 987 737.043 987H222.957Zm514.206-68.37q19.88 0 32.38-12.513 12.5-12.514 12.5-32.534V281.022H307.587v461.63h384.456V873.63q0 20 12.62 32.5t32.5 12.5ZM360.587 440.457v-60h235.456v60H360.587Zm0 134v-60h235.456v60H360.587Zm328.456-134q-12 0-21-9t-9-21q0-12 9-21t21-9q12 0 21 9t9 21q0 12-9 21t-21 9Zm0 129q-12 0-21-9t-9-21q0-12 9-21t21-9q12 0 21 9t9 21q0 12-9 21t-21 9ZM221.957 918.63h401.956V811.022H177.957v62.608q0 20 12.65 32.5t31.35 12.5Zm-44 0V811.022 918.63Z"/></svg>
-            <p>Pedidos</p>
-        </div></a>
-        <a href="conta.html"><div class="mobnav">
-            <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 96 960 960"><path d="M222.957 798.37q62.76-43.522 124.521-66.783 61.761-23.261 132.626-23.261 70.865 0 133.242 23.445 62.376 23.444 124.697 66.599 43.522-54.24 61.663-108.153Q817.848 636.303 817.848 576q0-143.863-96.98-240.856-96.98-96.992-240.826-96.992t-240.868 96.992Q142.152 432.137 142.152 576q0 60.283 18.528 114.139 18.529 53.856 62.277 108.231Zm256.857-190.696q-58.569 0-98.409-40.045-39.84-40.044-39.84-98.456 0-58.412 40.026-98.39 40.026-39.979 98.595-39.979 58.569 0 98.409 40.165 39.84 40.164 39.84 98.576 0 58.412-40.026 98.27-40.026 39.859-98.595 39.859Zm.514 374.304q-83.524 0-157.573-31.928t-129.46-87.333q-55.41-55.406-87.342-129.234-31.931-73.828-31.931-157.769 0-83.671 31.978-157.366 31.978-73.696 87.315-129.033 55.337-55.337 129.177-87.435 73.839-32.098 157.794-32.098 83.671 0 157.366 32.098 73.696 32.098 129.033 87.435 55.337 55.337 87.435 129.085 32.098 73.747 32.098 157.272 0 83.524-32.098 157.6t-87.435 129.413Q711.348 918.022 637.6 950q-73.747 31.978-157.272 31.978Zm-.328-68.13q54.283 0 105.587-15.522t102.304-54.804q-51.239-35.761-102.804-54.163Q533.522 770.957 480 770.957q-53.522 0-104.967 18.402-51.446 18.402-102.685 54.163 51 39.282 102.185 54.804Q425.717 913.848 480 913.848Zm0-369.044q33.251 0 54.408-21.021 21.157-21.022 21.157-54.424t-21.157-54.544Q513.251 393.674 480 393.674q-33.251 0-54.408 21.141-21.157 21.142-21.157 54.544t21.157 54.424q21.157 21.021 54.408 21.021Zm0-75.565Zm.239 373.283Z"/></svg>
-            <p>Conta</p>
-        </div></a>
-    </section>
-
-    <section id="cart" class="carrinho">
-        <div class="fechar"><span>Meu carrinho</span><button type="button" onclick="abrirCarrinho()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
-        <div class="content">
-            <h4>Seu pedido em</h4>
-            <div class="titulo">
-                <h3>Petshop Mundopet</h3>
-                <a href="petshop.html">Ver opções</a>
+    <main>
+        <section>
+            <div class="container">
+                <h1>Meus dados</h1>
+                <p>Edite suas informações pessoais aqui</p>
+                <form class="cadastrin" method="" action="conta.html" autocomplete="off">
+                    <fieldset class="esq">
+                        <label for="nome">Nome completo</label>
+                        <input class="txti" id="nome" type="text" placeholder="Caramelo do Brasil" value="Brasiliano Teste da Silva"/>
+                        <label for="email">Email</label>
+                        <input class="txti" id="nome" type="text" placeholder="email@email.com.br" value="teste@teste.com.br"/>
+                        <label for="email">Celular</label>
+                        <input class="txti" id="nome" type="text" placeholder="(00) 00000-0000" value="(41) 1020-3040"/>
+                        <label for="cpf">CPF</label>
+                        <input class="txti" id="cpf" type="text" placeholder="000.000.000-00" value="123.456.789-10" disabled/>                    
+                        <label>Credenciais</label>
+                        <button type="button" class="btb" onclick="abrirModal('#alterpass')">Clique para alterar sua senha</button>
+                    </fieldset>
+                    <fieldset class="dir">
+                        <label for="cep">CEP</label>
+                        <input class="txti" id="cep" type="text" value="80230-030"/>
+                        <label for="cidade">Cidade</label>
+                        <input class="txti" id="cidade" type="text" value="Curitiba"/>
+                        <label for="estado">Estado</label>
+                        <input class="txti" id="estado" type="text" value="PR"/>
+                        <label for="bairro">Bairro</label>
+                        <input class="txti" id="bairro" type="text" value="Rebouças"/>
+                        <label for="logradouro">Logradouro</label>
+                        <input class="txti" id="logradouro" type="text" value="Av. Presidente Getúlio Vargas, 892"/>
+                        <label for="complemento">Complemento</label>
+                        <input class="txti" id="complemento" type="text" value="Opet"/>
+                        <input class="bta btfit" type="submit" value="Salvar alterações"/>
+                        <a class="btb btfit" href="../store/index.html">Cancelar</a>
+                    </fieldset>
+                </form>
             </div>
-            <ul>
-                <li class="item">
-                    <div class="cproduto">           
-                        <p>2x Ração Special Dog Gold Adultos Sabor Carne (Granel)</p>
-                        <h3>R$ 31,80</h3>
-                    </div>
-                    <button type="button" class="acoes" style="color: var(--principal)" onclick="abrirModal('#edit1')">Editar</button>
-                    <dialog id="edit1" class="mdproduto" onkeydown="removeBlur()">
-                        <div class="cabeca">
-                            <h1>Produto</h1>
-                            <button class="mdfechar" type="button" onclick="fecharModal('#edit1')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+        </section>
+        <dialog id="alterpass" class="pass" onkeydown="removeBlur()">
+            <div class="cabeca">
+                <h1>Alteração de senha</h1>
+                <button class="mdfechar" type="button" onclick="fecharModal('#alterpass')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+            </div>
+            <div class="conteudo">
+                <form class="alterpass" method="" action="conta.html" autocomplete="off">
+                    <fieldset>
+                        <label for="antpass">Senha atual</label>
+                        <input class="txti" id="antpass" type="password" placeholder="********"/>
+                        <label for="newpass">Nova senha</label>
+                        <input class="txti" id="newpass" type="password" placeholder="********"/>
+                        <label for="cofpass">Confirmar</label>
+                        <input class="txti" id="cofpass" type="password" placeholder="********"/>
+                        <input class="bta" type="submit" value="Alterar" style="margin-top: 25px;"/>
+                    </fieldset>
+                </form>
+            </div>
+        </dialog>
+        <section class="mobnavs">
+            <a href="../store/index.html"><div class="mobnav">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M222.152 873.848h143.783V621.935h228.13v251.913h143.783V486.957L480 293.63 222.152 487.036v386.812Zm-68.13 68.13V452.891L480 208.348l326.218 244.543v489.087H528.565V687.435h-97.13v254.543H154.022ZM480 583.239Z"/></svg>
+                <p>Home</p>
+            </div></a>
+            <button class="bt" type="button" onclick="abrirPesquisa()"><div class="mobnav">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M795.761 941.696 531.326 677.5q-29.761 25.264-69.6 39.415-39.84 14.15-85.161 14.15-109.835 0-185.95-76.195Q114.5 578.674 114.5 471t76.196-183.87q76.195-76.195 184.369-76.195t183.87 76.195q75.695 76.196 75.695 184.02 0 43.328-13.641 82.97-13.641 39.641-40.924 74.402L845.5 891.957l-49.739 49.739ZM375.65 662.935q79.73 0 135.29-56.245Q566.5 550.446 566.5 471t-55.595-135.69q-55.595-56.245-135.255-56.245-80.494 0-136.757 56.245Q182.63 391.554 182.63 471t56.228 135.69q56.227 56.245 136.792 56.245Z"/></svg>
+                <p>Pesquisa</p>
+            </div></button>
+            <a href="../store/pedidos.html"><div class="mobnav">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960"><path d="M222.957 987q-47.377 0-80.374-32.996-32.996-32.997-32.996-80.486V742.652h129.869V171.935l61.235 60.956 60.996-60.956 60.756 60.956 61.235-60.956 60.757 60.956 61.195-60.956 60.957 60.956 61.196-60.956 60.956 60.956 61.674-60.956V873.63q0 47.377-33.066 80.374Q784.281 987 737.043 987H222.957Zm514.206-68.37q19.88 0 32.38-12.513 12.5-12.514 12.5-32.534V281.022H307.587v461.63h384.456V873.63q0 20 12.62 32.5t32.5 12.5ZM360.587 440.457v-60h235.456v60H360.587Zm0 134v-60h235.456v60H360.587Zm328.456-134q-12 0-21-9t-9-21q0-12 9-21t21-9q12 0 21 9t9 21q0 12-9 21t-21 9Zm0 129q-12 0-21-9t-9-21q0-12 9-21t21-9q12 0 21 9t9 21q0 12-9 21t-21 9ZM221.957 918.63h401.956V811.022H177.957v62.608q0 20 12.65 32.5t31.35 12.5Zm-44 0V811.022 918.63Z"/></svg>
+                <p>Pedidos</p>
+            </div></a>
+            <a href="conta.html"><div class="mobnav">
+                <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 96 960 960"><path d="M222.957 798.37q62.76-43.522 124.521-66.783 61.761-23.261 132.626-23.261 70.865 0 133.242 23.445 62.376 23.444 124.697 66.599 43.522-54.24 61.663-108.153Q817.848 636.303 817.848 576q0-143.863-96.98-240.856-96.98-96.992-240.826-96.992t-240.868 96.992Q142.152 432.137 142.152 576q0 60.283 18.528 114.139 18.529 53.856 62.277 108.231Zm256.857-190.696q-58.569 0-98.409-40.045-39.84-40.044-39.84-98.456 0-58.412 40.026-98.39 40.026-39.979 98.595-39.979 58.569 0 98.409 40.165 39.84 40.164 39.84 98.576 0 58.412-40.026 98.27-40.026 39.859-98.595 39.859Zm.514 374.304q-83.524 0-157.573-31.928t-129.46-87.333q-55.41-55.406-87.342-129.234-31.931-73.828-31.931-157.769 0-83.671 31.978-157.366 31.978-73.696 87.315-129.033 55.337-55.337 129.177-87.435 73.839-32.098 157.794-32.098 83.671 0 157.366 32.098 73.696 32.098 129.033 87.435 55.337 55.337 87.435 129.085 32.098 73.747 32.098 157.272 0 83.524-32.098 157.6t-87.435 129.413Q711.348 918.022 637.6 950q-73.747 31.978-157.272 31.978Zm-.328-68.13q54.283 0 105.587-15.522t102.304-54.804q-51.239-35.761-102.804-54.163Q533.522 770.957 480 770.957q-53.522 0-104.967 18.402-51.446 18.402-102.685 54.163 51 39.282 102.185 54.804Q425.717 913.848 480 913.848Zm0-369.044q33.251 0 54.408-21.021 21.157-21.022 21.157-54.424t-21.157-54.544Q513.251 393.674 480 393.674q-33.251 0-54.408 21.141-21.157 21.142-21.157 54.544t21.157 54.424q21.157 21.021 54.408 21.021Zm0-75.565Zm.239 373.283Z"/></svg>
+                <p>Conta</p>
+            </div></a>
+        </section>
+    
+        <section id="cart" class="carrinho">
+            <div class="fechar"><span>Meu carrinho</span><button type="button" onclick="abrirCarrinho()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
+            <div class="content">
+                <h4>Seu pedido em</h4>
+                <div class="titulo">
+                    <h3>Petshop Mundopet</h3>
+                    <a href="petshop.html">Ver opções</a>
+                </div>
+                <ul>
+                    <li class="item">
+                        <div class="cproduto">           
+                            <p>2x Ração Special Dog Gold Adultos Sabor Carne (Granel)</p>
+                            <h3>R$ 31,80</h3>
                         </div>
-                        <div class="conteudo">
-                            <div class="esquerda">
-                                <img src="../images/produto2.png" alt="Produto"/>
+                        <button type="button" class="acoes" style="color: var(--principal)" onclick="abrirModal('#edit1')">Editar</button>
+                        <dialog id="edit1" class="mdproduto" onkeydown="removeBlur()">
+                            <div class="cabeca">
+                                <h1>Produto</h1>
+                                <button class="mdfechar" type="button" onclick="fecharModal('#edit1')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
                             </div>
-                            <div class="direita">
-                                <div class="mdsc">
-                                    <h4>Ração Special Dog Gold Adultos Sabor Carne (Granel)</h4>
-                                    <p class="descricao">A ração Special Dog está classificada na categoria Premium, que reúne as rações de qualidade intermediária.</p>
-                                    <p class="peso">Granel 1Kg</p>
-                                    <p class="local">Vendido por <b>Aviário Cãopeão</b></p>
-                                    <p class="preco">R$ 15,90</p>
+                            <div class="conteudo">
+                                <div class="esquerda">
+                                    <img src="../images/produto2.png" alt="Produto"/>
                                 </div>
-                                <div class="botoes">
-                                    <div class="quantidade">
-                                        <button type="button" onclick="rmQuantProduto('#qtedit1')">-</button>
-                                        <input id="qtedit1" type="text" value="2" disabled/>
-                                        <button type="button" onclick="adQuantProduto('#qtedit1')">+</button>
+                                <div class="direita">
+                                    <div class="mdsc">
+                                        <h4>Ração Special Dog Gold Adultos Sabor Carne (Granel)</h4>
+                                        <p class="descricao">A ração Special Dog está classificada na categoria Premium, que reúne as rações de qualidade intermediária.</p>
+                                        <p class="peso">Granel 1Kg</p>
+                                        <p class="local">Vendido por <b>Aviário Cãopeão</b></p>
+                                        <p class="preco">R$ 15,90</p>
+                                    </div>
+                                    <div class="botoes">
+                                        <div class="quantidade">
+                                            <button type="button" onclick="rmQuantProduto('#qtedit1')">-</button>
+                                            <input id="qtedit1" type="text" value="2" disabled/>
+                                            <button type="button" onclick="adQuantProduto('#qtedit1')">+</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </dialog>
+        
+                        <button type="button" class="acoes">Remover</button>
+                    </li>
+                    <li class="item">
+                        <div class="cproduto">           
+                            <p>1x Coleira Super Reforçada Vermelha Para Cães Adultos</p>
+                            <h3>R$ 11,50</h3>
                         </div>
-                    </dialog>
-    
-                    <button type="button" class="acoes">Remover</button>
-                </li>
-                <li class="item">
-                    <div class="cproduto">           
-                        <p>1x Coleira Super Reforçada Vermelha Para Cães Adultos</p>
-                        <h3>R$ 11,50</h3>
-                    </div>
-                    <button type="button" class="acoes" style="color: var(--principal)" onclick="abrirModal('#edit2')">Editar</button>
-                    <dialog id="edit2" class="mdproduto" onkeydown="removeBlur()">
-                        <div class="cabeca">
-                            <h1>Produto</h1>
-                            <button class="mdfechar" type="button" onclick="fecharModal('#edit2')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
-                        </div>
-                        <div class="conteudo">
-                            <div class="esquerda">
-                                <img src="../images/produto5.png" alt="Produto"/>
+                        <button type="button" class="acoes" style="color: var(--principal)" onclick="abrirModal('#edit2')">Editar</button>
+                        <dialog id="edit2" class="mdproduto" onkeydown="removeBlur()">
+                            <div class="cabeca">
+                                <h1>Produto</h1>
+                                <button class="mdfechar" type="button" onclick="fecharModal('#edit2')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
                             </div>
-                            <div class="direita">
-                                <div class="mdsc">
-                                    <h4>Coleira Super Reforçada Vermelha Para Cães Adultos</h4>
-                                    <p class="descricao">A coleira super reforçada da LD-Pet é perfeita para a segurança do seu bichinho, fácil de adaptar qualquer corda para coleira e é puro estilo.</p>
-                                    <p class="peso">Unidade</p>
-                                    <p class="local">Vendido por <b>Petshop Mundopet</b></p>
-                                    <p class="preco">R$ 11,50</p>
+                            <div class="conteudo">
+                                <div class="esquerda">
+                                    <img src="../images/produto5.png" alt="Produto"/>
                                 </div>
-                                <div class="botoes">
-                                    <div class="quantidade">
-                                        <button type="button" onclick="rmQuantProduto('#qtedit2')">-</button>
-                                        <input id="qtedit2" type="text" value="1" disabled/>
-                                        <button type="button" onclick="adQuantProduto('#qtedit2')">+</button>
+                                <div class="direita">
+                                    <div class="mdsc">
+                                        <h4>Coleira Super Reforçada Vermelha Para Cães Adultos</h4>
+                                        <p class="descricao">A coleira super reforçada da LD-Pet é perfeita para a segurança do seu bichinho, fácil de adaptar qualquer corda para coleira e é puro estilo.</p>
+                                        <p class="peso">Unidade</p>
+                                        <p class="local">Vendido por <b>Petshop Mundopet</b></p>
+                                        <p class="preco">R$ 11,50</p>
+                                    </div>
+                                    <div class="botoes">
+                                        <div class="quantidade">
+                                            <button type="button" onclick="rmQuantProduto('#qtedit2')">-</button>
+                                            <input id="qtedit2" type="text" value="1" disabled/>
+                                            <button type="button" onclick="adQuantProduto('#qtedit2')">+</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </dialog>
-    
-                    <button type="button" class="acoes">Remover</button>
-                </li>
-            </ul>
-            <div class="item subtotais" style="border-bottom: none">
-                <span><p style="float: left">Subtotal</p><p style="float: right">R$ 43,30</p></span>
-                <span><p style="float: left">Taxa de entrega</p><p style="float: right">R$ 5,90</p></span>
-                <span><p style="float: left">Taxa de serviço</p><p style="float: right">R$ 0,99</p></span>
+                        </dialog>
+        
+                        <button type="button" class="acoes">Remover</button>
+                    </li>
+                </ul>
+                <div class="item subtotais" style="border-bottom: none">
+                    <span><p style="float: left">Subtotal</p><p style="float: right">R$ 43,30</p></span>
+                    <span><p style="float: left">Taxa de entrega</p><p style="float: right">R$ 5,90</p></span>
+                    <span><p style="float: left">Taxa de serviço</p><p style="float: right">R$ 0,99</p></span>
+                </div>
             </div>
-        </div>
-        <div id="total" class="totais">
-            <span><h3 style="float: left">Total</h3><h3 style="float: right">R$ 50,19</h3></span>
-            <a href="../store/checkout.html" class="bta">Finalizar pedido</a>
-        </div>
-    </section>
+            <div id="total" class="totais">
+                <span><h3 style="float: left">Total</h3><h3 style="float: right">R$ 50,19</h3></span>
+                <a href="../store/checkout.html" class="bta">Finalizar pedido</a>
+            </div>
+        </section>
+    </main>
+ 
     <footer>
         <div class="container">
             <div class="copyright"><p>Copyright © 2023 Caramel</p></div>

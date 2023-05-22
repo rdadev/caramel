@@ -995,7 +995,7 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding-top: 15px;
+    padding-top: 25px;
     border-top: 1px solid #cacaca;
 }
 
@@ -1062,6 +1062,29 @@ footer .container {
 .progresso li.active:before, .progresso li.active:after {
     background-color: var(--principal);
     color: #FFF;
+}
+
+.historico {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.pdhistorico {
+    width: 49%;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #cacaca;
+    border-radius: 13px;
+    margin-top: 15px;
+}
+
+.historico .esquerda {
+    float: left;
+}
+
+.historico .direita {
+    float: right;
 }
 
 @media screen and (max-width: 1050px) {

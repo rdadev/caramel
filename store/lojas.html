@@ -26,7 +26,7 @@
                     <li><a href="index.html">Outros</a></li>
                 </ul>
             </nav>
-            <form class="buscar" method="" action="busca.html" onsubmit="passaPesquisa()">
+            <form class="buscar" method="" action="busca.html" onsubmit="passaPesquisa()" autocomplete="off">
                 <input id="buscagem" type="text" placeholder="Digite e tecle enter para buscar" onfocusout="abrirPesquisa()"/>
             </form>
             <ul class="buttons">
@@ -37,7 +37,9 @@
             </ul>
         </div>
     </header>
-    <section>
+
+    <main>
+   <section>
         <div class="container">
             <h1>Lojas por perto</h1>
             <div class="lojas">
@@ -265,6 +267,8 @@
             <a href="checkout.html" class="bta">Finalizar pedido</a>
         </div>
     </section>
+    </main>
+
     <footer>
         <div class="container">
             <div class="copyright"><p>Copyright © 2023 Caramel</p></div>
