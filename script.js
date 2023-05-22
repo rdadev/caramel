@@ -67,9 +67,9 @@ function fecharMenuMobile() {
 
 // Abrir e fechar carrinho 
 function abrirCarrinho() {
-    $("#cart").toggleClass("poscarrinho");
-    $("#total").toggleClass("postotal");
-    $("#blockpage").toggleClass("mostrar");
+    $(".carrinho").toggleClass("poscarrinho");
+    $(".totais").toggleClass("postotal");
+    $(".block").toggleClass("mostrar");
 };
 
 const rdPix = document.querySelector("#pag1");
