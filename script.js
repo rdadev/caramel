@@ -189,3 +189,8 @@ function passaPesquisa() {
     const busca = document.querySelector("#buscagem");
     sessionStorage.setItem('termoBusca', busca.value);
 };
+
+// Função do botão de voltar em páginas do store
+function btVoltar() {
+    window.history.back();
+};

@@ -921,12 +921,16 @@ footer .container {
 
 .pbt {
     width: 33.333%;
+    height: auto;
+    overflow: hidden;
     line-height: 50px;
-    margin: auto;
     font-size: 12pt;
     color: var(--principal);
     font-weight: 600;
     transition: background-color ease 0.2s;
+    float: left;
+    text-align: center;
+    display: block;
 }
 
 .pbt:hover {
@@ -1072,7 +1076,7 @@ footer .container {
 
 .pdhistorico {
     width: 49%;
-    height: 200px;
+    height: auto;
     overflow: hidden;
     border: 1px solid #cacaca;
     border-radius: 13px;
@@ -1085,6 +1089,96 @@ footer .container {
 
 .historico .direita {
     float: right;
+}
+
+.hsconteudo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 20px 20px 15px 20px;
+}
+
+.pdhis {
+    width: 100%;
+    float: none;
+}
+
+.hsbotoes {
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 13px 13px;
+    border-top: 1px solid #cacaca;
+    font-size: 0;
+}
+
+.hbt {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    line-height: 50px;
+    font-size: 12pt;
+    color: var(--principal);
+    font-weight: 600;
+    transition: background-color ease 0.2s;
+    float: left;
+    text-align: center;
+    display: block;
+}
+
+.hbt:hover {
+    background-color: var(--principal);
+    color: #FFF;
+}
+
+.hsprodutos {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-top: 1px solid #cacaca;
+}
+
+.hsprodutos ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.hsprodutos ul li p{
+    font-size: 11pt;
+    color: var(--texto-principal);
+    margin: 0 0 10px 0;
+}
+
+.hsprodutos .qtd {
+    font-weight: 600;
+    margin: 0 15px 0 0;
+    background-color: #e9e9e9;
+    display: block;
+    width: 18px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 10pt;
+    line-height: 18px;
+}
+
+.hsprodutos .prd {
+    font-weight: 400;
+    color: var(--texto-principal);
+}
+
+.hsprodutos .msi {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--texto-tertiario);
+}
+
+.btvoltar {
+    margin-bottom: 10px;
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--texto-tertiario);
 }
 
 @media screen and (max-width: 1050px) {
