@@ -1165,7 +1165,7 @@ footer .container {
 
 .hsprodutos .prd {
     font-weight: 400;
-    color: var(--texto-principal);
+    color: var(--texto-secundario);
 }
 
 .hsprodutos .msi {
@@ -1179,6 +1179,79 @@ footer .container {
     font-size: 12pt;
     font-weight: 600;
     color: var(--texto-tertiario);
+}
+
+.cupom {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.cupom h3{
+    margin: 20px 0 5px 0;
+    color: var(--texto-tertiario);
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.cupom .pentegra {
+    font-weight: 600;
+    font-size: 13pt;
+    color: var(--texto-principal);
+    margin-top: 4px;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 15px;
+}
+
+.cupom .prds {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.cupomproduto {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.cupomproduto p {
+    font-size: 12pt;
+    float: left;
+    width: 65%;
+}
+
+.cupomproduto h3 {
+    font-weight: 600;
+    color: var(--texto-principal);
+    font-size: 13pt;
+    float: right;
+    margin: 7px 0;
+}
+
+.cupom .miscelanea {
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--texto-principal);
+}
+
+.cupom .subtotais {
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+.cupom .scmiscelanea {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cacaca;
 }
 
 @media screen and (max-width: 1050px) {
@@ -1229,6 +1302,10 @@ footer .container {
 
     #mdendereco {
         width: auto;
+    }
+
+    .cupom {
+        margin-bottom: 20px;
     }
 }
 
@@ -1479,5 +1556,15 @@ footer .container {
     body {
         min-width: 340px;
         
+    }
+}
+
+@media print {
+    * {
+        font-family: Tahoma, Arial, 'Segoe UI', Geneva, Verdana, sans-serif;
+    }
+
+    #print, header, footer, .btvoltar {
+        display: none;
     }
 }

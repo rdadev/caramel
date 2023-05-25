@@ -41,9 +41,49 @@
     <main>
         <section>
             <div class="container">
-                <button type="button" class="btvoltar" onclick="btVoltar()">Voltar</button>
-                <h1>Detalhes do pedido</h1>
-
+                <div class="cupom">
+                    <button type="button" class="btvoltar" onclick="btVoltar()">Voltar</button>
+                    <h1>Petshop Canarinho e Cia Ltda</h1>
+                    <h3>Previsão de entrega</h3>
+                    <p class="pentegra">30 - 40min</p>
+                    <ul class="prds">
+                        <li class="cupomproduto">
+                            <p>2x Ração Special Dog Gold Adultos Sabor Carne (Granel)</p>
+                            <h3>R$ 31,80</h3>
+                        </li>
+                        <li class="cupomproduto">
+                            <p>1x Coleira Super Reforçada Vermelha Para Cães Adultos</p>
+                            <h3>R$ 11,50</h3>
+                        </li>
+                    </ul>
+                    <h3>Subtotal</h3>
+                    <div class="subtotais">
+                        <span><p style="float: left">Produtos</p><p style="float: right">R$ 43,30</p></span>
+                        <span><p style="float: left">Taxa de entrega</p><p style="float: right">R$ 5,90</p></span>
+                        <span><p style="float: left">Taxa de serviço</p><p style="float: right">R$ 0,99</p></span>
+                    </div>
+                    <div class="scmiscelanea">
+                        <h3>Entrega em</h3>
+                        <p class="miscelanea">Avenida Opet do Brasil, 99, Curitiba - PR</p>
+                    </div>
+                    <div class="scmiscelanea">
+                        <h3>Pedido</h3>
+                        <p class="miscelanea">#4115201</p>
+                    </div>
+                    <div class="scmiscelanea">
+                        <h3>Data do pedido</h3>
+                        <p class="miscelanea">25/05/2023 • 11:27</p>
+                    </div>
+                    <div class="scmiscelanea">
+                        <h3>Pagamento</h3>
+                        <p class="miscelanea">Cartão de débito</p>
+                    </div>
+                    <div class="scmiscelanea" style="border-bottom: none">
+                        <h3>Status do pedido</h3>
+                        <p class="miscelanea">Concluído</p>
+                    </div>
+                    <button id="print" type="button" class="bta" onclick="window.print()">Imprimir</button>
+                </div>
             </div>
         </section>
 
