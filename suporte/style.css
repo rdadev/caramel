@@ -12,11 +12,11 @@
 }
 
 .conteudo {
-    margin: 30px 0;
+    margin: 35px 0;
 }
 
 .conteudo h2 {
-    font-size: 25px;
+    font-size: 20pt;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -35,21 +35,19 @@ a {
 
 .secoes .esquerda {
     float: left;
-    margin-left: 0;
 }
 
 .secoes .direita {
     float: right;
-    margin-right: 0;
 }
 
 .secao {
     height: auto;
     overflow: hidden;
-    width: calc(50% - 10px);
+    width: calc(50% - 15px);
     padding: 25px;
     text-decoration: none;
-    margin: 10px;
+    margin: 10px 3px;
     border: 1px solid var(--bordas);
     border-radius: 8px;
     min-height: 100px;
@@ -67,18 +65,19 @@ a {
     width: 32px;
 }
 
-.secao:hover {
-    border: 1px solid var(--hover);
+.secao p {
+    margin-top: 6px;
+    color: var(--texto-tertiario);
 }
 
-.secao:hover .titulo-botao {
-    color: var(--hover);
+.secao:hover {
+    box-shadow: 0px 0px 7px #cdcdcd;
 }
 
 .titulo-botao {
     font-size: 16pt;
-    font-weight: 600;
-    color: #000000;
+    font-weight: 800;
+    color: var(--texto-principal);
     margin-top: 16px;
     transition: color ease 0.2s;
 }
@@ -88,12 +87,24 @@ a {
     transition: fill ease 0.2s;
 }
 
-@media screen and (max-width: 600px) {
-    .titulo h1 {
-        font-size: 28pt;
-        padding: 60px 0 80px 0;
-    }
+.caminho {
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--texto-tertiario);
+    margin: 10px 0;
+}
 
+.caminho a {
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--texto-tertiario);
+}
+
+.caminho a:hover {
+    color: var(--principal);
+}
+
+@media screen and (max-width: 800px) {
     .secoes .esquerda, .secoes .direita {
         float: none;
     }
@@ -101,6 +112,25 @@ a {
     .secao {
         margin: 20px 0;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titulo h1 {
+        font-size: 28pt;
+        padding: 60px 0 80px 0;
+    }
+
+    .conteudo h2, h2 {
+        font-size: 17pt;
+    }
+
+    .caminho {
+        font-size: 10pt;
+    }
+    
+    .caminho a {
+        font-size: 10pt;
     }
 }
 

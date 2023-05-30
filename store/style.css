@@ -221,7 +221,7 @@ section {
 }
 
 .loja:hover {
-    box-shadow: 0px 0px 10px #cdcdcd;
+    box-shadow: 0px 0px 7px #cdcdcd;
 }
 
 .vertudo {
@@ -263,7 +263,7 @@ section {
 }
 
 .produto:hover {
-    box-shadow: 0px 0px 10px #cdcdcd;
+    box-shadow: 0px 0px 7px #cdcdcd;
 }
 
 .produtos .imagem {
@@ -1713,6 +1713,10 @@ main {
     color: var(--texto-tertiario);
     font-weight: 400;
     margin: 20px 0;
+}
+
+.descpromo {
+    color: var(--texto-tertiario);
 }
 
 @media screen and (max-width: 1050px) {
