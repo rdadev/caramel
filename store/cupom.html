@@ -81,12 +81,41 @@
                     </div>
                     <div class="scmiscelanea" style="border-bottom: none">
                         <h3>Status do pedido</h3>
-                        <p class="miscelanea">Concluído</p>
+                        <p id="pstatus" class="miscelanea">Concluído</p>
                     </div>
-                    <button id="print" type="button" class="bta" onclick="window.print()">Imprimir</button>
+                    <button type="button" class="bta print" onclick="window.print()">Imprimir</button>
+                    <button id="btaval" type="button" class="btb print" onclick="abrirModal('#avaliacao')">Avaliar loja</button>
                 </div>
             </div>
         </section>
+
+        <dialog id="avaliacao" class="avaliar" onkeydown="removeBlur()">
+            <div class="cabeca">
+                <h1>Avaliação da loja</h1>
+                <button class="mdfechar" type="button" onclick="fecharModal('#avaliacao')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+            </div>
+            <div class="conteudo">
+                <form class="faval" method="" action="" autocomplete="off">
+                    <h4>Experiência</h4>
+                    <div class="estrelinhas">
+                        <label for="class1"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" id="sel1"><path d="m323-205 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Zm0-206Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" id="star1" class="fantasma" viewBox="0 -960 960 960" width="28" height="28"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg></label>
+                        <input type="radio" class="fantasma" id="class1" name="classificacao" value="1" onchange="classificaLoja()">
+                        <label for="class2"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" id="sel2"><path d="m323-205 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Zm0-206Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" id="star2" class="fantasma" viewBox="0 -960 960 960" width="28" height="28"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg></label>
+                        <input type="radio" class="fantasma" id="class2" name="classificacao" value="2" onchange="classificaLoja()">
+                        <label for="class3"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" id="sel3"><path d="m323-205 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Zm0-206Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" id="star3" class="fantasma" viewBox="0 -960 960 960" width="28" height="28"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg></label>
+                        <input type="radio" class="fantasma" id="class3" name="classificacao" value="3" onchange="classificaLoja()">
+                        <label for="class4"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" id="sel4"><path d="m323-205 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Zm0-206Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" id="star4" class="fantasma" viewBox="0 -960 960 960" width="28" height="28"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg></label>
+                        <input type="radio" class="fantasma" id="class4" name="classificacao" value="4" onchange="classificaLoja()">
+                        <label for="class5"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" id="sel5"><path d="m323-205 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm157-24L294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Zm0-206Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" id="star5" class="fantasma" viewBox="0 -960 960 960" width="28" height="28"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg></label>
+                        <input type="radio" class="fantasma" id="class5" name="classificacao" value="5" onchange="classificaLoja()">
+                    </div>
+                    <h4 class="place2">Comentário</h4>
+                    <input type="text" class="txti" placeholder="Conte sua experiência (opcional)"/>
+                    <p class="mdobs">Obs.: Sua avaliação será postada publicamente na página da loja e irá exibir seu primeiro nome como título</p>
+                    <input type="submit" class="bta" value="Enviar"/>
+                </form>
+            </div>
+        </dialog>
 
         <section class="mobnavs">
             <a href="index.html"><div class="mobnav">
@@ -214,5 +243,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        window.onload = function leituraStatus() {
+            const status = sessionStorage.getItem('statusPedido');
+            const texto = document.querySelector("#pstatus");
+
+            // Validação do tipo de abertura
+            if (status == 'aberto') {
+                $("#btaval").addClass("fantasma");
+                texto.textContent = "Em andamento";
+
+            } else if (status == 'concluido') {
+                $("#btaval").removeClass("fantasma");
+                texto.textContent = "Concluído";
+            };
+        };
+    </script>
 </body>
 </html>

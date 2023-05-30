@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="pdbotoes">
-                        <a href="cupom.html" class="pbt bordapbt">Detalhes</a>
+                        <a href="cupom.html" class="pbt bordapbt" onclick="passaStatus('aberto')">Detalhes</a>
                         <button type="button" class="pbt bordapbt pbtmeio" onclick="abrirChat()">Mensagem</button>
                         <button type="button" class="pbt pbtfinal">Cancelar</button>
                     </div>
@@ -93,8 +93,8 @@
                             </div>
                         </div>
                         <div class="hsbotoes">
-                            <a href="cupom.html" class="hbt bordapbt">Ajuda</a>
-                            <button type="button" class="hbt">Pedir novamente</button>
+                            <a href="cupom.html" class="hbt bordapbt" onclick="passaStatus('concluido')">Detalhes</a>
+                            <button type="button" class="hbt">Ajuda</button>
                         </div>
                     </div>
                     <div class="pdhistorico direita">
@@ -113,8 +113,8 @@
                             </div>
                         </div>
                         <div class="hsbotoes">
-                            <a href="cupom.html" class="hbt bordapbt">Ajuda</a>
-                            <button type="button" class="hbt">Pedir novamente</button>
+                            <a href="cupom.html" class="hbt bordapbt" onclick="passaStatus('concluido')">Detalhes</a>
+                            <button type="button" class="hbt">Ajuda</button>
                         </div>
                     </div>
                 </div>
@@ -236,8 +236,33 @@
 
         <section class="chat">
             <div class="fechar"><span>Mensagens</span><button type="button" onclick="abrirChat()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
-            <div class="contents">
-    
+            <div class="contents mspedido">
+                <div class="introchat">
+                    <img src="../images/petshops/petshop1.jpg" alt="Logotipo petshop"/>
+                    <h2>Aviário Cãopeão</h2>
+                </div>
+                <div class="msgs">
+                    <ul class="dias">
+                        <li class="dia">
+                            <h6>22 de maio, 12:10h</h6>
+                            <ul class="mensagens">
+                                <li class="msusuario">Olá! Bom dia!</li>
+                                <li class="msusuario">Meu pedido está demorando</li>
+                                <br/>
+                                <li class="msloja">Bom dia Sr. Teste! Vamos verificar o ocorrido.</li>
+                                <br/>
+                                <li class="msusuario">Tá ok! Muito obrigado.</li>
+                                <br/>
+                                <li class="msloja">Houve um problema durante a entrega, iremos enviar novamente</li>
+                                <br/>
+                                <li class="msusuario">Perfeito</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="digitador">
+                <input type="text" class="txti" placeholder="Enviar mensagem"/>
             </div>
         </section>
     </main>

@@ -98,8 +98,10 @@ function abrirClassificacao() {
     $(".block").removeClass("mostrar");
 };
 
+// Abertura do chat do pedido atual
 function abrirChat() {
     $(".chat").toggleClass("poschat");
+    $(".digitador").toggleClass("posdigitador");
     $(".blockchat").toggleClass("mostrar");
     $(".carrinho").removeClass("poscarrinho");
     $(".totais").removeClass("postotal");
@@ -222,4 +224,86 @@ function exibeEndereco() {
 function passaPesquisa() {
     const busca = document.querySelector("#buscagem");
     sessionStorage.setItem('termoBusca', busca.value);
+};
+
+// Classificação da loja (jogo dos rádios)
+function classificaLoja() {
+    if ($("#class1").prop("checked")) {
+        // Marca
+        $("#star1").removeClass("fantasma");
+        $("#sel1").addClass("fantasma");
+
+        // Desmarca outros 
+        $("#star2").addClass("fantasma");
+        $("#sel2").removeClass("fantasma");
+        $("#star3").addClass("fantasma");
+        $("#sel3").removeClass("fantasma");
+        $("#star4").addClass("fantasma");
+        $("#sel4").removeClass("fantasma");
+        $("#star5").addClass("fantasma");
+        $("#sel5").removeClass("fantasma");
+
+    } else if ($("#class2").prop("checked")) {
+         // Marca
+        $("#star1").removeClass("fantasma");
+        $("#sel1").addClass("fantasma");
+        $("#star2").removeClass("fantasma");
+        $("#sel2").addClass("fantasma");
+
+        // Desmarca outros 
+        $("#star3").addClass("fantasma");
+        $("#sel3").removeClass("fantasma");
+        $("#star4").addClass("fantasma");
+        $("#sel4").removeClass("fantasma");
+        $("#star5").addClass("fantasma");
+        $("#sel5").removeClass("fantasma");
+
+    } else if ($("#class3").prop("checked")) {
+         // Marca
+        $("#star1").removeClass("fantasma");
+        $("#sel1").addClass("fantasma");
+        $("#star2").removeClass("fantasma");
+        $("#sel2").addClass("fantasma");
+        $("#star3").removeClass("fantasma");
+        $("#sel3").addClass("fantasma");
+
+        // Desmarca outros 
+        $("#star4").addClass("fantasma");
+        $("#sel4").removeClass("fantasma");
+        $("#star5").addClass("fantasma");
+        $("#sel5").removeClass("fantasma");
+
+    } else if ($("#class4").prop("checked")) {
+         // Marca
+         $("#star1").removeClass("fantasma");
+         $("#sel1").addClass("fantasma");
+         $("#star2").removeClass("fantasma");
+         $("#sel2").addClass("fantasma");
+         $("#star3").removeClass("fantasma");
+         $("#sel3").addClass("fantasma");
+         $("#star4").removeClass("fantasma");
+         $("#sel4").addClass("fantasma");
+ 
+         // Desmarca outros 
+         $("#star5").addClass("fantasma");
+         $("#sel5").removeClass("fantasma");
+ 
+    } else if ($("#class5").prop("checked")) {
+         // Marca
+         $("#star1").removeClass("fantasma");
+         $("#sel1").addClass("fantasma");
+         $("#star2").removeClass("fantasma");
+         $("#sel2").addClass("fantasma");
+         $("#star3").removeClass("fantasma");
+         $("#sel3").addClass("fantasma");
+         $("#star4").removeClass("fantasma");
+         $("#sel4").addClass("fantasma");
+         $("#star5").removeClass("fantasma");
+         $("#sel5").addClass("fantasma");
+    };
+};
+
+// Passar status do pedido para a página de cupom
+function passaStatus(status) {
+    sessionStorage.setItem('statusPedido', status);
 };
