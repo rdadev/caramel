@@ -70,6 +70,40 @@ function abrirCarrinho() {
     $(".carrinho").toggleClass("poscarrinho");
     $(".totais").toggleClass("postotal");
     $(".block").toggleClass("mostrar");
+    $(".sobreloja").removeClass("posloja");
+    $(".blockloja").removeClass("mostrar");
+    $(".classificados").removeClass("posclassificacao");
+    $(".blockclass").removeClass("mostrar");
+};
+
+// Abre a descrição da loja na página da loja
+function abrirDetalhesLoja() {
+    $(".sobreloja").toggleClass("posloja");
+    $(".blockloja").toggleClass("mostrar");
+    $(".carrinho").removeClass("poscarrinho");
+    $(".totais").removeClass("postotal");
+    $(".block").removeClass("mostrar");
+    $(".classificados").removeClass("posclassificacao");
+    $(".blockclass").removeClass("mostrar");
+};
+
+// Abrir comentários e classificação sobre a loja
+function abrirClassificacao() {
+    $(".classificados").toggleClass("posclassificacao");
+    $(".blockclass").toggleClass("mostrar");
+    $(".sobreloja").removeClass("posloja");
+    $(".blockloja").removeClass("mostrar");
+    $(".carrinho").removeClass("poscarrinho");
+    $(".totais").removeClass("postotal");
+    $(".block").removeClass("mostrar");
+};
+
+function abrirChat() {
+    $(".chat").toggleClass("poschat");
+    $(".blockchat").toggleClass("mostrar");
+    $(".carrinho").removeClass("poscarrinho");
+    $(".totais").removeClass("postotal");
+    $(".block").removeClass("mostrar");
 };
 
 const rdPix = document.querySelector("#pag1");
@@ -188,9 +222,4 @@ function exibeEndereco() {
 function passaPesquisa() {
     const busca = document.querySelector("#buscagem");
     sessionStorage.setItem('termoBusca', busca.value);
-};
-
-// Função do botão de voltar em páginas do store
-function btVoltar() {
-    window.history.back();
 };

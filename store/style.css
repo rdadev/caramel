@@ -55,7 +55,7 @@ header {
     margin: 0;
     line-height: 75px;
     margin: 0 20px;
-    min-width: 32%;
+    min-width: 27%;
 }
 
 .buscar input {
@@ -80,7 +80,7 @@ header {
 
 .buttons li {
     float: right;
-    line-height: 90px;
+    line-height: 85px;
     margin: 0 10px;
 }
 
@@ -101,7 +101,7 @@ section {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 50px auto;
+    margin: 40px auto;
 }
 
 .promocoes {
@@ -123,7 +123,7 @@ section {
 }
 
 .promo1 {
-    background-image: url('../images/promocao1.png');
+    background-image: url('../images/promocoes/promocao1.png');
 }
 
 .promo2 {
@@ -147,20 +147,19 @@ section {
 }
 
 .loja {
-    width: calc(33.333% - 20px);
+    width: calc(33.333% - 10px);
     height: auto;
     overflow: hidden;
-    min-height: 142px;
     padding: 15px;
     float: left;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     transition: box-shadow ease 0.2s;
 }
 
 .loja img {
-    width: 110px;
-    height: 110px;
+    width: 95px;
+    height: 95px;
     border-radius: 25px;
     float: left;
     margin-right: 20px;
@@ -170,7 +169,7 @@ section {
 .loja h4 {
     font-size: 15pt;
     color: var(--texto-principal);
-    margin: 20px 0 10px 0;
+    margin: 12px 0px 10px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -295,6 +294,14 @@ section {
     font-weight: 800;
 }
 
+.precopromo {
+    font-size: 13pt;
+    margin: 8px 0 0 0;
+    color: var(--texto-tertiario);
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
 .peso {
     font-size: 10pt;
     color: #FFF;
@@ -313,10 +320,6 @@ footer {
 
 footer .container {
     border: none;
-}
-
-.checkout .container {
-    margin-bottom: 40px;
 }
 
 .cadastros {
@@ -401,68 +404,76 @@ footer .container {
     display: block;
 }
 
-.carrinho {
+.carrinho, .classificados, .sobreloja, .chat {
     width: 100%;
     height: calc(100vh - 75px);
     background-color: #faf9f9;
     position: fixed;
-    right: -100%;
+    right: -110%;
     top: 75px;
     max-width: 450px;
     box-shadow: 0px 0px 15px #00000036;
     z-index: 1;
     transition: ease all 0.3s;
-    overflow: auto;
-    scrollbar-width: 0;    
+    overflow: auto;  
     margin: 0;
+}
+
+.carrinho {
+    scrollbar-width: 0;
 }
 
 .carrinho::-webkit-scrollbar {
     display: none;
 }
 
-.poscarrinho {
+.poscarrinho, .posloja, .posclassificacao, .poschat {
     right: 0;
 }
 
-.carrinho .fechar {
+.carrinho .fechar, .classificados .fechar, .sobreloja .fechar, .chat .fechar{
     width: 100%;
     height: 60px;
     background-color: #f0f0f0;
     padding: 15px;
 }
 
-.carrinho .fechar span {
+.carrinho .fechar span, .classificados .fechar span, .sobreloja .fechar span, .chat .fechar span {
     float: right;
     line-height: 30px;
     font-weight: 600;
     color: var(--texto-secundario);
 }
 
-.carrinho .fechar button {
+.carrinho .fechar button, .classificados .fechar button, .sobreloja .fechar button, .chat .fechar button {
     float: left;
     border: none;
     background: none;
 }
 
-.carrinho .fechar svg path {
+.carrinho .fechar svg path, .classificados .fechar svg path, .sobreloja .fechar svg path, .chat .fechar svg path {
     fill: var(--texto-secundario);
 }
 
-.content {
+.content, .contents {
     padding: 20px;
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin-bottom: 25px;
 }
 
-.content h4 {
+.carrinho .content {
+    margin-bottom: 125px;
+}
+
+.content h4, .contents h4 {
     font-weight: 400;
     color: var(--texto-secundario);
     font-size: 11pt;
 }
 
-.content .titulo {
+.content .titulo, .contents .titulo {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -470,14 +481,14 @@ footer .container {
     border-bottom: 1px solid #cacaca;
 }
 
-.content .titulo h3 {
+.content .titulo h3, .contents .titulo h3 {
     font-weight: 600;
     color: var(--texto-principal);
     font-size: 15pt;
     float: left;
 }
 
-.content .titulo a {
+.content .titulo a, .contents .titulo a {
     float: right;
     font-size: 13pt;
     color: var(--principal);
@@ -543,7 +554,7 @@ footer .container {
     position: fixed;
     z-index: 2;
     bottom: 0;
-    right: -100%;
+    right: -110%;
     padding: 20px;
     transition: ease all 0.3s;
 }
@@ -669,13 +680,14 @@ footer .container {
     border: 1px solid #cacaca;
     border-radius: 10px;
     float: left;
-    margin-right: 15px;
+    margin: 1px 15px 1px 1px;
     padding: 10px;
     cursor: pointer;
 }
 
 .logistica .select, .pagamentos .select {
-    border: 2px solid var(--principal);
+    border: 1px solid var(--principal);
+    outline: 1px solid var(--principal);
 }
 
 .logistica .tipoent .p1 {
@@ -700,12 +712,12 @@ footer .container {
 }
 
 .pagto {
-    width: 100%;
+    width: calc(100% - 2px);
     height: auto;
     overflow: hidden;
     border: 1px solid #cacaca;
     border-radius: 10px;
-    margin-bottom: 17px;
+    margin: 1px 1px 17px 1px;
     padding: 20px;
     cursor:pointer;
 }
@@ -737,10 +749,7 @@ footer .container {
     max-width: 1100px;
     height: 500px;
     min-height: 480px;
-    -webkit-user-select:none;  
-    -moz-user-select:none;     
-    -ms-user-select:none;      
-    user-select:none;
+    user-select: none;
 }
 
 .mdproduto .conteudo .esquerda, .mdproduto .conteudo .direita {
@@ -809,7 +818,7 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 20px 0 35px 0;
 }
 
 .cadastrin fieldset {
@@ -943,7 +952,7 @@ footer .container {
 }
 
 .pdloja {
-    width: 70%;
+    width: 65%;
     height: auto;
     overflow: hidden;
     float: left;
@@ -973,7 +982,7 @@ footer .container {
 }
 
 .pdprevisao {
-    width: 30%;
+    width: 35%;
     height: auto;
     overflow: hidden;
     float: right;
@@ -1158,27 +1167,37 @@ footer .container {
     overflow: hidden;
     float: left;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 10pt;
     line-height: 18px;
 }
 
 .hsprodutos .prd {
     font-weight: 400;
-    color: var(--texto-secundario);
+    color: var(--texto-tertiario);
+    letter-spacing: 0.4px;
 }
 
 .hsprodutos .msi {
     font-size: 10pt;
     font-weight: 600;
-    color: var(--texto-tertiario);
+    color: var(--texto-principal);
 }
 
 .btvoltar {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-size: 12pt;
     font-weight: 600;
     color: var(--texto-tertiario);
+}
+
+.btvoltar svg {
+    float: left;
+    margin-right: 7px;
+}
+
+.btvoltar svg path {
+    fill: var(--texto-tertiario);
 }
 
 .cupom {
@@ -1254,9 +1273,306 @@ footer .container {
     border-bottom: 1px solid #cacaca;
 }
 
+main {
+    min-height: calc(100vh - 147px);
+}
+
+.capa {
+    margin-bottom: 0;
+}
+
+.capa img {
+    width: calc(100% - 40px);
+    height: 230px;
+    object-fit: cover;
+    border-radius: 13px;
+    max-width: 1100px;
+    margin: auto;
+    display: block;
+    filter: brightness(0.8);
+}
+
+.introducao {
+    margin-top: 20px;   
+    user-select: none;
+}
+
+.introducao .store {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.introducao .store .logor {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+    float: left;
+}
+
+.introducao .store h2 {
+    float: left;
+    line-height: 80px;
+    margin-left: 20px;
+    font-size: 22pt;
+    font-weight: 600;
+}
+
+.classificacao {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin: 30px 0 0 20px;
+}
+
+.classificacao svg {
+    width: 20px;
+    height: 20px;
+}
+
+.classificacao svg path {
+    fill: #adab00;
+}
+
+.classificacao p {
+    float: right;
+    font-weight: 800;
+    color: #adab00;
+    margin: 2px 0 0 5px;
+}
+
+.introducao .store .btl {
+    float: right;
+    line-height: 80px;
+}
+
+.introducao .store .entpreco {
+    float: right;
+    line-height: 80px;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--texto-tertiario);
+}
+
+.separador {
+    margin: 0 40px;
+    float: right;
+    line-height: 80px;
+    color: var(--texto-tertiario);
+    font-weight: 300;
+}
+
+.introducao .pesquisar {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.introducao .pesquisar form {
+    width: calc(100% - 250px);
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin-top: 10px;
+}
+
+.introducao .tempo {
+    width: 120px;
+    height: 50px;
+    float: right;
+    border-radius: 7px;
+    border: 1px solid #cacaca;
+    margin-top: 20px;
+    padding: 8px;
+    margin-left: 5px;
+}
+
+.introducao .tempo h4 {
+    font-size: 11pt;
+    font-weight: 600;
+    text-align: left;
+}
+
+.introducao .tempo p {
+    font-size: 9pt;
+    text-align: left;
+}
+
+.scs {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 25px 0;
+    border-bottom: 1px solid #cacaca;
+}
+
+.scs:last-child {
+    border-bottom: none;
+}
+
+.scs h3 {
+    font-size: 13pt;
+    color: var(--texto-principal);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.scs p, .scs ul li {
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--texto-secundario);
+}
+
+.scs ul li {
+    margin-bottom: 7px;
+}
+
+.hr1 {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+
+.hr2 {
+    width: 60%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    float: right;
+}
+
+.scs .ativo p {
+    font-weight: 800;
+}
+
+.scs .localizacao {
+    float: left;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+}
+
+.btmap {
+    float: right;
+    font-size: 13pt;
+    color: var(--principal);
+    margin-left: 20px;
+}
+
+.avalintro {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.avalintro h1 {
+    font-size: 33pt;
+    font-weight: 600;
+}
+
+.avalintro svg {
+    width: 24px;
+    height: 24px;
+}
+
+.avalintro svg path {
+    fill: var(--texto-tertiario);
+}
+
+.avalintro .ativo {
+    fill: #adab00;
+}
+
+.estrelas {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    letter-spacing: -5px;
+}
+
+.avalintro p {
+    font-size: 10pt;
+    color: var(--texto-tertiario);
+    margin-top: 5px;
+}
+
+.avalu {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.avalu .nota{
+    font-weight: 600;
+    font-size: 12pt;
+    float: left;
+    line-height: 23px;
+}
+
+.avalu .avastars {
+    float: left;
+    margin-left: 15px;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    letter-spacing: -5px;
+}
+
+.avastars svg {
+    width: 20px;
+    height: 20px;
+}
+
+.avastars svg path {
+    fill: var(--texto-tertiario);
+}
+
+.avastars .ativo {
+    fill: #adab00;
+}
+
+.avalu .data {
+    float: right;
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--texto-secundario);
+}
+
+.avalu .comentario {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.avalu .comentario p {
+    font-size: 12pt;
+    color: var(--texto-principal);
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+.dirloja {
+    float: right;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 1050px) {
     .promocional .container {
         width: 1050px;
+    }
+
+    .promocao {
+        margin: 0px 20px 0 0;
     }
 
     footer, .navbusca, .buscar, .conta, .pedidos {
@@ -1274,15 +1590,21 @@ footer .container {
     }
 
     .loja {
-        width: calc(50% - 20px);
+        width: calc(50% - 10px);
+    }
+
+    .loja img {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+    }
+
+    .loja h4 {
+        margin: 10px 0;
     }
 
     .mobnavs {
         display: block;
-    }
-
-    .secfinal {
-        margin: 50px auto 90px auto;
     }
 
     .mdproduto {
@@ -1306,6 +1628,10 @@ footer .container {
 
     .cupom {
         margin-bottom: 20px;
+    }
+
+    .dados {
+        margin-bottom: 55px;
     }
 }
 
@@ -1346,23 +1672,82 @@ footer .container {
         width: 100%;
     }
     
-    section {
-        margin: 50px auto 70px auto;
+    .abfinal {
+        margin: 30px auto 100px auto;
+    }
+
+    .classificacao {
+        float: right;
+        margin: 7px 0 0 0;
+    }
+
+    .introducao .store .logor {
+        width: 68px;
+        height: 68px;
+    }
+
+    .capa {
+        margin-top: 0;
+    }
+
+    .capa img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .introducao .store {
+        margin-top: 0;
+    }
+
+    .introducao .store h2 {
+        line-height: unset;
+        font-size: 17pt;
+        width: calc(85% - 90px);
+        margin-top: 7px;
+    }
+
+    .dirloja {
+        float: left;
+        margin-left: 20px;
+    }
+
+    .introducao .store .btl, .separador, .introducao .store .entpreco {
+        line-height: 35px;
+    }
+
+    .separador {
+        margin: 0 20px;
+    }
+
+    .btl {
+        font-size: 12pt;
     }
 }
 
 @media screen and (max-width: 750px) {
     .loja {
-        padding: 10px;
+        width: 50%;
+        margin: 0;
+        padding: 15px 10px;
+    }
+
+    .loja:hover {
+        box-shadow: none;
     }
 
     .loja img {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
+        margin-right: 15px;
     }
 
     .loja h4 {
-        margin: 10px 0px 10px;
+        font-size: 13pt;
+        margin: 5px 0;
+    }
+
+    .loja p {
+        font-size: 10pt;
     }
 
     .checkout .esquerda, .checkout .direita {
@@ -1406,11 +1791,28 @@ footer .container {
     .mdproduto .conteudo .botoes {
         margin-top: 20px;
     }
+
+    .mdproduto .conteudo h4 {
+        font-size: 14pt;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 15pt;
+    }
+
     .produto {
-        width: calc(100% - 20px);
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .produto:hover{
+        box-shadow: none;
+    }
+
+    .vertudo {
+        width: 100%;
     }
 
     .produto .imagem {
@@ -1424,7 +1826,8 @@ footer .container {
     }
 
     .descritivo h4 {
-        height: 38px;
+        height: 36px;
+        font-size: 13pt;
     }
 
     .descricao {
@@ -1448,21 +1851,12 @@ footer .container {
     }
 
     .loja img {
-        float: none;
-        display: block;
-        margin: auto;
+        width: 62px;
+        height: 62px;
     }
 
-    .loja h4, .loja p {
-        text-align: center;
-    }
-
-    .loja h4, .descritivo h4{
-        font-size: 13pt;
-    }
-
-    .loja p, .descreve {
-        font-size: 10.5pt;
+    .loja h4 {
+        font-size: 12.5pt;
     }
 
     .mdproduto .conteudo img {
@@ -1476,30 +1870,123 @@ footer .container {
     .endcm {
         margin: 0;
     }
-}
 
-@media screen and (max-width: 400px) {
-    .loja {
-        width: calc(100% - 20px);
-        min-height: 110px;
+    .pdconteudo {
+        padding: 15px;
     }
 
-    .loja img {
-        float: left;
-        display: block;
-        margin-right: 20px;
+    .pdstatus {
+        display: none;
     }
 
-    .loja h4, .loja p {
+    .pdhistorico {
+        width: 100%;
+    }
+
+    .pdloja {
+        width: 100%;
+    }
+
+    .pdloja img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .pdloja h4 {
+        margin-top: 8px;
+    }
+
+    .pdprevisao {
+        width: 100%;
+        float: none;
+        border-top: 1px solid #cacaca;
+        margin: 0;
+    }
+
+    .pdprevisao p, .pdprevisao h4 {
         text-align: left;
     }
 
+    .pdprevisao h4 {
+        font-size: 14pt;
+    }
+
+    .pdprevisao p {
+        font-size: 10pt;
+    }
+
+    .pbt {
+        width: 50%;
+        font-size: 10.5pt;
+        line-height: 49px;
+    }
+
+    .pbtmeio {
+        border-right: none;
+    }
+
+    .hbt {
+        font-size: 10.5pt;
+        line-height: 49px;
+    }
+
+    .pbtfinal {
+        width: 100%;
+        border-top: 1px solid #cacaca;
+    }
+
+    .hsprodutos .prd, .hsprodutos .qtd {
+        font-size: 10pt;
+    }
+
+    .hsprodutos .msi {
+        font-size: 9pt;
+    }
+
+    .capa img {
+        height: 200px;
+    }
+
+    .introducao .pesquisar form {
+        width: 100%;
+    }
+
+    .introducao .tempo {
+        margin: 0;
+        width: calc(50% - 5px);
+        height: 52px;
+        float: left;
+    }
+
+    .introducao .tmp2 {
+        float: right;
+    }
+
+    .cadastrin label, .alterpass label {
+        font-size: 11pt;
+    }
+
+    .avalintro h1 {
+        font-size: 28pt;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .loja {
+        width: 100%;
+        padding: 15px 0px;
+        border-bottom: 1px solid #cacaca;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
     .produto .imagem img {
         height: 70px;
     }
 
     .produto {
-        width: calc(100% - 20px);
+        width: 100%;
     }
 
     .produto .imagem, .descritivo {
@@ -1539,16 +2026,24 @@ footer .container {
         font-size: 13pt;
     }
 
-    .content .titulo a {
+    .content .titulo a, .btmap {
         font-size: 11.5pt;
     }
 
     .content .item .cproduto p {
-        font-size: 10.5pt;
+        font-size: 11pt;
+    }
+
+    .scs p, .scs ul li {
+        font-size: 11pt;
     }
 
     .mdproduto .quantidade input {
         width: 78%;
+    }
+
+    .introducao .store h2 {
+        font-size: 15pt;
     }
 }
 
@@ -1561,10 +2056,15 @@ footer .container {
 
 @media print {
     * {
-        font-family: Tahoma, Arial, 'Segoe UI', Geneva, Verdana, sans-serif;
+        font-family: Arial, Verdana, sans-serif;
     }
 
     #print, header, footer, .btvoltar {
         display: none;
+    }
+
+    .cupom h1 {
+        text-transform: uppercase;
+        font-size: 15pt;
     }
 }
