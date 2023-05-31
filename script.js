@@ -307,3 +307,28 @@ function classificaLoja() {
 function passaStatus(status) {
     sessionStorage.setItem('statusPedido', status);
 };
+
+// Abertura de acordeon 
+var acc = document.getElementsByClassName("acordeon");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    var acc = document.getElementsByClassName("acordeon");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        var acord = this;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+          panel.style.padding = "0px 20px";
+          acord.style.borderRadius = "8px";
+        } else {
+          acord.style.borderRadius = "8px 8px 0 0";
+          panel.style.padding = "5px 20px 20px 20px";
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      }
+    }
+};

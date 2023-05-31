@@ -104,6 +104,44 @@ a {
     color: var(--principal);
 }
 
+.acordeon {
+    background-color: var(--inicio);
+    color: #000000;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14pt;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 25px 0 0 0;
+}
+
+.acordeon::after {
+    content: '+';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 16pt;
+}
+
+.acordeon.active::after {
+    content: '-';
+}
+
+.painel {
+    padding: 0px 20px;
+    background-color: var(--inicio);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.03s ease-out;
+    color: #000;
+    border-radius: 0 0 8px 8px;
+}
+
 @media screen and (max-width: 800px) {
     .secoes .esquerda, .secoes .direita {
         float: none;

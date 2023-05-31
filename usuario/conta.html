@@ -43,37 +43,50 @@
         <section>
             <div class="container">
                 <button type="button" class="btvoltar" onclick="window.history.back()"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M359-242 120-481l239-239 43 43-166 166h604v60H236l166 166-43 43Z"/></svg> Voltar</button>
-                <h1>Meus dados</h1>
-                <p>Edite suas informações pessoais aqui</p>
+                <h1 class="heads">Meus dados</h1>
                 <form class="cadastrin" method="" action="conta.html" autocomplete="off">
-                    <fieldset class="esq">
-                        <label for="nome">Nome completo</label>
-                        <input class="txti" id="nome" type="text" placeholder="Caramelo do Brasil" value="Caramelo do Brasil"/>
-                        <label for="email">Email</label>
-                        <input class="txti" id="nome" type="text" placeholder="email@email.com.br" value="teste@teste.com.br"/>
-                        <label for="email">Celular</label>
-                        <input class="txti" id="nome" type="text" placeholder="(00) 00000-0000" value="(41) 1020-3040"/>
-                        <label for="cpf">CPF</label>
-                        <input class="txti" id="cpf" type="text" placeholder="000.000.000-00" value="123.456.789-10" disabled/>                    
-                        <label>Credenciais</label>
-                        <button type="button" class="btb" onclick="abrirModal('#alterpass')">Clique para alterar sua senha</button>
+                    <h3 class="subheads">Principal</h3>
+                    <fieldset>
+                        <div class="esq">
+                            <label for="nome">Nome completo</label>
+                            <input class="txti" id="nome" type="text" placeholder="Caramelo do Brasil" value="Caramelo do Brasil"/>
+                            <label for="email">Email</label>
+                            <input class="txti" id="nome" type="text" placeholder="email@email.com.br" value="teste@teste.com.br"/>    
+                        </div>
+                        <div class="dir">
+                            <label for="email">Celular</label>
+                            <input class="txti" id="nome" type="text" placeholder="(00) 00000-0000" value="(41) 1020-3040"/>
+                            <label for="cpf">CPF</label>
+                            <input class="txti" id="cpf" type="text" placeholder="000.000.000-00" value="123.456.789-10" disabled/>   
+                        </div>
                     </fieldset>
-                    <fieldset class="dir">
-                        <label for="cep">CEP</label>
-                        <input class="txti" id="cep" type="text" value="80230-030"/>
-                        <label for="cidade">Cidade</label>
-                        <input class="txti" id="cidade" type="text" value="Curitiba"/>
-                        <label for="estado">Estado</label>
-                        <input class="txti" id="estado" type="text" value="PR"/>
-                        <label for="bairro">Bairro</label>
-                        <input class="txti" id="bairro" type="text" value="Rebouças"/>
-                        <label for="logradouro">Logradouro</label>
-                        <input class="txti" id="logradouro" type="text" value="Av. Presidente Getúlio Vargas, 892"/>
-                        <label for="complemento">Complemento</label>
-                        <input class="txti" id="complemento" type="text" value="Opet"/>
-                        <input class="bta btfit" type="submit" value="Salvar alterações"/>
-                        <a class="btb btfit" href="../store/index.html">Cancelar</a>
+                    <h3 class="subheads">Credenciais</h3>
+                    <fieldset>
+                        <label for="nome">Senha</label>
+                        <input class="txti txtpass" id="senha" type="password" placeholder="########" value="********" disabled/>
+                        <button type="button" class="btb btpass" onclick="abrirModal('#alterpass')">Alterar senha</button>
                     </fieldset>
+                    <h3 class="subheads">Endereço</h3>
+                    <fieldset>
+                        <div class="esq">
+                            <label for="cep">CEP</label>
+                            <input class="txti" id="cep" type="text" value="80230-030"/>
+                            <label for="cidade">Cidade</label>
+                            <input class="txti" id="cidade" type="text" value="Curitiba"/>
+                            <label for="estado">Estado</label>
+                            <input class="txti" id="estado" type="text" value="PR"/>
+                        </div>
+                        <div class="dir">
+                            <label for="bairro">Bairro</label>
+                            <input class="txti" id="bairro" type="text" value="Rebouças"/>
+                            <label for="logradouro">Logradouro</label>
+                            <input class="txti" id="logradouro" type="text" value="Av. Presidente Getúlio Vargas, 892"/>
+                            <label for="complemento">Complemento</label>
+                            <input class="txti" id="complemento" type="text" value="Opet"/>
+                        </div>
+                    </fieldset>
+                    <input class="bta btfit" type="submit" value="Salvar alterações"/>
+                    <a class="btb btfit" href="../store/index.html">Cancelar</a>
                 </form>
             </div>
         </section>

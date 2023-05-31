@@ -8,6 +8,23 @@ header {
     border-bottom: 1px solid var(--bordas);
 }
 
+.heads {
+   font-size: 20pt;
+   font-weight: 800; 
+   color: var(--texto-principal);
+}
+
+.subheads {
+    padding: 30px 0 15px 0;
+    color: var(--texto-principal);
+    font-weight: 600;
+    font-size: 15pt;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 .logotipo {
     float: left;
     font-family: 'Pacifico', cursive;
@@ -514,7 +531,7 @@ footer .container {
     height: auto;
     overflow: hidden;
     padding: 15px 0 20px 0;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .content .titulo h3, .contents .titulo h3 {
@@ -535,7 +552,7 @@ footer .container {
     height: auto;
     overflow: hidden;
     padding: 15px 0 20px 0;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .content .item .cproduto {
@@ -639,7 +656,7 @@ footer .container {
     width: 80%;
     height: auto;
     overflow: hidden;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     border-radius: 12px;
     padding: 20px;
     float: right;
@@ -662,7 +679,7 @@ footer .container {
 }
 
 .dados h3 {
-    margin: 20px 0;
+    margin: 15px 0;
     font-size: 12pt;
     font-weight: 400;
     color: var(--texto-secundario);
@@ -717,7 +734,7 @@ footer .container {
     width: 40%;
     height: auto;
     overflow: hidden;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     border-radius: 10px;
     float: left;
     margin: 1px 15px 1px 1px;
@@ -755,7 +772,7 @@ footer .container {
     width: calc(100% - 2px);
     height: auto;
     overflow: hidden;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     border-radius: 10px;
     margin: 1px 1px 17px 1px;
     padding: 20px;
@@ -831,7 +848,7 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     border-radius: 7px;
 }
 
@@ -858,11 +875,13 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 20px 0 35px 0;
+    margin: 20px 0 40px 0;
 }
 
-.cadastrin fieldset {
+.cadastrin .esq, .cadastrin .dir {
     width: 48%;
+    height: auto;
+    overflow: hidden;
     margin: auto;
 }
 
@@ -951,7 +970,7 @@ footer .container {
     overflow: hidden;
     border-radius: 13px;
     margin-top: 15px;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
 }
 
 .pdconteudo {
@@ -966,7 +985,7 @@ footer .container {
     width: 100%;
     height: 50px;
     border-radius: 0 0 13px 13px;
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid var(--bordas);
     font-size: 0;
 }
 
@@ -990,7 +1009,7 @@ footer .container {
 }
 
 .bordapbt {
-    border-right: 1px solid #cacaca;
+    border-right: 1px solid var(--bordas);
 }
 
 .pdloja {
@@ -1051,7 +1070,7 @@ footer .container {
     height: auto;
     overflow: hidden;
     padding-top: 35px;
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid var(--bordas);
 }
 
 .pdstatus h2 {
@@ -1087,12 +1106,12 @@ footer .container {
 .progresso li:before {
     content: counter(step);
     counter-increment: step;
-    width: 20px;
+    width: 22px;
     display: block;
-    line-height: 20px;
+    line-height: 22px;
     margin: 0 auto 5px auto;
     background-color: #dadada;
-    border-radius: 100%;
+    border-radius: 5px;
     padding: 3px;
     color: #000;
     font-weight: 600;
@@ -1129,7 +1148,7 @@ footer .container {
     width: 49%;
     height: auto;
     overflow: hidden;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     border-radius: 13px;
     margin-top: 15px;
 }
@@ -1158,7 +1177,7 @@ footer .container {
     width: 100%;
     height: 50px;
     border-radius: 0 0 13px 13px;
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid var(--bordas);
     font-size: 0;
 }
 
@@ -1185,7 +1204,7 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid var(--bordas);
 }
 
 .hsprodutos ul {
@@ -1262,7 +1281,7 @@ footer .container {
     font-size: 13pt;
     color: var(--texto-principal);
     margin-top: 4px;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
     padding-bottom: 15px;
 }
 
@@ -1271,7 +1290,7 @@ footer .container {
     height: auto;
     overflow: hidden;
     padding-bottom: 15px;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .cupomproduto {
@@ -1302,7 +1321,7 @@ footer .container {
 }
 
 .cupom .subtotais {
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
     padding-bottom: 15px;
     margin-top: 10px;
 }
@@ -1312,7 +1331,7 @@ footer .container {
     height: auto;
     overflow: hidden;
     padding-bottom: 20px;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 main {
@@ -1426,7 +1445,7 @@ main {
     height: 50px;
     float: right;
     border-radius: 7px;
-    border: 1px solid #cacaca;
+    border: 1px solid var(--bordas);
     margin-top: 20px;
     padding: 8px;
     margin-left: 5px;
@@ -1448,7 +1467,7 @@ main {
     height: auto;
     overflow: hidden;
     padding: 25px 0;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .scs:last-child {
@@ -1512,7 +1531,7 @@ main {
     overflow: hidden;
     text-align: center;
     padding-bottom: 25px;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .avalintro h1 {
@@ -1673,7 +1692,7 @@ main {
 .msloja {
     max-width: 65%;
     text-align: left;
-    background-color: #cacaca;
+    background-color: var(--bordas);
     color: #000;
     margin: 5px auto 5px 0;
 }
@@ -1717,6 +1736,18 @@ main {
 
 .descpromo {
     color: var(--texto-tertiario);
+}
+
+.txtpass {
+    width: calc(100% - 160px);
+    float: left;
+    margin: 0 auto 10px auto;
+}
+
+.btpass {
+    width: 150px;
+    margin: 0 auto 10px auto;
+    float: right;
 }
 
 @media screen and (max-width: 1050px) {
@@ -1831,10 +1862,9 @@ main {
         max-width: none;
     }
 
-    .cadastrin fieldset {
+    .cadastrin .esq, .cadastrin .dir{
         width: 100%;
         float: none;
-        margin-bottom: 20px;
     }
 
     .btfit {
@@ -2072,7 +2102,7 @@ main {
     .pdprevisao {
         width: 100%;
         float: none;
-        border-top: 1px solid #cacaca;
+        border-top: 1px solid var(--bordas);
         margin: 0;
     }
 
@@ -2105,7 +2135,7 @@ main {
 
     .pbtfinal {
         width: 100%;
-        border-top: 1px solid #cacaca;
+        border-top: 1px solid var(--bordas);
     }
 
     .hsprodutos .prd, .hsprodutos .qtd {
@@ -2144,7 +2174,7 @@ main {
     .loja {
         width: 100%;
         padding: 15px 0px;
-        border-bottom: 1px solid #cacaca;
+        border-bottom: 1px solid var(--bordas);
         border-radius: 0;
     }
 }
