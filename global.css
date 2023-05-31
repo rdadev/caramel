@@ -499,6 +499,7 @@ header {
     margin: 0 5px;
     padding: 15px 0;
     transition: box-shadow ease 0.2s;
+    user-select: none;
 }
 
 .lojinhas:hover {
@@ -860,6 +861,11 @@ dialog::-webkit-scrollbar {
 
     dialog .cabeca h1 {
         font-size: 16pt;
+    }
+
+    dialog .cabeca .mdfechar svg {
+        width: 24px;
+        height: 24px;
     }
 }
 

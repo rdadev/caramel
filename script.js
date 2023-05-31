@@ -323,11 +323,13 @@ for (i = 0; i < acc.length; i++) {
         if (panel.style.maxHeight){
           panel.style.maxHeight = null;
           panel.style.padding = "0px 20px";
+          panel.style.borderBottom = "none";
           acord.style.borderRadius = "8px";
         } else {
           acord.style.borderRadius = "8px 8px 0 0";
-          panel.style.padding = "5px 20px 20px 20px";
+          panel.style.padding = "20px";
           panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.borderBottom = "1px solid var(--bordas)";
         } 
       }
     }

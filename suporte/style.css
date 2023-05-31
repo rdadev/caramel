@@ -13,6 +13,7 @@
 
 .conteudo {
     margin: 35px 0;
+    min-height: calc(100vh - 242px);
 }
 
 .conteudo h2 {
@@ -52,7 +53,7 @@ a {
     border-radius: 8px;
     min-height: 100px;
     display: block;
-    transition: ease 0.2s;
+    transition: box-shadow ease 0.2s;
 }
 
 .secao div {
@@ -105,18 +106,19 @@ a {
 }
 
 .acordeon {
-    background-color: var(--inicio);
+    background-color: #FFF;
+    border: 1px solid var(--bordas);
     color: #000000;
     cursor: pointer;
     padding: 20px;
     width: 100%;
-    border: none;
     text-align: left;
     outline: none;
     font-size: 14pt;
     border-radius: 8px;
     font-weight: 600;
     margin: 25px 0 0 0;
+    transition: box-shadow ease 0.2s;
 }
 
 .acordeon::after {
@@ -133,13 +135,65 @@ a {
 }
 
 .painel {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
     padding: 0px 20px;
-    background-color: var(--inicio);
+    border-left: 1px solid var(--bordas);
+    border-right: 1px solid var(--bordas);
+    border-bottom: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.03s ease-out;
     color: #000;
     border-radius: 0 0 8px 8px;
+}
+
+.edicao {
+    width: 100%;
+    height: auto;
+    min-height: 160px;
+    overflow: hidden;
+    display: block;
+}
+
+.active {
+    background-color: var(--inicio);
+}
+
+.ck-editor__editable {
+    border: 1px solid var(--bordas);
+}
+
+.ck-editor__editable[role="textbox"] {
+    min-height: 160px;
+}
+
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+    border-radius: 0 0 7px 7px!important;
+}
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+    border-radius: 7px 7px 0 0!important;
+}
+
+.ck.ck-toolbar, .ck.ck-editor__editable_inline {
+    border: 1px solid var(--bordas)!important;
+}
+
+.ck.ck-editor__editable_inline {
+    border-top: none;
+}
+
+.esqinput {
+    float: left;
+    width: 49%;
+}
+
+.dirinput {
+    float: right;
+    width: 50%;
 }
 
 @media screen and (max-width: 800px) {
@@ -150,6 +204,19 @@ a {
     .secao {
         margin: 20px 0;
         width: 100%;
+    }
+
+    .secao:hover {
+        box-shadow: none;
+    }
+
+    .esqinput, .dirinput {
+        float: none;
+        width: 100%;
+    }
+
+    .acordeon{
+        padding: 15px;
     }
 }
 
@@ -169,6 +236,10 @@ a {
     
     .caminho a {
         font-size: 10pt;
+    }
+
+    .acordeon {
+        font-size: 12pt;
     }
 }
 

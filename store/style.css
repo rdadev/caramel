@@ -504,6 +504,12 @@ footer .container {
     background: none;
 }
 
+.carrinho .fechar svg, .classificados .fechar svg, .sobreloja .fechar svg, .chat .fechar svg {
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
 .carrinho .fechar svg path, .classificados .fechar svg path, .sobreloja .fechar svg path, .chat .fechar svg path {
     fill: var(--texto-secundario);
 }
