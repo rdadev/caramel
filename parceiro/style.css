@@ -186,6 +186,7 @@ aside::-webkit-scrollbar-track {
 aside::-webkit-scrollbar-thumb {
     background-color: #bdbdbd;
     border-radius: 20px;
+    border: 0;
 }
 
 .dash {

@@ -23,6 +23,22 @@
     backface-visibility: hidden;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
+    scrollbar-width: 10px;
+    scrollbar-color: #bdbdbd transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #ececec;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #bdbdbd;
+    border-radius: 20px;
+    margin: 1px solid #ececec;
 }
 
 @keyframes carregar {
@@ -85,21 +101,6 @@ button, input[type=submit] {
 body {
     position: relative;
     min-height: 100vh;
-    scrollbar-width: 10px;
-    scrollbar-color: #bdbdbd transparent;
-}
-
-body::-webkit-scrollbar {
-    width: 10px;
-}
-  
-body::-webkit-scrollbar-track {
-    background: #ececec;
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: #bdbdbd;
-    border-radius: 20px;
 }
 
 main {
