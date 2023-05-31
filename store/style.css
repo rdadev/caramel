@@ -881,7 +881,6 @@ footer .container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 20px 0 40px 0;
 }
 
 .cadastrin .esq, .cadastrin .dir {
@@ -1338,10 +1337,6 @@ footer .container {
     overflow: hidden;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--bordas);
-}
-
-main {
-    min-height: calc(100vh - 147px);
 }
 
 .capa {
@@ -1816,10 +1811,6 @@ main {
         width: auto;
     }
 
-    .cupom {
-        margin-bottom: 20px;
-    }
-
     .dados {
         margin-bottom: 55px;
     }
@@ -1875,10 +1866,6 @@ main {
 
     .btfit {
         width: 100%;
-    }
-    
-    .abfinal {
-        margin: 30px auto 100px auto;
     }
 
     .classificacao {

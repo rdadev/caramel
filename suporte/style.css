@@ -13,7 +13,6 @@
 
 .conteudo {
     margin: 35px 0;
-    min-height: calc(100vh - 242px);
 }
 
 .conteudo h2 {
@@ -240,6 +239,7 @@ a {
 
     .acordeon {
         font-size: 12pt;
+        margin: 20px 0 0 0;
     }
 }
 
