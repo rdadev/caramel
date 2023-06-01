@@ -1396,13 +1396,13 @@ footer .container {
 }
 
 .classificacao svg path {
-    fill: #adab00;
+    fill: #df9800;
 }
 
 .classificacao p {
     float: right;
     font-weight: 800;
-    color: #adab00;
+    color: #df9800;
     margin: 2px 0 0 5px;
 }
 
@@ -1550,7 +1550,7 @@ footer .container {
 }
 
 .avalintro .ativo {
-    fill: #adab00;
+    fill: #df9800;
 }
 
 .estrelas {
@@ -1598,7 +1598,7 @@ footer .container {
 }
 
 .avastars .ativo {
-    fill: #adab00;
+    fill: #df9800;
 }
 
 .avalu .data {
@@ -1721,7 +1721,7 @@ footer .container {
 }
 
 .estrelinhas svg path {
-    fill: #adab00;
+    fill: #df9800;
 }
 
 .avaliar {
@@ -1918,6 +1918,12 @@ footer .container {
     .avaliar {
         max-width: unset;
     }
+
+    .txtpass, .btpass {
+        width: 100%;
+    }
+
+
 }
 
 @media screen and (max-width: 750px) {
