@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../global.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script defer type="text/javascript" src="../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../script.js"></script>
     <title>Caramel</title>
 </head>
 <body class="portal">
@@ -28,7 +28,7 @@
                     <li><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" ><path d="M179.761 941.978q-27.698 0-48.034-20.265-20.336-20.266-20.336-47.865V278.152q0-27.697 20.336-48.033 20.336-20.337 48.034-20.337h292.674v68.37H179.761v595.696h292.674v68.13H179.761Zm486.478-182.369-48.978-48.5 101.043-101.044H371.891v-68.13h344.413L615.261 440.891l48.978-48.5L848.609 577l-182.37 182.609Z"/></svg></a></li>
                 </ul>
                 <div class="situacao">
-                    <select>
+                    <select id="funcionamento" onchange="abrirLoja()">
                         <option selected class="dpdown" value="aberta">Aberta</option>
                         <option class="dpdown" value="fechada">Fechada</option>
                      </select>
@@ -37,24 +37,39 @@
         </div>
     </header>
     
+    <dialog id="mdloja" onkeydown="removeBlur()">
+        <div class="cabeca">
+            <h1 id="mljtit">Abertura da loja</h1>
+            <button class="mdfechar" type="button" onclick="fecharModal('#mdloja')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+        </div>
+        <div class="conteudo">
+            <img src="../images/shop.png" alt="Loja"/>
+            <p id="mljdesc">Deseja realizar a abertura de turno da loja? A loja ficará visível na busca da plataforma e clientes poderão comprar e visitar sua página</p>
+            <button type="button" class="bta rbtcontent">Confirmar</button>
+            <button type="button" class="btb rbtcontent" onclick="fecharModal('#mdloja')">Cancelar</button>
+        </div>
+    </dialog>
+
     <aside>
-        <ul class="navbar">
-            <li class="active"><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm0 80q-33 0-56.5-23.5T160-200v-360q0-19 8.5-36t23.5-28l240-180q11-8 23-12t25-4q13 0 25 4t23 12l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H520v-240h-80v240H240Zm240-350Z"/></svg>Início</a></li>
-            <li><a href="avaliacoes.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-129q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-531q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-488L662-361l44 189q3 13-2 23.5T690-131q-9 7-21 8t-23-6L480-229Zm0-201Z"/></svg>Avaliações</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-50 0-85-35t-35-85v-80q0-17 11.5-28.5T160-320h80v-531q0-9 8-11t16 6l36 36 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 36-36q8-8 16-6.5t8 11.5v651q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h320q17 0 28.5 11.5T680-280v80q0 17 11.5 28.5T720-160ZM399-600q-17 0-28-11.5T360-640q0-17 11.5-28.5T400-680h160q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H399Zm0 120q-17 0-28-11.5T360-520q0-17 11.5-28.5T400-560h160q17 0 28.5 11.5T600-520q0 17-11.5 28.5T560-480H399Zm281-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>Pedidos</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M481-120q-17 0-28.5-11.5T441-160v-46q-45-10-79-35t-55-70q-7-14-.5-29.5T330-363q14-6 29 .5t23 21.5q17 30 43 45.5t64 15.5q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-44q0-17 11.5-28.5T481-840q17 0 28.5 11.5T521-800v44q38 6 66 24.5t46 45.5q9 13 3.5 29T614-634q-14 6-29 .5T557-653q-13-14-30.5-21.5T483-682q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v44q0 17-11.5 28.5T481-120Z"/></svg>Financeiro</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M512-40q-12.75 0-21.375-8.675Q482-57.351 482-70.175 482-83 490.625-91.5T512-100h268v-54h-88q-24.75 0-42.375-17.625T632-214v-176q0-24.75 17.625-42.375T692-450h88v-68q0-124-87-213.5T482-821q-124 0-213 89.5T180-518v68h88q24.75 0 42.375 17.625T328-390v176q0 24.75-17.625 42.375T268-154h-88q-24 0-42-18t-18-42v-304q0-74.733 28.5-140.881Q177-725.03 226-774.515T341.204-852.5q66.205-28.5 141-28.5Q557-881 622.5-852.5 688-824 736.052-774.515q48.051 49.485 76 115.634Q840-592.733 840-518v418q0 24-18 42t-42 18H512ZM180-214h88v-176h-88v176Zm512 0h88v-176h-88v176Zm-512 0h88-88Zm512 0h88-88Z"/></svg>Mensagens</a></li>
-            <h5>Configurações</h5>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm34 440q-45 0-68-39.5t-2-78.5l54-98-144-304H79q-17 0-28-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57h590q27 0 37 20t-1 42L692-482q-11 20-29 31t-41 11H324l-44 80h441q17 0 28 11.5t11 28.5q0 17-11.5 28.5T720-280H280Zm62-240h280-280Z"/></svg>Produtos</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-496v-144q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v159q0 8 3 15.5t9 13.5l132 132q11 11 28 11t28-11q11-11 11-28t-11-28L520-496ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>Horários</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-496v-144q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v159q0 8 3 15.5t9 13.5l132 132q11 11 28 11t28-11q11-11 11-28t-11-28L520-496ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>Tempo de entrega</a></li>
-            <h5>Geral</h5>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-472 52q-11-11-11-28t11-28l528-528q11-11 28-11t28 11q11 11 11 28t-11 28L244-188q-11 11-28 11t-28-11Z"/></svg>Promoções</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M201-120q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518v318q0 33-23.5 56.5T761-120H201Zm368-440q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z"/></svg>Perfil</a></li>
-            <h5>Legal</h5>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm4-172q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"/></svg>Ajuda</a></li>
-            <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm4-172q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"/></svg>Políticas</a></li>
-        </ul>
+        <nav>
+            <ul class="navbar">
+                <li class="active"><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm0 80q-33 0-56.5-23.5T160-200v-360q0-19 8.5-36t23.5-28l240-180q11-8 23-12t25-4q13 0 25 4t23 12l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H520v-240h-80v240H240Zm240-350Z"/></svg>Início</a></li>
+                <li><a href="avaliacoes.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-129q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-531q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-488L662-361l44 189q3 13-2 23.5T690-131q-9 7-21 8t-23-6L480-229Zm0-201Z"/></svg>Avaliações</a></li>
+                <li><a href="pedidos.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-50 0-85-35t-35-85v-80q0-17 11.5-28.5T160-320h80v-531q0-9 8-11t16 6l36 36 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 36-36q8-8 16-6.5t8 11.5v651q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h320q17 0 28.5 11.5T680-280v80q0 17 11.5 28.5T720-160ZM399-600q-17 0-28-11.5T360-640q0-17 11.5-28.5T400-680h160q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H399Zm0 120q-17 0-28-11.5T360-520q0-17 11.5-28.5T400-560h160q17 0 28.5 11.5T600-520q0 17-11.5 28.5T560-480H399Zm281-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>Pedidos</a></li>
+                <li><a href="financeiro.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M481-120q-17 0-28.5-11.5T441-160v-46q-45-10-79-35t-55-70q-7-14-.5-29.5T330-363q14-6 29 .5t23 21.5q17 30 43 45.5t64 15.5q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-44q0-17 11.5-28.5T481-840q17 0 28.5 11.5T521-800v44q38 6 66 24.5t46 45.5q9 13 3.5 29T614-634q-14 6-29 .5T557-653q-13-14-30.5-21.5T483-682q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v44q0 17-11.5 28.5T481-120Z"/></svg>Financeiro</a></li>
+                <li><a href="mensagens.html"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M512-40q-12.75 0-21.375-8.675Q482-57.351 482-70.175 482-83 490.625-91.5T512-100h268v-54h-88q-24.75 0-42.375-17.625T632-214v-176q0-24.75 17.625-42.375T692-450h88v-68q0-124-87-213.5T482-821q-124 0-213 89.5T180-518v68h88q24.75 0 42.375 17.625T328-390v176q0 24.75-17.625 42.375T268-154h-88q-24 0-42-18t-18-42v-304q0-74.733 28.5-140.881Q177-725.03 226-774.515T341.204-852.5q66.205-28.5 141-28.5Q557-881 622.5-852.5 688-824 736.052-774.515q48.051 49.485 76 115.634Q840-592.733 840-518v418q0 24-18 42t-42 18H512ZM180-214h88v-176h-88v176Zm512 0h88v-176h-88v176Zm-512 0h88-88Zm512 0h88-88Z"/></svg>Mensagens</a></li>
+                <h5>Configurações</h5>
+                <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm34 440q-45 0-68-39.5t-2-78.5l54-98-144-304H79q-17 0-28-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57h590q27 0 37 20t-1 42L692-482q-11 20-29 31t-41 11H324l-44 80h441q17 0 28 11.5t11 28.5q0 17-11.5 28.5T720-280H280Zm62-240h280-280Z"/></svg>Produtos</a></li>
+                <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-496v-144q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v159q0 8 3 15.5t9 13.5l132 132q11 11 28 11t28-11q11-11 11-28t-11-28L520-496ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>Horários</a></li>
+                <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-496v-144q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640v159q0 8 3 15.5t9 13.5l132 132q11 11 28 11t28-11q11-11 11-28t-11-28L520-496ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>Tempo de entrega</a></li>
+                <h5>Geral</h5>
+                <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-472 52q-11-11-11-28t11-28l528-528q11-11 28-11t28 11q11 11 11 28t-11 28L244-188q-11 11-28 11t-28-11Z"/></svg>Promoções</a></li>
+                <li><a href="portal.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M201-120q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518v318q0 33-23.5 56.5T761-120H201Zm368-440q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z"/></svg>Perfil</a></li>
+                <h5>Legal</h5>
+                <li><a href="../suporte/index.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm4-172q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"/></svg>Ajuda</a></li>
+                <li><a href="../suporte/politicas.html" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Zm4-172q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"/></svg>Políticas</a></li>
+            </ul>
+        </nav>
     </aside>
 
     <main class="dashboard">
@@ -64,12 +79,12 @@
                 <div class="metrica">
                     <h4>Pedidos</h4>
                     <h3>2</h3>
-                    <a href="">Gerenciar</a>
+                    <a href="pedidos.html">Gerenciar</a>
                 </div>
                 <div class="metrica">
                     <h4>Avaliações</h4>
                     <h3>1</h3>
-                    <a href="">Gerenciar</a>
+                    <a href="avaliacoes.html">Gerenciar</a>
                 </div>
                 <div class="metrica">
                     <h4>Visitas</h4>
@@ -92,22 +107,82 @@
             <div class="atividades">
                 <div class="atividade">
                     <h4>Segunda-feira</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
                 <div class="atividade">
                     <h4>Terça-feira</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
                 <div class="atividade fim">
                     <h4>Quarta-feira</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
                 <div class="atividade">
                     <h4>Quinta-feira</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
                 <div class="atividade">
                     <h4>Sexta-feira</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
                 <div class="atividade fim">
                     <h4>Sábado</h4>
+                    <div class="vendas">
+                        <h4>Vendas</h4>
+                        <h3>0</h3>
+                        <h5>R$ 0,00</h5>
+                    </div>
+                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
+                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
+                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
+                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
                 </div>
+
             </div>
         </section>
     </main>
@@ -136,12 +211,12 @@
               label: 'Pedidos',
               data: [1120, 850, 795, 812, 985, 1003],
               borderWidth: 6,
-              borderColor: 'red'
+              borderColor: '#007bff'
             }, {
               label: 'Visitas',
-              data: [2801, 1702, 1023, 1210, 3801, 2001],
+              data: [1340, 1702, 1023, 1210, 2180, 2001],
               borderWidth: 6,
-              borderColor: 'blue'
+              borderColor: '#bff007'
             }]
           },
           options: {

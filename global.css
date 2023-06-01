@@ -80,7 +80,7 @@ html, input, select, button, fieldset, form {
 
 input, select {
     color: var(--texto-principal);
-    font-size: 12.2pt;
+    font-size: 11.5pt;
     font-weight: 400;
 }
 
@@ -715,11 +715,19 @@ dialog::-webkit-scrollbar {
     background-color: #FFF;
     width: 100%;
     height: 50px;
-    padding: 20px;
+    padding: 0 20px;
     margin: 10px auto;
     border-radius: 7px;
     display: block;
     color: var(--texto-principal);
+}
+
+.selections {
+    padding: 10px 15px;
+    background: url('images/down.svg') #FFF no-repeat center right;
+    background-position-x: calc(100% - 5px);
+    appearance: none;
+    cursor: pointer;
 }
 
 .bta {
@@ -773,6 +781,17 @@ dialog::-webkit-scrollbar {
     font-weight: 600;
     color: var(--principal);
     font-size: 13pt;
+}
+
+.lbtcontent {
+    width: fit-content;
+    float: left;
+}
+
+.rbtcontent {
+    width: fit-content;
+    float: right;
+    margin-left: 10px;
 }
 
 .btl:hover {

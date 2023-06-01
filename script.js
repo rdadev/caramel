@@ -148,6 +148,7 @@ function abrirModal(elemento) {
     $("header").addClass("blur");
     $("section").addClass("blur");
     $("footer").addClass("blur");
+    $("aside").addClass("blur");
     modal.showModal();
 };
 
@@ -157,6 +158,7 @@ function fecharModal(elemento) {
     $("header").removeClass("blur");
     $("section").removeClass("blur");
     $("footer").removeClass("blur");
+    $("aside").removeClass("blur");
     modal.close();
 };
 
@@ -167,6 +169,7 @@ function removeBlur() {
             $("header").removeClass("blur");
             $("section").removeClass("blur");
             $("footer").removeClass("blur");
+            $("aside").removeClass("blur");
         };
     };
 };
@@ -311,7 +314,6 @@ function passaStatus(status) {
 // Abertura de acordeon 
 var acc = document.getElementsByClassName("acordeon");
 var i;
-
 for (i = 0; i < acc.length; i++) {
     var acc = document.getElementsByClassName("acordeon");
     var i;
@@ -333,4 +335,56 @@ for (i = 0; i < acc.length; i++) {
         } 
       }
     }
+};
+
+// Abertura e fechamento da loja 
+function abrirLoja() {
+    const status = document.querySelector("#funcionamento");
+    const titulo = document.querySelector("#mljtit");
+    const descricao = document.querySelector("#mljdesc");
+
+    if (status.value == "aberta") {
+        abrirModal('#mdloja');
+        titulo.textContent = "Abertura de turno";
+        descricao.textContent = "Deseja realizar a abertura de turno da loja? A loja ficará visível na busca da plataforma e clientes poderão comprar e visitar sua página";
+
+    } else if (status.value == "fechada") {
+        abrirModal('#mdloja');
+        titulo.textContent = "Fechamento de turno";
+        descricao.textContent = "Deseja realizar o fechamento de turno da loja? A loja ficará invisível na busca da plataforma e clientes não poderão comprar na sua loja";
+    };
+};
+
+function tabelasData(nome) {
+    $(nome).DataTable({
+        paging: true,
+        searching: false,
+        ordering: false,
+        info: true,
+        processing: false,
+        "language": {
+            "decimal":        "",
+            "emptyTable":     "Nenhum registro encontrado",
+            "info":           "_TOTAL_ registros",
+            "infoEmpty":      "Nenhum registro encontrado",
+            "infoFiltered":   "(Filtrando em _MAX_ registros)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Exibindo _MENU_ registros",
+            "loadingRecords": "Aguarde, carregando",
+            "processing":     "",
+            "search":         "Pesquisa:",
+            "zeroRecords":    "Nenhum registro encontrado",
+                "paginate": {
+                    "first":      "Primeiro",
+                    "last":       "Último",
+                    "next":       "Próximo",
+                    "previous":   "Anterior"
+            },
+        "aria": {
+            "sortAscending":  ": activate to sort column ascending",
+            "sortDescending": ": activate to sort column descending"
+            }
+        }
+    });
 };
