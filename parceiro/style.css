@@ -165,19 +165,19 @@ header {
 
 
 .loja {
-    width: calc(100% - 300px);
+    width: fit-content;
     height: auto;
     overflow: hidden;
+    float: left;
 }
 
 .loja img {
     width: 50px;
     height: 50px;
     object-fit: cover;
-    border-radius: 100%;
+    border-radius: 10px;
     margin: 12px 0;
     float: left;
-    border: 1px solid #cacaca;
 }
 
 .txloja {
@@ -199,6 +199,13 @@ header {
     color: var(--texto-tertiario);
 }
 
+.btsdir {
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    float: right;
+}
+
 .situacao {
     width: fit-content;
     height: auto;
@@ -206,6 +213,21 @@ header {
     line-height: 75px;
     float: right;
     margin-right: 20px;
+}
+
+.sitmobile {
+    display: none;
+}
+
+.sitmobile select {
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    background: var(--secundaria);
+    appearance: none;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--principal);
 }
 
 .situacao select {
@@ -268,6 +290,11 @@ header {
 
 .buttons li:nth-child(1):hover::after {
     content: "Sair";
+    display: block;
+}
+
+.buttons li:nth-child(2):hover::after {
+    content: "Avisos";
     display: block;
 }
 
@@ -347,6 +374,8 @@ aside {
     overflow-y: scroll;
     scrollbar-width: 10px;
     scrollbar-color: #bdbdbd transparent;
+    transition: ease all 0.3s;
+    z-index: 10;
 }
 
 aside::-webkit-scrollbar {
@@ -363,6 +392,10 @@ aside::-webkit-scrollbar-thumb {
     border: 0;
 }
 
+.asidepos {
+    left: 0%;
+}
+
 .dash {
     width: 100%;
     max-width: calc(100% - 50px);
@@ -373,6 +406,7 @@ aside::-webkit-scrollbar-thumb {
 
 footer .dash {
     border-top: 1px solid #cacaca;
+    
 }
 
 footer {
@@ -422,7 +456,7 @@ footer {
     padding: 25px
 }
 
-.dashboard {
+.exibicao {
     background-color: #f8f8f8;
     margin-left: 300px;
     min-height: calc(100vh - 75px);
@@ -608,7 +642,7 @@ footer {
 }
 
 .tabela tr:hover {
-    background-color: #f7f7f7;
+    background-color: #eeeeee;
 }
 
 .tabela td {
@@ -645,11 +679,11 @@ footer {
 }
 
 #tblavaliacoes .cabecalho th:nth-child(4) {
-    width: 70px;
+    width: 80px;
 }
 
 #tblavaliacoes .cabecalho th:nth-child(5) {
-    width: 80px;
+    width: 100px;
 }
 
 .dataTables_length {
@@ -690,16 +724,104 @@ footer {
     padding: 6px 12px;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
-    border: none;
-    color: var(--principal);
-    padding: 0 7px 0 0;
+#tblpedidos .cabecalho th:nth-child(1) {
+    width: 95px;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.next {
-    border: none;
-    color: var(--principal);
-    padding: 0 0 0 7px;
+#tblpedidos .cabecalho th:nth-child(2) {
+    width: 165px;
+}
+
+#tblpedidos .cabecalho th:nth-child(3) {
+    width: 165px;
+}
+
+#tblpedidos .cabecalho th:nth-child(4) {
+    width: 165px;
+}
+
+#tblpedidos .cabecalho th:nth-child(5) {
+    max-width: 240px;
+}
+
+#tblpedidos .cabecalho th:nth-child(6) {
+    width: 100px;
+}
+
+tr:nth-child(even) {
+    background:#f7f7f7;
+}
+
+#tblpedidos .confirmar, #tblpedidos .andamento, #tblpedidos .entrega, #tblpedidos .concluido {
+    width: fit-content;
+    padding: 6px 15px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+#tblpedidos .confirmar {
+    background-color: #e9e3be;
+    color: #998200;
+}
+
+#tblpedidos .andamento {
+    background-color: #bee3e9;
+    color: #25375e;
+}
+
+#tblpedidos .entrega {
+    background-color: #e9bebe;
+    color: #411b19;
+}
+
+#tblpedidos .concluido {
+    background-color: #c2e9be;
+    color: #145735;
+}
+
+.hamburger {
+    margin: 21px 15px 20px 0;
+}
+
+.hamburguer svg {
+    width: 28px;
+    height: 28px;
+}
+
+@media screen and (max-width: 1150px) {
+    aside {
+        left: -110%;
+    }
+
+    .exibicao, footer {
+        margin-left: 0;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .loja {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .plogotipo {
+        width: fit-content;
+    }
+
+    .buttons li:nth-child(1):hover::after {
+        display: none;
+    }
+    
+    .buttons li:nth-child(2):hover::after {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 950px) { 
@@ -719,6 +841,62 @@ footer {
     .formulario {
         width: 100%;
         margin: 30px auto;
+    }
+
+    .filtro5 {
+        width: 24%;
+    }
+
+    .fim5 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .subfim5 {
+        width: 25%;
+        margin-right: 0;
+    }
+
+    #filtraval {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .metrica {
+        width: 49%;
+        margin-bottom: 1%;
+    }
+
+    .atividade {
+        width: 49%;
+    }
+
+    .atividades .fim {
+        width: 49%;
+        margin-right: 1%;
+    }
+
+    .mob {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .filtro5 {
+        width: 49%;
+    }
+
+    .subfim5, .segfim5 {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .fim5 {
+        width: 100%;
+    }
+
+    #filtraval {
+        margin-top: 10px;
     }
 }
 
@@ -741,5 +919,36 @@ footer {
 
     .entradas, .botao, .recuperacao {
         width: 100%;
+    }
+
+    .atividade, .mob, .atividades .fim, .metrica {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tabelamento {
+        overflow-x: scroll;
+    }
+
+    .tabela {
+        width: 780px;
+    }
+
+    .filtro5, .subfim5, .fim5 {
+        width: 100%;
+    }
+
+    .metrica h4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .situacao {
+        display: none;
+    }
+
+    .sitmobile {
+        display: inline;
     }
 }

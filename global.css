@@ -260,9 +260,15 @@ header {
 .hamburger {
     display: none;
     width: 34px;
+    height: auto;
+    overflow: hidden;
     float: left;
-    line-height: 120px;
-    margin: 0 15px 0 0;
+    margin: 33px 15px 33px 0;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    float: left;
 }
 
 .mobile {
@@ -800,6 +806,7 @@ dialog::-webkit-scrollbar {
 
 .acessos {
     padding-bottom: 0;
+    user-select: none;
 }
 
 /* O JUMP DO GATO NO RESPONSIVO */
@@ -1029,6 +1036,10 @@ dialog::-webkit-scrollbar {
 
     .miolo {
         background-size: 110%;
+    }
+
+    footer .dash {
+        padding: 15px 0;
     }
 }
 

@@ -314,27 +314,24 @@ function passaStatus(status) {
 // Abertura de acordeon 
 var acc = document.getElementsByClassName("acordeon");
 var i;
+
 for (i = 0; i < acc.length; i++) {
-    var acc = document.getElementsByClassName("acordeon");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        var acord = this;
-        if (panel.style.maxHeight){
-          panel.style.maxHeight = null;
-          panel.style.padding = "0px 20px";
-          panel.style.borderBottom = "none";
-          acord.style.borderRadius = "8px";
-        } else {
-          acord.style.borderRadius = "8px 8px 0 0";
-          panel.style.padding = "20px";
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          panel.style.borderBottom = "1px solid var(--bordas)";
-        } 
-      }
-    }
+    acc[i].onclick = function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      var acord = this;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+        panel.style.padding = "0px 20px";
+        panel.style.borderBottom = "none";
+        acord.style.borderRadius = "8px";
+      } else {
+        acord.style.borderRadius = "8px 8px 0 0";
+        panel.style.padding = "20px";
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.borderBottom = "1px solid var(--bordas)";
+      };
+   };
 };
 
 // Abertura e fechamento da loja 
@@ -355,6 +352,19 @@ function abrirLoja() {
     };
 };
 
+// Cancelamento de abertura ou fechamento da loja
+function cancelarTurno() {
+    const status = document.querySelector("#funcionamento");
+    const statusmob = document.querySelector("#funcionamobile");
+    if (status.value == "aberta") {
+        status.value = "fechada";
+        statusmob.value = "Loja fechada";
+    } else if (status.value == "fechada") {
+        status.value = "aberta";
+        statusmob.value = "Loja aberta";
+    };
+};
+
 function tabelasData(nome) {
     $(nome).DataTable({
         paging: true,
@@ -365,7 +375,7 @@ function tabelasData(nome) {
         "language": {
             "decimal":        "",
             "emptyTable":     "Nenhum registro encontrado",
-            "info":           "_TOTAL_ registros",
+            "info":           "_TOTAL_ registros listados",
             "infoEmpty":      "Nenhum registro encontrado",
             "infoFiltered":   "(Filtrando em _MAX_ registros)",
             "infoPostFix":    "",
@@ -376,10 +386,10 @@ function tabelasData(nome) {
             "search":         "Pesquisa:",
             "zeroRecords":    "Nenhum registro encontrado",
                 "paginate": {
-                    "first":      "Primeiro",
-                    "last":       "Último",
-                    "next":       "Próximo",
-                    "previous":   "Anterior"
+                    "first":      "<<",
+                    "last":       ">>",
+                    "next":       ">",
+                    "previous":   "<"
             },
         "aria": {
             "sortAscending":  ": activate to sort column ascending",
@@ -387,4 +397,9 @@ function tabelasData(nome) {
             }
         }
     });
+};
+
+function abrirSidebar() {
+    $("aside").toggleClass("asidepos");
+    $(".block").toggleClass("mostrar");
 };
