@@ -456,7 +456,7 @@ footer .container {
     display: block;
 }
 
-.carrinho, .classificados, .sobreloja, .chat {
+.lateral {
     width: 100%;
     height: calc(100vh - 75px);
     background-color: #faf9f9;
@@ -464,56 +464,44 @@ footer .container {
     right: -110%;
     top: 75px;
     max-width: 450px;
-    box-shadow: 0px 0px 15px #00000036;
+    border-left: 1px solid var(--bordas);
     z-index: 1;
     transition: ease all 0.3s;
     overflow: auto;  
     margin: 0;
 }
 
-.carrinho {
-    scrollbar-width: 0;
-}
-
-.carrinho::-webkit-scrollbar {
-    display: none;
-}
-
-.poscarrinho, .posloja, .posclassificacao, .poschat {
-    right: 0;
-}
-
-.carrinho .fechar, .classificados .fechar, .sobreloja .fechar, .chat .fechar{
+.lateral .fechar {
     width: 100%;
     height: 60px;
     background-color: #f0f0f0;
     padding: 15px;
 }
 
-.carrinho .fechar span, .classificados .fechar span, .sobreloja .fechar span, .chat .fechar span {
+.lateral .fechar span {
     float: right;
     line-height: 30px;
     font-weight: 600;
     color: var(--texto-secundario);
 }
 
-.carrinho .fechar button, .classificados .fechar button, .sobreloja .fechar button, .chat .fechar button {
+.lateral .fechar button {
     float: left;
     border: none;
     background: none;
 }
 
-.carrinho .fechar svg, .classificados .fechar svg, .sobreloja .fechar svg, .chat .fechar svg {
+.lateral .fechar svg {
     width: 25px;
     height: 25px;
     margin-top: 3px;
 }
 
-.carrinho .fechar svg path, .classificados .fechar svg path, .sobreloja .fechar svg path, .chat .fechar svg path {
+.lateral .fechar svg path {
     fill: var(--texto-secundario);
 }
 
-.content, .contents {
+.lateral .content,.lateral .contents {
     padding: 20px;
     width: 100%;
     height: auto;
@@ -521,7 +509,7 @@ footer .container {
     margin-bottom: 25px;
 }
 
-.carrinho .content {
+.lateral .content {
     margin-bottom: 125px;
 }
 
@@ -617,10 +605,6 @@ footer .container {
     transition: ease all 0.3s;
 }
 
-.postotal, .posdigitador {
-    right: 0%;
-}
-
 .totais span {
     display: block;
     width: 100%;
@@ -635,7 +619,8 @@ footer .container {
 .tcheckout {
     position: inherit;
     background-color: transparent;
-    padding: 0 20px;
+    padding: 0;
+    max-width: none;
 }
 
 .lgcheckout {
@@ -663,7 +648,7 @@ footer .container {
     overflow: hidden;
     border: 1px solid var(--bordas);
     border-radius: 12px;
-    padding: 20px;
+    padding: 40px;
     float: right;
 }
 
@@ -1748,6 +1733,10 @@ footer .container {
     width: 150px;
     margin: 0 auto 10px auto;
     float: right;
+}
+
+.poslateral {
+    right: 0;
 }
 
 @media screen and (max-width: 1050px) {

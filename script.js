@@ -65,56 +65,12 @@ function fecharMenuMobile() {
     }, 350);
 };
 
-// Abrir e fechar carrinho 
-function abrirCarrinho() {
-    $(".carrinho").toggleClass("poscarrinho");
-    $(".totais").toggleClass("postotal");
-    $(".block").toggleClass("mostrar");
-    $(".sobreloja").removeClass("posloja");
-    $(".blockloja").removeClass("mostrar");
-    $(".classificados").removeClass("posclassificacao");
-    $(".blockclass").removeClass("mostrar");
-};
-
-// Abre a descrição da loja na página da loja
-function abrirDetalhesLoja() {
-    $(".sobreloja").toggleClass("posloja");
-    $(".blockloja").toggleClass("mostrar");
-    $(".carrinho").removeClass("poscarrinho");
-    $(".totais").removeClass("postotal");
-    $(".block").removeClass("mostrar");
-    $(".classificados").removeClass("posclassificacao");
-    $(".blockclass").removeClass("mostrar");
-};
-
-// Abrir comentários e classificação sobre a loja
-function abrirClassificacao() {
-    $(".classificados").toggleClass("posclassificacao");
-    $(".blockclass").toggleClass("mostrar");
-    $(".sobreloja").removeClass("posloja");
-    $(".blockloja").removeClass("mostrar");
-    $(".carrinho").removeClass("poscarrinho");
-    $(".totais").removeClass("postotal");
-    $(".block").removeClass("mostrar");
-};
-
-// Abertura do chat do pedido atual
-function abrirChat() {
-    $(".chat").toggleClass("poschat");
-    $(".digitador").toggleClass("posdigitador");
-    $(".blockchat").toggleClass("mostrar");
-    $(".carrinho").removeClass("poscarrinho");
-    $(".totais").removeClass("postotal");
-    $(".block").removeClass("mostrar");
-};
-
-const rdPix = document.querySelector("#pag1");
-
 // Função do rádio logistica checkout
 function logCheckout() {
+    const pix = document.querySelector("#pag1");
     if ($("#log1").prop("checked")) {
         $("#lbd").addClass("fantasma");
-        rdPix.checked = true;
+        pix.checked = true;
         pagCheckout();
         $(".tipoent").removeClass("select");
         $("#boxlog1").addClass("select");
@@ -376,7 +332,7 @@ function tabelasData(nome) {
         "language": {
             "decimal":        "",
             "emptyTable":     "Nenhum registro encontrado",
-            "info":           "_TOTAL_ registros listados",
+            "info":           "_TOTAL_ registro(s) listado(s)",
             "infoEmpty":      "Nenhum registro encontrado",
             "infoFiltered":   "(Filtrando em _MAX_ registros)",
             "infoPostFix":    "",
@@ -403,18 +359,104 @@ function tabelasData(nome) {
 // Abertura da navegação do dashboard do lojista
 function abrirSidebar() {
     $("aside").toggleClass("asidepos");
-    $(".block").toggleClass("mostrar");
+    $(".blocksidebar").toggleClass("mostrar");
 };
 
 // Abertura da exibição lateral do dashboard
 function abrirLateral(id) {
     fecharLateral();
-    $(".blocklateral").addClass("mostrar");
+    $(".block").addClass("mostrar");
     $(id).addClass("poslateral");
 }
 
 // Fechamento da exibição lateral do dashboard
 function fecharLateral() {
-    $(".blocklateral").removeClass("mostrar");
+    $(".block").removeClass("mostrar");
     $(".lateral").removeClass("poslateral");
+    $(".digitador").removeClass("poslateral");
+    $(".totais").removeClass("poslateral");
+};
+
+function passaAndamento(status) {
+    sessionStorage.setItem('andamentoPedido', status);
+};
+
+// Loading no botão de pedidos ao clicar
+function executarPedido(bt, parametro) {
+    const botao = document.querySelector(bt);
+    botao.textContent = "Aguarde ...";
+    $(bt).addClass("btcarregando");
+
+    setTimeout(function() { 
+        detalharPedido(parametro);
+        window.scrollTo(0, 0);
+    }, 500);
+
+};
+
+// Status do pedido na tela de confirmação do pedido
+function detalharPedido(status) {
+    if (status == "concluido") {
+        $(".status").css("display", "none");
+        $(".btcontato").css("display", "inline");
+        const info = document.querySelector("#infocliente");
+        const stat = document.querySelector("#andamento");
+        const local = document.querySelector("#endereco");
+        const prev = document.querySelector("#previsao");
+        info.textContent = "Ana Castro • Pedido #827649";
+        stat.textContent = "Concluído";
+        local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
+        prev.innerHTML = "Entregue às <b>16:15<b/>";
+        $("#andamento").addClass("statpos");
+        $(".btimpressao").css("display", "inline");
+        $(".btentrega").css("display", "none");
+        $(".btconfirmar").css("display", "none");
+        $(".cobranca").css("display", "block");
+    }
+
+    else if (status == "preparando") {
+        $(".status").css("display", "none");
+        $(".btcontato").css("display", "inline");
+        const info = document.querySelector("#infocliente");
+        const stat = document.querySelector("#andamento");
+        const local = document.querySelector("#endereco");
+        const prev = document.querySelector("#previsao");
+        info.textContent = "Ana Castro • Pedido #827649";
+        stat.textContent = "Preparando pedido";
+        local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
+        prev.innerHTML = "Entrega prevista <b>16:20<b/>";
+        $("#andamento").addClass("statpos");
+        $(".btimpressao").css("display", "inline");
+        $(".btentrega").css("display", "inline");
+        $(".btconfirmar").css("display", "none");
+        $(".cobranca").css("display", "block");
+    }
+
+    else if (status == "entregando") {
+        $(".status").css("display", "none");
+        $(".btcontato").css("display", "inline");
+        const info = document.querySelector("#infocliente");
+        const stat = document.querySelector("#andamento");
+        const local = document.querySelector("#endereco");
+        const prev = document.querySelector("#previsao");
+        info.textContent = "Ana Castro • Pedido #827649";
+        stat.textContent = "Rota de entrega";
+        local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
+        prev.innerHTML = "Entrega prevista <b>16:20<b/>";
+        $("#andamento").addClass("statpos");
+        $(".btimpressao").css("display", "inline");
+        $(".btentrega").css("display", "none");
+        $(".btconfirmar").css("display", "none");
+        $(".cobranca").css("display", "block");
+    };
+};
+
+// Digitador do chat
+function abrirDigitador() {
+    $(".digitador").addClass("poslateral");
+};
+
+// Abrir total do carrinho
+function abrirTotais() {
+    $(".totais").addClass("poslateral");
 };
