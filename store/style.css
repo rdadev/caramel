@@ -312,7 +312,6 @@ section {
     color: var(--texto-principal);
     margin-bottom: 20px;
     overflow: hidden;
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     line-height: 1.1;

@@ -365,6 +365,7 @@ function cancelarTurno() {
     };
 };
 
+// Tabelas 
 function tabelasData(nome) {
     $(nome).DataTable({
         paging: true,
@@ -399,7 +400,21 @@ function tabelasData(nome) {
     });
 };
 
+// Abertura da navegação do dashboard do lojista
 function abrirSidebar() {
     $("aside").toggleClass("asidepos");
     $(".block").toggleClass("mostrar");
+};
+
+// Abertura da exibição lateral do dashboard
+function abrirLateral(id) {
+    fecharLateral();
+    $(".blocklateral").addClass("mostrar");
+    $(id).addClass("poslateral");
+}
+
+// Fechamento da exibição lateral do dashboard
+function fecharLateral() {
+    $(".blocklateral").removeClass("mostrar");
+    $(".lateral").removeClass("poslateral");
 };

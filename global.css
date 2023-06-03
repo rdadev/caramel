@@ -38,7 +38,7 @@
 *::-webkit-scrollbar-thumb {
     background-color: #bdbdbd;
     border-radius: 20px;
-    margin: 1px solid #ececec;
+    border: 1px solid #ececec;
 }
 
 @keyframes carregar {
@@ -1039,7 +1039,7 @@ dialog::-webkit-scrollbar {
     }
 
     footer .dash {
-        padding: 15px 0;
+        padding: 20px 0;
     }
 }
 
