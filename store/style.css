@@ -1705,13 +1705,6 @@ footer .container {
     max-width: 520px;
 }
 
-.mdobs {
-    font-size: 10pt;
-    color: var(--texto-tertiario);
-    font-weight: 400;
-    margin: 20px 0;
-}
-
 .descpromo {
     color: var(--texto-tertiario);
 }

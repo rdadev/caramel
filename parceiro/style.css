@@ -829,7 +829,7 @@ tr:nth-child(even) {
     display: block;
 }
 
-.avaliacao .estrelas {
+.estrelas {
     width: fit-content;
     height: auto;
     overflow: hidden;
@@ -838,16 +838,16 @@ tr:nth-child(even) {
     margin-bottom: 10px;
 }
 
-.avaliacao .estrelas svg {
+.estrelas svg {
     width: 20px;
     height: 20px;
 }
 
-.avaliacao .estrelas svg path {
+.estrelas svg path {
     fill: var(--texto-tertiario);
 }
 
-.avaliacao .estrelas .ativo {
+.estrelas .ativo {
     fill: #df9800;
 }
 
@@ -941,16 +941,16 @@ tr:nth-child(even) {
 }
 
 .cartoes h3 {
-    font-size: 12pt;
+    font-size: 13pt;
     font-weight: 600;
     color: var(--texto-principal);
-    margin-bottom: 5px;
 }
 
 .cartoes p {
     font-size: 11pt;
     font-weight: 400;
     color: var(--texto-secundario);
+    margin: 5px 0 15px 0;
 }
 
 .acionamento {
@@ -1194,6 +1194,38 @@ tr:nth-child(even) {
 
 .lateral .comfundo {
     margin-bottom: 125px;
+}
+
+.outro {
+    font-size: 10pt;
+    color: var(--texto-principal);
+    font-weight: 400;
+    margin: 2px 0;
+}
+
+.psoutros {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#avaliado .conteudo h3 {
+    font-size: 17pt;
+}
+
+#avaliado .conteudo p {
+    font-size: 12pt;
+}
+
+#avaliado .estrelas {
+    margin-top: 5px;
+}
+
+#avaliado h5 {
+    font-size: 12pt;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    color: var(--texto-tertiario);
 }
 
 @media screen and (max-width: 1150px) {

@@ -686,7 +686,7 @@ dialog {
     padding: 25px;
     background-color: #FFF;
 	border-radius: 15px;
-	width: 650px;
+	width: 520px;
 	outline: none;
 	box-shadow: 0 0 20px #00000025;
     overflow: hidden;
@@ -701,6 +701,10 @@ dialog .conteudo {
     overflow: hidden!important;
     padding: 0!important;
     margin: 0!important;
+}
+
+dialog .conteudo p {
+    font-size: 11pt;
 }
 
 dialog::backdrop {
@@ -726,6 +730,13 @@ dialog .cabeca .mdfechar {
 
 dialog::-webkit-scrollbar {
     display: none;
+}
+
+dialog .obs {
+    font-size: 10pt!important;
+    color: var(--texto-tertiario);
+    font-weight: 400;
+    margin: 20px 0;
 }
 
 .txti {
