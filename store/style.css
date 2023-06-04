@@ -476,6 +476,7 @@ footer .container {
     height: 60px;
     background-color: #f0f0f0;
     padding: 15px;
+    border-bottom: 1px solid var(--bordas);
 }
 
 .lateral .fechar span {
@@ -873,7 +874,7 @@ footer .container {
 
 .cadastrin label, .alterpass label {
     font-size: 12pt;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--texto-secundario);
     margin-bottom: 10px;
     padding-top: 10px;

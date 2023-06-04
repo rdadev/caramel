@@ -305,7 +305,7 @@ header {
 }
 
 .blur {
-    filter: blur(4px);
+    filter: blur(3.5px);
     transition: filter 0.2s;
 }
 
