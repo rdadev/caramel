@@ -55,6 +55,16 @@
         </div>
     </dialog>
 
+    <dialog id="moderacao" onkeydown="removeBlur()">
+        <div class="cabeca">
+            <h1>Moderação</h1>
+            <button class="mdfechar" type="button" onclick="fecharModal('#moderacao')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+        </div>
+        <div class="conteudo">
+            
+        </div>
+    </dialog>
+
     <aside>
         <nav>
             <ul class="navbar">
@@ -129,7 +139,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">João</h3><h4 style="float: right; margin-top: 5px">25/03/2023</h4></span>
@@ -142,7 +152,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Bom, porém o tempo de espera é um pouco extenso.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -155,7 +165,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -168,7 +178,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -181,7 +191,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -194,7 +204,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -207,7 +217,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -220,7 +230,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                     <li class="avaliacao">
                         <span><h3 style="float: left">Ana Banana</h3><h4 style="float: right; margin-top: 5px">22/03/2023</h4></span>
@@ -233,7 +243,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path class="ativo" d="M480-229 294-117q-8 5-17 4.5t-16-5.5q-7-5-10.5-13t-1.5-18l49-212-164-143q-8-7-9.5-15.5t.5-16.5q2-8 9-13.5t17-6.5l217-19 84-200q4-9 12-13.5t16-4.5q8 0 16 4.5t12 13.5l84 200 217 19q10 1 17 6.5t9 13.5q2 8 .5 16.5T826-504L662-361l49 212q2 10-1.5 18T699-118q-7 5-16 5.5t-17-4.5L480-229Z"/></svg>    
                         </div>
                         <p>Muito bom! Atendimento excelente, recomendo.</p>
-                        <button type="button" class="detalhar">Detalhes</button>
+                        <button type="button" class="detalhar" onclick="abrirLateral('#avaliado'); abrirFundo('#moderar');">Detalhes</button>
                     </li>
                 </ul>
             </div>
@@ -259,6 +269,17 @@
                     <button type="button" class="detalhar">Dispensar</button>
                     <a href="mensagens.html" class="detalhar acionamento">Acessar</a>
                 </div>
+            </div>
+        </section>
+        <section id="avaliado" class="lateral">
+            <div class="fechar"><span>Avaliação</span><button type="button" onclick="fecharLateral()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
+            <div class="conteudo comfundo">
+                <h3>Ana</h3>
+                <p>Muito bom! Atendimento excelente, recomendo.</p>
+                <p>Pedido #401201</p>
+            </div>
+            <div id="moderar" class="fundo">
+                <button type="button" class="bta" onclick="abrirModal('#moderacao')">Solicitar moderação</button>
             </div>
         </section>
     </main>

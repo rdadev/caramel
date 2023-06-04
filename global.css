@@ -695,6 +695,14 @@ dialog {
     scrollbar-width: 0;
 }
 
+dialog .conteudo {
+    width: 100%!important;
+    height: auto!important;
+    overflow: hidden!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
 dialog::backdrop {
 	background-color: #00000094;
 }

@@ -369,12 +369,16 @@ function abrirLateral(id) {
     $(id).addClass("poslateral");
 }
 
+// Abre o fundo para os deslizes laterais que tenham
+function abrirFundo(id) {
+    $(id).addClass("poslateral");
+};
+
 // Fechamento da exibição lateral do dashboard
 function fecharLateral() {
     $(".block").removeClass("mostrar");
     $(".lateral").removeClass("poslateral");
-    $(".digitador").removeClass("poslateral");
-    $(".totais").removeClass("poslateral");
+    $(".fundo").removeClass("poslateral");
 };
 
 function passaAndamento(status) {
@@ -449,14 +453,4 @@ function detalharPedido(status) {
         $(".btconfirmar").css("display", "none");
         $(".cobranca").css("display", "block");
     };
-};
-
-// Digitador do chat
-function abrirDigitador() {
-    $(".digitador").addClass("poslateral");
-};
-
-// Abrir total do carrinho
-function abrirTotais() {
-    $(".totais").addClass("poslateral");
 };

@@ -97,7 +97,7 @@
                 <div class="alerta">
                     <p id="andamento" class="andamento">Confirmar em <b>5 min</b></p>
                 </div>
-                <button type="button" class="btl btcontato" onclick="abrirLateral('#chat'); abrirDigitador();">Entrar em contato</button>
+                <button type="button" class="btl btcontato" onclick="abrirLateral('#chat'); abrirFundo('#digitador');">Entrar em contato</button>
             </div>
             <div class="log">
                 <p><span class="tipo">Entrega própria</span><span class="endereco" id="endereco">Avenida Opet • Rebouças • Curitiba/PR • 2,5km</span></p>
@@ -170,7 +170,7 @@
         </section>
         <section id="chat" class="lateral">
             <div class="fechar"><span>Chat</span><button type="button" onclick="fecharLateral()"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button></div>
-            <div class="conteudo mensagens">
+            <div class="conteudo mensagens comfundo">
                 <div class="introchat">
                     <img src="../images/usuario.png" alt="Icone usuário"/>
                     <h2>Ana Castro</h2>
@@ -195,7 +195,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="digitador">
+            <div id="digitador" class="fundo">
                 <input type="text" class="txti" placeholder="Enviar mensagem"/>
             </div>
             </div>

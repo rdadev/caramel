@@ -914,6 +914,21 @@ tr:nth-child(even) {
     margin-bottom: 25px;
 }
 
+.fundo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: -110%;
+    padding: 20px;
+    transition: ease all 0.3s;
+    border: 1px solid var(--bordas);
+}
+
 .cartoes {
     width: 100%;
     height: auto;
@@ -1165,20 +1180,6 @@ tr:nth-child(even) {
     margin: 5px 0 5px auto;
 }
 
-.digitador {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    overflow: hidden;
-    background-color: #f7f7f7;
-    position: fixed;
-    z-index: 2;
-    bottom: 0;
-    right: -110%;
-    padding: 20px;
-    transition: ease all 0.3s;
-}
-
 .poslateral {
     right: 0;
 }
@@ -1189,6 +1190,10 @@ tr:nth-child(even) {
 
 .pagamento {
     margin-right: 20px;
+}
+
+.lateral .comfundo {
+    margin-bottom: 125px;
 }
 
 @media screen and (max-width: 1150px) {
