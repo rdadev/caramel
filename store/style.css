@@ -872,7 +872,7 @@ footer .container {
     margin: auto;
 }
 
-.cadastrin label, .alterpass label {
+.cadastrin label {
     font-size: 12pt;
     font-weight: 600;
     color: var(--texto-secundario);
@@ -1676,13 +1676,6 @@ footer .container {
     margin: 5px auto 5px 0;
 }
 
-.faval h4 {
-    font-size: 12pt;
-    font-weight: 400;
-    color: var(--texto-secundario);
-    margin-bottom: 10px;
-}
-
 .place2 {
     margin-top: 20px;
 }
@@ -2154,6 +2147,11 @@ footer .container {
         padding: 15px 0px;
         border-bottom: 1px solid var(--bordas);
         border-radius: 0;
+    }
+
+    dialog .rbtcontent, dialog .lbtcontent {
+        width: 100%;
+        margin-right: 0;
     }
 }
 

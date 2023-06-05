@@ -98,13 +98,14 @@
             <div class="conteudo">
                 <form class="alterpass" method="" action="conta.html" autocomplete="off">
                     <fieldset>
-                        <label for="antpass">Senha atual</label>
+                        <label for="antpass" class="lbs">Senha atual</label>
                         <input class="txti" id="antpass" type="password" placeholder="********"/>
-                        <label for="newpass">Nova senha</label>
+                        <label for="newpass" class="lbs">Nova senha</label>
                         <input class="txti" id="newpass" type="password" placeholder="********"/>
-                        <label for="cofpass">Confirmar</label>
+                        <label for="cofpass" class="lbs">Confirmar</label>
                         <input class="txti" id="cofpass" type="password" placeholder="********"/>
-                        <input class="bta" type="submit" value="Alterar" style="margin-top: 25px;"/>
+                        <input class="bta rbtcontent" type="submit" value="Alterar"/>
+                        <button class="btb rbtcontent" type="button" onclick="fecharModal('#alterpass')">Cancelar</button>
                     </fieldset>
                 </form>
             </div>

@@ -121,7 +121,7 @@ function fecharModal(elemento) {
 // Remover blur do fundo
 function removeBlur() {
     document.onkeydown = function(e) {
-        if(e.key === "Escape") {
+        if(e.key == "Escape") {
             $("header").removeClass("blur");
             $("section").removeClass("blur");
             $("footer").removeClass("blur");
@@ -453,4 +453,65 @@ function detalharPedido(status) {
         $(".btconfirmar").css("display", "none");
         $(".cobranca").css("display", "block");
     };
+};
+
+function abreDropDown(id) {
+    $(id).toggleClass('dpexibir');
+};
+
+// Seleciona o arquivo ao clicar
+function selecionaArquivo(id) {
+    input = document.getElementById(id);
+    input.click();
+};
+
+// Visualizar arquivo ao colocar
+function mostraImagem(id, input) {
+    let reader = new FileReader();
+    imagem = document.getElementById(id);
+    arquivo = document.getElementById(input);
+
+    reader.onload = () => {
+        imagem.src = reader.result;
+        $(imagem).css("object-fit", "contain");
+    }
+
+    reader.readAsDataURL(arquivo.files[0]);
+};
+
+// Preencher informações do produto
+function alterarProduto() {
+    abrirLateral('#manproduto');
+    abrirFundo('#fdproduto');
+
+    const nome = document.getElementById("nome");
+    const descricao = document.getElementById("descricao");
+    const codigo = document.getElementById("codigo");
+    const medida = document.getElementById("medida");
+    const preco = document.getElementById("preco");
+    imagem = document.getElementById("imgresult");
+    nome.value = "Ração Golden Special Adultos Sabor Frango Pacote 15Kg";
+    descricao.textContent = "Golden Formula Adultos Frango e Carne utiliza proteína de carne bovina e não sabores artificiais e contém o nível ideal de todos os nutrientes.";
+    codigo.value = "11503";
+    medida.value = "PC - Pacote";
+    preco.value = "R$ 59,90";
+    imagem.src = "../images/produtos/produto1.jpg";
+    $(imagem).css("object-fit", "contain");
+};
+
+// Limpa campos do cadastro
+function zerarCadastro() {
+    const nome = document.getElementById("nome");
+    const descricao = document.getElementById("descricao");
+    const codigo = document.getElementById("codigo");
+    const medida = document.getElementById("medida");
+    const preco = document.getElementById("preco");
+    imagem = document.getElementById("imgresult");
+    nome.value = "";
+    descricao.textContent = "";
+    codigo.value = "";
+    medida.value = "UN - Unidade";
+    preco.value = "";
+    imagem.src = "../images/blank.svg";
+    $(imagem).css("object-fit", "cover");
 };
