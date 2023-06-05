@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../global.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../script.js"></script>
     <title>Caramel</title>
 </head>
@@ -55,6 +55,28 @@
         </div>
     </dialog>
 
+    <dialog id="mdajuste" onkeydown="removeBlur()">
+        <div class="cabeca">
+            <h1>Ajuste de estoque</h1>
+            <button class="mdfechar" type="button" onclick="fecharModal('#mdajuste')"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="28"><path d="m249 873-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/></svg></button>
+        </div>
+        <div class="conteudo">
+            <form method="" action="">
+                <input type="number" placeholder="Quantidade atual" class="txti"/>
+                <div class="labelcheck">
+                    <p class="left fit">Adicionar ao atual (modo compra)</p>
+                    <label class="switch right">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <p class="obs">Ao término do estoque o produto será pausado automaticamente e não ficará visível na página na loja</p>
+            </form>
+            <button type="button" class="bta rbtcontent">Confirmar</button>
+            <button type="button" class="btb rbtcontent" onclick="fecharModal('#mdajuste')">Cancelar</button>
+        </div>
+    </dialog>
+
     <aside>
         <nav>
             <ul class="navbar">
@@ -64,14 +86,14 @@
                         <option class="dpdown" value="fechada">Loja fechada</option>
                      </select>
                 </div>
-                <li class="active"><a href="dashboard.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm0 80q-33 0-56.5-23.5T160-200v-360q0-19 8.5-36t23.5-28l240-180q11-8 23-12t25-4q13 0 25 4t23 12l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H520v-240h-80v240H240Zm240-350Z"/></svg>Início</a></li>
+                <li><a href="dashboard.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm0 80q-33 0-56.5-23.5T160-200v-360q0-19 8.5-36t23.5-28l240-180q11-8 23-12t25-4q13 0 25 4t23 12l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H520v-240h-80v240H240Zm240-350Z"/></svg>Início</a></li>
                 <li><a href="pedidos.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-50 0-85-35t-35-85v-80q0-17 11.5-28.5T160-320h80v-531q0-9 8-11t16 6l36 36 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 46-46q6-6 14-6t14 6l46 46 36-36q8-8 16-6.5t8 11.5v651q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h320q17 0 28.5 11.5T680-280v80q0 17 11.5 28.5T720-160ZM399-600q-17 0-28-11.5T360-640q0-17 11.5-28.5T400-680h160q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H399Zm0 120q-17 0-28-11.5T360-520q0-17 11.5-28.5T400-560h160q17 0 28.5 11.5T600-520q0 17-11.5 28.5T560-480H399Zm281-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/></svg>Pedidos</a></li>
                 <li><a href="avaliacoes.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143Zm126 18L314-129q-11 7-23 6t-21-8q-9-7-14-17.5t-2-23.5l44-189-147-127q-10-9-12.5-20.5T140-531q4-11 12-18t22-9l194-17 75-178q5-12 15.5-18t21.5-6q11 0 21.5 6t15.5 18l75 178 194 17q14 2 22 9t12 18q4 11 1.5 22.5T809-488L662-361l44 189q3 13-2 23.5T690-131q-9 7-21 8t-23-6L480-229Zm0-201Z"/></svg>Avaliações</a></li>
                 <li><a href="financeiro.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M481-120q-17 0-28.5-11.5T441-160v-46q-45-10-79-35t-55-70q-7-14-.5-29.5T330-363q14-6 29 .5t23 21.5q17 30 43 45.5t64 15.5q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-44q0-17 11.5-28.5T481-840q17 0 28.5 11.5T521-800v44q38 6 66 24.5t46 45.5q9 13 3.5 29T614-634q-14 6-29 .5T557-653q-13-14-30.5-21.5T483-682q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v44q0 17-11.5 28.5T481-120Z"/></svg>Financeiro</a></li>
                 <h5>Catálogo</h5>
                 <li><a href="produtos.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm34 440q-45 0-68-39.5t-2-78.5l54-98-144-304H79q-17 0-28-11.5T40-840q0-17 11.5-28.5T80-880h65q11 0 21 6t15 17l27 57h590q27 0 37 20t-1 42L692-482q-11 20-29 31t-41 11H324l-44 80h441q17 0 28 11.5t11 28.5q0 17-11.5 28.5T720-280H280Zm62-240h280-280Z"/></svg>Produtos</a></li>
                 <li><a href="promocoes.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M300-520q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T360-660q0-25-17.5-42.5T300-720q-25 0-42.5 17.5T240-660q0 25 17.5 42.5T300-600Zm360 440q-58 0-99-41t-41-99q0-58 41-99t99-41q58 0 99 41t41 99q0 58-41 99t-99 41Zm0-80q25 0 42.5-17.5T720-300q0-25-17.5-42.5T660-360q-25 0-42.5 17.5T600-300q0 25 17.5 42.5T660-240Zm-472 52q-11-11-11-28t11-28l528-528q11-11 28-11t28 11q11 11 11 28t-11 28L244-188q-11 11-28 11t-28-11Z"/></svg>Promoções</a></li>
-                <li><a href="estoque.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M224.118-161Q175-161 140.5-195 106-229 106-279h-6q-24.75 0-42.375-17.625T40-339v-401q0-24 18-42t42-18h519q24.75 0 42.375 17.625T679-740v107h90q7.5 0 13.5 3t10.5 9l121 161q3 3.75 4.5 8.25T920-442v133q0 12.75-8.625 21.375T890-279h-41q0 50-34.382 84-34.383 34-83.5 34Q682-161 647.5-195 613-229 613-279H342q0 50-34.382 84-34.383 34-83.5 34ZM224-221q24 0 41-17t17-41q0-24-17-41t-41-17q-24 0-41 17t-17 41q0 24 17 41t41 17ZM100-740v401h22q17-27 43.041-43 26.041-16 58-16t58.459 16.5Q308-365 325-339h294v-401H100Zm631 519q24 0 41-17t17-41q0-24-17-41t-41-17q-24 0-41 17t-17 41q0 24 17 41t41 17Zm-52-204h186L754-573h-75v148ZM360-540Z"/></svg> Estoque</a></li>
+                <li class="active"><a href="estoque.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M224.118-161Q175-161 140.5-195 106-229 106-279h-6q-24.75 0-42.375-17.625T40-339v-401q0-24 18-42t42-18h519q24.75 0 42.375 17.625T679-740v107h90q7.5 0 13.5 3t10.5 9l121 161q3 3.75 4.5 8.25T920-442v133q0 12.75-8.625 21.375T890-279h-41q0 50-34.382 84-34.383 34-83.5 34Q682-161 647.5-195 613-229 613-279H342q0 50-34.382 84-34.383 34-83.5 34ZM224-221q24 0 41-17t17-41q0-24-17-41t-41-17q-24 0-41 17t-17 41q0 24 17 41t41 17ZM100-740v401h22q17-27 43.041-43 26.041-16 58-16t58.459 16.5Q308-365 325-339h294v-401H100Zm631 519q24 0 41-17t17-41q0-24-17-41t-41-17q-24 0-41 17t-17 41q0 24 17 41t41 17Zm-52-204h186L754-573h-75v148ZM360-540Z"/></svg> Estoque</a></li>
                 <h5>Configurações</h5>
                 <li><a href="perfil.html"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M201-120q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518v318q0 33-23.5 56.5T761-120H201Zm368-440q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z"/></svg>Perfil</a></li>
                 <li><a href="configuracoes.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M546-80H414q-11 0-19.5-7T384-105l-16-101q-19-7-40-19t-37-25l-93 43q-11 5-22 1.5T159-220L93-337q-6-10-3-21t12-18l86-63q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521l-86-63q-9-7-12-18t3-21l66-117q6-11 17-14.5t22 1.5l93 43q16-13 37-25t40-18l16-102q2-11 10.5-18t19.5-7h132q11 0 19.5 7t10.5 18l16 101q19 7 40.5 18.5T669-710l93-43q11-5 22-1.5t17 14.5l66 116q6 10 3.5 21.5T858-584l-86 61q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l86 62q9 7 12 18t-3 21l-66 117q-6 11-17 14.5t-22-1.5l-93-43q-16 13-36.5 25.5T592-206l-16 101q-2 11-10.5 18T546-80Zm-66-270q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-60q-29 0-49.5-20.5T410-480q0-29 20.5-49.5T480-550q29 0 49.5 20.5T550-480q0 29-20.5 49.5T480-410Zm0-70Zm-44 340h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Z"/></svg>Configurações</a></li>
@@ -84,115 +106,63 @@
 
     <main class="exibicao">
         <section class="dsh">
-            <div class="titulor"><h2>Métricas</h2><p>Tempo real</p></div>
-            <div class="metricas">
-                <div class="metrica">
-                    <h4>Pedidos</h4>
-                    <h3>2</h3>
-                    <a href="pedidos.html">Gerenciar</a>
+            <div class="titulor"><h2>Estoque</h2></div>
+            <div class="filtragem">
+                <div class="menor">
+                    <label for="categoria">Seção</label>
+                    <select class="txti">
+                        <option selected>Todas</option>
+                        <option>Ração</option>
+                        <option>Petiscos</option>
+                        <option>Diversos</option>
+                    </select>
                 </div>
-                <div class="metrica mob">
-                    <h4>Avaliações</h4>
-                    <h3>1</h3>
-                    <a href="avaliacoes.html">Gerenciar</a>
+                <div class="grande"> 
+                    <label for="busca">Busca</label>
+                    <input type="text" class="txti" placeholder="Busca de produtos"/>
                 </div>
-                <div class="metrica">
-                    <h4>Visitas</h4>
-                    <h3>15</h3>
-                </div>
-                <div class="metrica fim mob">
-                    <h4>Ticket médio</h4>
-                    <h3>R$ 18,50</h3>
+                <div class="pedidors fim">
+                    <button type="button" class="bta btfiltro">Filtrar</button>
                 </div>
             </div>
-        </section>
-        <section class="dsh">
-            <div class="titulor"><h2>Desempenho</h2><p>Análise mensal</p></div>
-            <div class="desempenho">
-                <canvas id="desempenho"></canvas>
-            </div>
-        </section>
-        <section class="dsh">
-            <div class="titulor"><h2>Atividade</h2><p>Últimos seis dias</p></div>
-            <div class="atividades">
-                <div class="atividade">
-                    <h4>Segunda-feira</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
-                <div class="atividade mob">
-                    <h4>Terça-feira</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
-                <div class="atividade fim">
-                    <h4>Quarta-feira</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
-                <div class="atividade mob">
-                    <h4>Quinta-feira</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
-                <div class="atividade">
-                    <h4>Sexta-feira</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
-                <div class="atividade fim mob">
-                    <h4>Sábado</h4>
-                    <div class="vendas">
-                        <h4>Vendas</h4>
-                        <h3>0</h3>
-                        <h5>R$ 0,00</h5>
-                    </div>
-                    <span class="medidas"><p style="float:left">Tempo online</p><p class="valor" style="float:right">2h</p></span>
-                    <span class="medidas"><p style="float:left">Atrasos</p><p class="valor" style="float:right">0%</p></span>
-                    <span class="medidas"><p style="float:left">Nota média</p><p class="valor" style="float:right">5</p></span>
-                    <span class="medidas"><p style="float:left">Cancelamentos</p><p class="valor" style="float:right">0</p></span>
-                </div>
-
+            <div class="tabelamento">
+                <table id="tblestoque" class="tabela">
+                    <thead>
+                        <tr class=cabecalho>
+                            <th>Código</th>
+                            <th>Produto</th>
+                            <th>Seção</th>
+                            <th>Unidade</th>
+                            <th>Atual</th>
+                            <th>Ação</th>
+                        </tr>
+                    <tbody>
+                        <tr>
+                            <td>100120</td>
+                            <td>Ração Golden Special Adultos Sabor Frango Pacote 15Kg</td>
+                            <td>Ração</td>
+                            <td>PC</td>
+                            <td>20</td>
+                            <td><button type="button" class="btlink" onclick="abrirModal('#mdajuste')">Ajustar</button></td>
+                        </tr>
+                        <tr>
+                            <td>100122</td>
+                            <td>Ração Golden Special Adultos Sabor Frango Pacote 15Kg</td>
+                            <td>Ração</td>
+                            <td>PC</td>
+                            <td>15</td>
+                            <td><button type="button" class="btlink" onclick="abrirModal('#mdajuste')">Ajustar</button></td>
+                        </tr>
+                        <tr>
+                            <td>100125</td>
+                            <td>Ração Golden Special Adultos Sabor Frango Pacote 15Kg</td>
+                            <td>Ração</td>
+                            <td>UN</td>
+                            <td>3</td>
+                            <td><button type="button" class="btlink" onclick="abrirModal('#mdajuste')">Ajustar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         <section id="avisos" class="lateral">
@@ -234,34 +204,11 @@
     </footer>
 
     <script>
-        const ctx = document.getElementById('desempenho');
-      
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-            datasets: [{
-              label: 'Pedidos',
-              data: [1120, 850, 795, 812, 985, 1003],
-              borderWidth: 6,
-              borderColor: '#007bff'
-            }, {
-              label: 'Visitas',
-              data: [1340, 1702, 1023, 1210, 2180, 2001],
-              borderWidth: 6,
-              borderColor: '#bff007'
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            },
-            responsive: true
-          }
-        });
-      </script>
+    $(document).ready(function() {
+        tabelasData('#tblestoque');
+    });
 
+
+    </script>
 </body>
 </html>

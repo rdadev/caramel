@@ -416,6 +416,7 @@ function detalharPedido(status) {
         $(".btentrega").css("display", "none");
         $(".btconfirmar").css("display", "none");
         $(".cobranca").css("display", "block");
+        $(".observacao").css("display", "block");
     }
 
     else if (status == "preparando") {
@@ -434,6 +435,7 @@ function detalharPedido(status) {
         $(".btentrega").css("display", "inline");
         $(".btconfirmar").css("display", "none");
         $(".cobranca").css("display", "block");
+        $(".observacao").css("display", "block");
     }
 
     else if (status == "entregando") {
@@ -452,6 +454,7 @@ function detalharPedido(status) {
         $(".btentrega").css("display", "none");
         $(".btconfirmar").css("display", "none");
         $(".cobranca").css("display", "block");
+        $(".observacao").css("display", "block");
     };
 };
 
@@ -466,15 +469,17 @@ function selecionaArquivo(id) {
 };
 
 // Visualizar arquivo ao colocar
-function mostraImagem(id, input) {
+function mostraImagem(id, input, contain) {
     let reader = new FileReader();
     imagem = document.getElementById(id);
     arquivo = document.getElementById(input);
 
     reader.onload = () => {
         imagem.src = reader.result;
-        $(imagem).css("object-fit", "contain");
-    }
+        if (contain == true) {
+            $(imagem).css("object-fit", "contain");
+        };
+    };
 
     reader.readAsDataURL(arquivo.files[0]);
 };
@@ -514,4 +519,21 @@ function zerarCadastro() {
     preco.value = "";
     imagem.src = "../images/blank.svg";
     $(imagem).css("object-fit", "cover");
+};
+
+// Edita seção
+function editarSecao() {
+    abrirModal('#mdsecao');
+    const titulo = document.getElementById("mdsecaoh1");
+    const descricao = document.getElementById("mdsecaodescricao");
+    titulo.textContent = "Editar seção";
+    descricao.value = "Rações";
+};
+
+// Zera seção
+function zerarSecao() {
+    const titulo = document.getElementById("mdsecaoh1");
+    const descricao = document.getElementById("mdsecaodescricao");
+    titulo.textContent = "Adicionar seção";
+    descricao.value = "";
 };

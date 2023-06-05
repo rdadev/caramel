@@ -1047,7 +1047,7 @@ tr:nth-child(even) {
     font-size: 11pt;
 }
 
-.log, .cobranca {
+.log, .cobranca, .observacao {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1058,11 +1058,11 @@ tr:nth-child(even) {
     margin-top: 25px;
 }
 
-.cobranca {
+.cobranca, .observacao {
     display: none;
 }
 
-.log p, .cobranca p {
+.log p, .cobranca p, .observacao p {
     font-size: 11pt;
 }
 
@@ -1449,6 +1449,16 @@ tr:nth-child(even) {
     float: left;
 }
 
+.metade {
+    width: 49%;
+    margin: 0 1% 15px 0;
+}
+
+.inter {
+    width: 99%;
+    margin: 10px 0;
+}
+
 .frmlateral label{
     font-size: 11pt;
     font-weight: 800;
@@ -1456,7 +1466,7 @@ tr:nth-child(even) {
     letter-spacing: 0;
 }
 
-.frmlateral fieldset legend h2 {
+form fieldset legend h2 {
     font-size: 14pt;
     font-weight: 800;
     margin-bottom: 10px;
@@ -1493,7 +1503,7 @@ input[type='file'] {
     float: right;
 }
 
-.frmlateral .dica {
+form .dica {
     font-size: 10pt;
     float: right;
     color: var(--texto-tertiario);
@@ -1505,7 +1515,7 @@ input[type='file'] {
     overflow: hidden;
 }
 
-.cfgestoque {
+.labelcheck {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1515,7 +1525,7 @@ input[type='file'] {
     padding: 20px;
 }
 
-.cfgestoque p {
+.labelcheck p {
     line-height: 30px;
     font-size: 11pt;
     font-weight: 600;
@@ -1525,6 +1535,68 @@ input[type='file'] {
 
 .acoes .lbtcontent {
     margin-right: 1%;
+}
+
+.brand {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.capa {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background-color: #e6e6e6;
+    border: 1px solid var(--bordas);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.capa img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logomarca {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid var(--bordas);
+    background-color: #ffffff;
+    position: relative;
+    top: -50px;
+    left: calc(50% - 45px);
+    cursor: pointer;
+}
+
+.logomarca img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.setenta {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+}
+
+#tblestoque .cabecalho th:nth-child(1),
+#tblestoque .cabecalho th:nth-child(4),
+#tblestoque .cabecalho th:nth-child(5) {
+    width: 90px;
+}
+
+#tblestoque .cabecalho th:nth-child(3) {
+    width: 110px;
+}
+
+#tblestoque .cabecalho th:nth-child(6) {
+    width: 100px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -1763,6 +1835,29 @@ input[type='file'] {
         width: 100%;
         margin-right: 0;
     }
+
+    .capa {
+        height: 120px;
+    }
+
+    .logomarca {
+        width: 90px;
+        height: 90px;
+        left: calc(50% - 45px);
+    }
+
+    .metade {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .inter {
+        width: 100%;
+    }
+
+    .inter .rbtcontent {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1777,6 +1872,21 @@ input[type='file'] {
     .fundo .rbtcontent, dialog .rbtcontent, dialog .lbtcontent {
         width: 100%;
         margin-right: 0;
+    }
+
+    .capa {
+        height: 100px;
+    }
+
+    .logomarca {
+        width: 70px;
+        height: 70px;
+        left: calc(50% - 35px);
+        top: -35px;
+    }
+
+    #manproduto .comfundo {
+        margin-bottom: 165px;
     }
 }
 
