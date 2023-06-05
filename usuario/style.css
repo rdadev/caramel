@@ -154,6 +154,10 @@ a {
     text-decoration: underline;
 }
 
+.smb {
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 950px) { 
     .entrada, .cadastramento{
         background-image: none;

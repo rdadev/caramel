@@ -135,11 +135,6 @@ a {
     color: #FFF;
 }
 
-nav ::selection {
-    background-color: transparent;
-    color: var(--texto-cabecalho);
-}
-
 input:active, input:focus, select:active, select:focus {
     border: 1px solid var(--principal);
     outline: none;
@@ -269,6 +264,10 @@ header {
 
 .hamburger svg {
     float: left;
+}
+
+nav, footer {
+    user-select: none;
 }
 
 .mobile {
@@ -1085,5 +1084,9 @@ dialog .obs {
 
     footer p, footer a {
         font-size: 9.5pt;
+    }
+
+    body {
+        min-width: 320px;
     }
 }
