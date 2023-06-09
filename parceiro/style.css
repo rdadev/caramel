@@ -498,13 +498,9 @@ footer {
 }
 
 .metrica a {
-    float: right;
     font-size: 9pt;
     margin-top: 2px;
     padding: 6px 12px;
-    background-color: var(--secundaria);
-    border-radius: 5px;
-    font-weight: 600;
 }
 
 .desempenho, .tabelamento {
@@ -883,12 +879,13 @@ tr:nth-child(even) {
 
 .detalhar {
     float: right;
-    font-size: 9pt;
+    font-size: 10pt;
     margin-top: 5px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     background-color: var(--secundaria);
     border-radius: 5px;
     font-weight: 600;
+    color: var(--hover);
 }
 
 .lateral {
@@ -1693,6 +1690,7 @@ form .dica {
 .avs {
     font-size: 11pt;
     margin-bottom: 20px;
+    color: var(--texto-tertiario);
 }
 
 .marketing {
@@ -1825,6 +1823,74 @@ form .dica {
     width: fit-content;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+#tblprodpromocao .cabecalho th:nth-child(1) {
+    width: 40px;
+}
+
+#tblprodpromocao .cabecalho th:nth-child(3),
+#tblprodpromocao .cabecalho th:nth-child(4) {
+    width: 100px;
+}
+
+.inputable {
+    width: 90px;
+    border: 1px solid var(--bordas);
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10.5pt;
+}
+
+.grandao {
+    width: 69%;
+    float: left;
+}
+
+.btgrandao {
+    width: 30%;
+    float: right;
+    margin-top: 29px;
+}
+
+.promocionais {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.ctpromocao {
+    width: 32.333%;
+    height: auto;
+    overflow: hidden;
+    margin-right: 1%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--bordas);
+    background-color: #FFF;
+    float: left;
+}
+
+.promocionais img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.promocionais h2 {
+    font-size: 14pt;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.promocionais .detalhar {
+    margin-top: 20px;
+}
+
+.btexcluir {
+    display: none;
 }
 
 @media screen and (max-width: 1150px) {
@@ -1978,6 +2044,22 @@ form .dica {
         width: 100%;
         margin-right: 0;
     }
+
+    .grandao {
+        width: 100%;
+        float: none;
+    }
+    
+    .btgrandao {
+        width: 100%;
+        float: none;
+        margin-top: 0;
+    }
+    
+    .ctpromocao {
+        width: 49%;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 650px) {  
@@ -2102,6 +2184,16 @@ form .dica {
     .dicazinha {
         font-size: 9pt;
     }
+
+    .ctpromocao {
+        width: 100%;
+    }
+
+    .promocionais img {
+        width: 100%;
+        object-fit: contain;
+        background: var(--inicio);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2130,11 +2222,15 @@ form .dica {
     }
 
     #manproduto .comfundo {
-        margin-bottom: 165px;
+        margin-bottom: 230px;
     }
 
     #manusuario .comfundo {
         margin-bottom: 200px;
+    }
+
+    #manpromocao .comfundo {
+        margin-bottom: 230px;
     }
 }
 

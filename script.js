@@ -505,6 +505,7 @@ function alterarProduto() {
     preco.value = "R$ 59,90";
     imagem.src = "../images/produtos/produto1.jpg";
     $(imagem).css("object-fit", "contain");
+    $('.btexcluir').css('display', 'block');
 };
 
 // Limpa campos do cadastro
@@ -522,6 +523,7 @@ function zerarCadastro() {
     preco.value = "";
     imagem.src = "../images/blank.svg";
     $(imagem).css("object-fit", "cover");
+    $('.btexcluir').css('display', 'none');
 };
 
 // Edita seção
@@ -543,7 +545,6 @@ function zerarSecao() {
 
 function preencheUsuario() {
     $('.avs').css('display', 'none');
-    $('#btremover').css('display', 'block');
     $('#username').prop('disabled', true);
     $('#usermail').prop('disabled', true);
     $('#usercpf').prop('disabled', true);
@@ -559,7 +560,6 @@ function preencheUsuario() {
 
 function zeraUsuario() {
     $('.avs').css('display', 'block');
-    $('#btremover').css('display', 'none');
     $('#username').prop('disabled', false);
     $('#usermail').prop('disabled', false);
     $('#usercpf').prop('disabled', false);
@@ -571,4 +571,66 @@ function zeraUsuario() {
     nome.value = "";
     email.value = "";
     cpf.value = "";
+};
+
+function preencherPromocao() {
+    var nome = document.querySelector("#nome");
+    var img = document.querySelector("#imgresult");
+    
+    nome.value = "Rações com até 30% OFF";
+    img.src = "../images/promocoes/promocao1.png";
+    $('.btexcluir').css('display', 'block');
+    $('#tabela2').css('display', 'block');
+    $('#tabela1').css('display', 'none');
+
+}
+
+function zerarPromocao() {
+    var nome = document.querySelector("#nome");
+    var img = document.querySelector("#imgresult");
+    
+    nome.value = "";
+    img.src = "../images/blank.svg";
+    $('.btexcluir').css('display', 'none');
+    $('#tabela2').css('display', 'none');
+    $('#tabela1').css('display', 'block');
+};
+
+// REMOVER, SOMENTE PARA FINS DE DEMONSTRAÇÃO
+function leituraUsuario() {
+    const user = sessionStorage.getItem('acessoParceiro');
+    var conta = document.querySelector('#tipo-conta');
+
+    if (user == "gerente") {
+        $('#menu-perfil').css('display', 'none');
+        $('#menu-definicoes').css('display', 'none');
+        $('#menu-usuarios').css('display', 'none');
+        conta.textContent = "Gerente";
+
+    } else if (user == "operacional") {
+        $('#menu-perfil').css('display', 'none');
+        $('#menu-definicoes').css('display', 'none');
+        $('#menu-usuarios').css('display', 'none');
+        $('#menu-avaliacoes').css('display', 'none');
+        $('#menu-usuarios').css('display', 'none');
+        $('#menu-promocoes').css('display', 'none');
+        $('#menu-produtos').css('display', 'none');
+        $('#gerava').css('display', 'none');
+        conta.textContent = "Operacional";
+
+    } else if (user == "atendente") {
+        $('#menu-perfil').css('display', 'none');
+        $('#menu-definicoes').css('display', 'none');
+        $('#menu-usuarios').css('display', 'none');
+        $('#menu-avaliacoes').css('display', 'none');
+        $('#menu-usuarios').css('display', 'none');
+        $('#menu-promocoes').css('display', 'none');
+        $('#menu-produtos').css('display', 'none');
+        $('#menu-financeiro').css('display', 'none');
+        $('#menu-estoque').css('display', 'none');
+        $('#titulo-catalogo').css('display', 'none');
+        $('#gerava').css('display', 'none');
+        $('#atividade-dashboard').css('display', 'none');
+        conta.textContent = "Atendente";
+    };
 };

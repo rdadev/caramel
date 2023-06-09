@@ -892,6 +892,10 @@ dialog .obs {
     text-align: center;
     cursor: pointer;
 }
+
+.click:hover {
+    background-color: #e9e9e9;
+}
   
 .slider:before {
    position: absolute;
@@ -914,7 +918,7 @@ input:checked + .click {
     border: 1px solid var(--principal);
     font-weight: 600;
     color: #FFF;
- }
+}
   
 input:focus + .slider {
    box-shadow: 0 0 1px var(--principal);
@@ -948,6 +952,63 @@ input:checked + .slider:before {
 
 .fit {
     width: fit-content;
+}
+
+.checks {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    top: -3px;
+}
+
+.checks input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #dfdfdf;
+    border-radius: 3px;
+}
+
+.checks:hover input + .checkmark {
+    background-color: #cacaca;
+}
+
+.checks input:checked + .checkmark {
+    background-color: var(--principal);
+}
+
+.checks .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+  
+.checks input:checked + .checkmark:after {
+    display: block;
+}
+
+.mt {
+    margin-top: 30px;
 }
 
 /* O JUMP DO GATO NO RESPONSIVO */
