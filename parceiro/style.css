@@ -755,7 +755,7 @@ tr:nth-child(even) {
     background:#f7f7f7;
 }
 
-.tabela .confirmar, .tabela .andamento, .tabela .entrega, .tabela .concluido, .tabela .cancelado {
+.tabela .confirmar, .tabela .andamento, .tabela .entrega, .tabela .concluido, .tabela .cancelado, .tabela .contexto {
     width: fit-content;
     padding: 6px 15px;
     height: auto;
@@ -787,6 +787,11 @@ tr:nth-child(even) {
 .tabela .cancelado {
     background-color: #e9bebe;
     color: #351b1b;
+}
+
+.tabela .contexto {
+    background-color: #bee3e9;
+    color: #25375e;
 }
 
 .hamburger {
@@ -1459,6 +1464,12 @@ tr:nth-child(even) {
     margin: 10px 0;
 }
 
+.totalclass {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 .frmlateral label{
     font-size: 11pt;
     font-weight: 800;
@@ -1599,6 +1610,223 @@ form .dica {
     width: 100px;
 }
 
+.informacoes {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.informacoes ul {
+    list-style: none;
+}
+
+.informacoes ul li {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-bottom: 1px solid var(--bordas);
+}
+
+.informacoes p {
+    font-size: 12pt;
+}
+
+.informacoes .descrinfo {
+    line-height: 50px;
+    float: left;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+}
+
+.informacoes .info {
+    line-height: 50px;
+    float: right;
+    font-weight: 600;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    text-align: right;
+}
+
+.informacoes .btl {
+    font-size: 12pt;
+}
+
+#atendente {
+    display: none;
+}
+
+.dicazinha {
+    font-size: 10pt;
+    color: var(--texto-tertiario);
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.observa {
+    font-size: 10pt!important;
+    color: var(--texto-tertiario);
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#tblusuarios .cabecalho th:nth-child(3) {
+    width: 220px;
+}
+
+#tblusuarios .cabecalho th:nth-child(2),
+#tblusuarios .cabecalho th:nth-child(4) {
+    width: 170px;
+}
+
+#tblusuarios .cabecalho th:nth-child(5) {
+    width: 110px;
+}
+
+.avs {
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+
+.marketing {
+    margin-bottom: 30px;
+}
+
+.htotal {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #FFF;
+    border-radius: 8px;
+    border: 1px solid var(--bordas);
+}
+
+.hmetrica {
+    width: 33.333%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    float: left;
+}
+
+.hmetrica h5 {
+    font-weight: 400;
+}
+
+.kanban {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.kanban th {
+    width: 6%;
+    height: 45px;
+}
+
+.kanban tr:nth-child(even) {
+    background: none;
+}
+
+.kanban td {
+    height: 36px;
+    border-bottom: 1px solid var(--bordas);
+}
+
+.kanban .active {
+    background-color: var(--secundaria);
+    padding: 12px 8px;
+}
+
+.kanban .pri {
+    border-radius: 11px 11px 0 0;
+}
+
+.kanban .fini {
+    border-radius: 0 0 11px 11px;
+}
+
+.kanban .hora {
+    width: 95%;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.kanban .horario {
+    border: none;
+    font-size: 10pt;
+    color: var(--texto-tertiario);
+}
+
+.kanban .active p {
+    font-size: 9pt;
+    text-align: center;
+}
+
+.horarinhos {
+    width: 2%!important;
+    border: none!important;
+}
+
+.hdia {
+    width: 95%;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    border: 1px solid var(--secundaria);
+    background-color: var(--secundaria);
+    line-height: 30px;
+    font-size: 10pt;
+}
+
+#kbn {
+    margin-bottom: 30px;
+}
+
+.checkdia {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.inputinho {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.seletor {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    min-width: 420px;
+}
+
+.txtspan {
+    float: left;
+    line-height: 50px;
+    margin-top: 10px;
+}
+
+.inputspan {
+    float: left;
+    width: fit-content;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 @media screen and (max-width: 1150px) {
     aside {
         left: -110%;
@@ -1671,6 +1899,14 @@ form .dica {
 
     .filtragem .grande {
         width: 79%;
+    }
+
+    #kbn {
+        overflow-x: scroll;
+    }
+
+    .kanban {
+        width: 1200px;
     }
 }
 
@@ -1858,6 +2094,14 @@ form .dica {
     .inter .rbtcontent {
         width: 100%;
     }
+
+    .informacoes p, .informacoes .btl {
+        font-size: 11pt;
+    }
+
+    .dicazinha {
+        font-size: 9pt;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1887,6 +2131,10 @@ form .dica {
 
     #manproduto .comfundo {
         margin-bottom: 165px;
+    }
+
+    #manusuario .comfundo {
+        margin-bottom: 200px;
     }
 }
 

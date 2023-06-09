@@ -696,6 +696,7 @@ dialog {
     animation: modal 0.3s;
     will-change: opacity;
     scrollbar-width: 0;
+    user-select: none;
 }
 
 dialog .conteudo {
@@ -748,7 +749,7 @@ dialog .obs {
     width: 100%;
     height: 50px;
     padding: 0 20px;
-    margin: 10px auto;
+    margin: 10px auto 15px auto;
     border-radius: 7px;
     display: block;
     color: var(--texto-principal);
@@ -853,8 +854,16 @@ dialog .obs {
     width: 54px;
     height: 30px;
 }
+
+.day {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+}
   
-.switch input { 
+.switch input, .day input { 
    opacity: 0;
    width: 0;
    height: 0;
@@ -869,6 +878,19 @@ dialog .obs {
    bottom: 0;
    background-color: #ccc;
    transition: 0.3s;
+}
+
+.click {
+    padding: 5px;
+    border-radius: 100%;
+    border: 1px solid var(--bordas);
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 10pt;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
 }
   
 .slider:before {
@@ -886,6 +908,13 @@ dialog .obs {
 input:checked + .slider {
    background-color: var(--principal);
 }
+
+input:checked + .click {
+    background-color: var(--principal);
+    border: 1px solid var(--principal);
+    font-weight: 600;
+    color: #FFF;
+ }
   
 input:focus + .slider {
    box-shadow: 0 0 1px var(--principal);
@@ -1178,5 +1207,11 @@ input:checked + .slider:before {
 
     body {
         min-width: 320px;
+    }
+}
+
+@media print {
+    header, aside, footer {
+        display: none;
     }
 }

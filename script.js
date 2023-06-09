@@ -412,6 +412,7 @@ function detalharPedido(status) {
         local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
         prev.innerHTML = "Entregue às <b>16:15<b/>";
         $("#andamento").addClass("statpos");
+        $("#atendente").css("display", "block");
         $(".btimpressao").css("display", "inline");
         $(".btentrega").css("display", "none");
         $(".btconfirmar").css("display", "none");
@@ -431,6 +432,7 @@ function detalharPedido(status) {
         local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
         prev.innerHTML = "Entrega prevista <b>16:20<b/>";
         $("#andamento").addClass("statpos");
+        $("#atendente").css("display", "block");
         $(".btimpressao").css("display", "inline");
         $(".btentrega").css("display", "inline");
         $(".btconfirmar").css("display", "none");
@@ -450,6 +452,7 @@ function detalharPedido(status) {
         local.textContent = "Avenida Opet, 99 • Rebouças • Curitiba/PR • 2,5km • CEP 80230-030";
         prev.innerHTML = "Entrega prevista <b>16:20<b/>";
         $("#andamento").addClass("statpos");
+        $("#atendente").css("display", "block");
         $(".btimpressao").css("display", "inline");
         $(".btentrega").css("display", "none");
         $(".btconfirmar").css("display", "none");
@@ -536,4 +539,36 @@ function zerarSecao() {
     const descricao = document.getElementById("mdsecaodescricao");
     titulo.textContent = "Adicionar seção";
     descricao.value = "";
+};
+
+function preencheUsuario() {
+    $('.avs').css('display', 'none');
+    $('#btremover').css('display', 'block');
+    $('#username').prop('disabled', true);
+    $('#usermail').prop('disabled', true);
+    $('#usercpf').prop('disabled', true);
+    
+    var nome = document.querySelector("#username");
+    var email = document.querySelector("#usermail");
+    var cpf = document.querySelector("#usercpf");
+
+    nome.value = "Teste da Silva";
+    email.value = "teste@teste.com.br";
+    cpf.value = "123.456.789-00";
+};
+
+function zeraUsuario() {
+    $('.avs').css('display', 'block');
+    $('#btremover').css('display', 'none');
+    $('#username').prop('disabled', false);
+    $('#usermail').prop('disabled', false);
+    $('#usercpf').prop('disabled', false);
+
+    var nome = document.querySelector("#username");
+    var email = document.querySelector("#usermail");
+    var cpf = document.querySelector("#usercpf");
+
+    nome.value = "";
+    email.value = "";
+    cpf.value = "";
 };

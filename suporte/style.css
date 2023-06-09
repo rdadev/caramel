@@ -113,10 +113,9 @@ a {
     width: 100%;
     text-align: left;
     outline: none;
-    font-size: 14pt;
+    font-size: 13pt;
     border-radius: 8px;
-    font-weight: 600;
-    margin: 25px 0 0 0;
+    margin: 15px 0 0 0;
     transition: box-shadow ease 0.2s;
 }
 
@@ -193,6 +192,34 @@ a {
 .dirinput {
     float: right;
     width: 50%;
+}
+
+.acessar {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    border-top: 1px solid var(--bordas);
+    transition: background-color 0.1s ease;
+}
+
+.acessar:hover {
+    background-color: var(--inicio);
+}
+
+.acessar p {
+    float: left;
+    line-height: 60px;
+    margin-left: 5px;
+}
+
+.acessar svg {
+    float: right;
+    margin: 20px 0 20px 5px;
+}
+
+.afinal {
+    border-bottom: 1px solid var(--bordas);
 }
 
 @media screen and (max-width: 800px) {

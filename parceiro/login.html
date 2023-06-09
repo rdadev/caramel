@@ -7,6 +7,7 @@
     <link rel="icon" type="image/icon" href="../images/icon.ico"/>
     <link rel="stylesheet" type="text/css" href="../global.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <title>Caramel</title>
 </head>
 <body class="entrada">
@@ -18,16 +19,40 @@
                     <div class="logotipo logo"><a href="../index.html">Caramel</a></div>
                     <h1>Entre para continuar</h1>
                     <p>Venda e gerencie pedidos pela plataforma de delivery mais amada pelos petshops</p>
-                    <form class="formulario" method="" action="dashboard.html" autocomplete="off">
-                        <input class="entradas" type="email" placeholder="email@email.com.br" />
-                        <input class="entradas" type="password" placeholder="********" />
+                    <form class="formulario" method="" action="dashboard.html" onsubmit="tipoAcesso()">
+                        <input id="email" class="entradas" type="email" placeholder="email@email.com.br" required/>
+                        <input id="senha" class="entradas" type="password" placeholder="********"/>
                         <a class="recuperacao" href="recuperacao.html">Esqueceu a senha?</a>
-                        <input class="botao" type="submit" value="Entrar"/>
+                        <input type="submit" class="botao" value="Entrar"/>
                         <span class="acao">Ainda não é parceiro? <a class="linkacao" href="cadastro.html">Cadastro</a></span>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+    $(document).ready(function() {
+        setTimeout(function() { 
+            window.alert("ESTE AVISO NÃO FAZ PARTE DO PROJETO, SERÁ REMOVIDO POSTERIORMENTE \n\nPara fins demonstrativos, os logins abaixo mudam o tipo de acesso no portal\n\nAdministrador: admin@caramel.com.br\nGerente: gerente@caramel.com.br\nOperacional: operacional@caramel.com.br\nAtendente: atendente@caramel.com.br\n\nSenha: Em branco");
+    }, 750);
+    });
+
+    // REMOVER APÓS APRESENTAÇÃO DO PI, É SOMENTE PARA FINS DEMONSTRATIVOS
+    function tipoAcesso() {
+    const email = document.querySelector("#email");
+    
+        if (email.value == "admin@caramel.com.br") {
+            sessionStorage.setItem('acessoParceiro', 'administrador');
+        } else if (email.value == "gerente@caramel.com.br") {
+            sessionStorage.setItem('acessoParceiro', 'gerente');
+        } else if (email.value == "operacional@caramel.com.br") {
+            sessionStorage.setItem('acessoParceiro', 'operacional');
+        } else if (email.value == "atendente@caramel.com.br") {
+            sessionStorage.setItem('acessoParceiro', 'atendente');
+        } else {
+            sessionStorage.setItem('acessoParceiro', 'administrador');
+        };
+    };
+    </script>
 </body>
 </html>
