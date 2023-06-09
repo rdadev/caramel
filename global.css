@@ -1011,6 +1011,12 @@ input:checked + .slider:before {
     margin-top: 30px;
 }
 
+.graficos {
+    width: 100%!important;
+    height: auto!important;
+    overflow: hidden!important;
+}
+
 /* O JUMP DO GATO NO RESPONSIVO */
 @media screen and (max-width: 1120px) {
     .container {

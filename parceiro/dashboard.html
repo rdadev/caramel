@@ -111,7 +111,7 @@
         <section class="dsh">
             <div class="titulor"><h2>Desempenho</h2><p>Análise mensal</p></div>
             <div class="desempenho">
-                <canvas id="desempenho"></canvas>
+                <canvas class="graficos" id="desempenho"></canvas>
             </div>
         </section>
         <section id="atividade-dashboard" class="dsh">
@@ -260,7 +260,8 @@
                 beginAtZero: true
               }
             },
-            responsive: true
+            responsive: true,
+            mantainAspectRadio: false
           }
         });
 
