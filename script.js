@@ -634,3 +634,30 @@ function leituraUsuario() {
         conta.textContent = "Atendente";
     };
 };
+
+// Usando API viaCEP para consulta de CEP
+function consultarCEP() {
+    let cep = document.querySelector('#cep').value;
+    const cidade = document.querySelector('#cidade');
+    const estado = document.querySelector('#estado');
+    const bairro = document.querySelector('#bairro');
+    const logradouro = document.querySelector('#logradouro');
+    const complemento = document.querySelector('#complemento');
+
+    let url = `https://viacep.com.br/ws/${cep}/json/`;
+
+    fetch(url).then(function(response){
+        response.json().then(function(data) {
+            cidade.value = data.localidade;
+            estado.value = data.uf;
+            bairro.value = data.bairro;
+            logradouro.value = data.logradouro;
+            complemento.value = data.complemento;
+        });
+    });
+};
+
+function escondeValor() {
+    $('.escondido').toggleClass('escondervalor');
+    $('#valor').toggleClass('dpnone');
+};

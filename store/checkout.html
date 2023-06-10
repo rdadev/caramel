@@ -42,17 +42,17 @@
                                         </div>
                                         <div class="conteudo">
                                             <label class="lblocal" for="cep">CEP</label>
-                                            <input class="txti cep" id="cep" type="text" value="80230-030" name="cep"/>
+                                            <input class="txti cep" id="cep" type="text" name="cep" onchange="consultarCEP()" placeholder="CEP" required/>
                                             <div class="endsm"><label class="lblocal" for="cidade">Cidade</label>
-                                            <input class="txti" id="cidade" type="text" value="Curitiba" name="cidade"/></div>
+                                            <input class="txti" id="cidade" type="text" name="cidade" placeholder="Cidade" required/></div>
                                             <div class="endcm"><label class="lblocal" for="estado">Estado</label>
-                                            <input class="txti" id="estado" type="text" value="PR" name="estado"/></div>
+                                            <input class="txti" id="estado" type="text" name="estado" placeholder="UF"/></div>
                                             <div class="endsm"><label class="lblocal" for="bairro">Bairro</label>
-                                            <input class="txti" id="bairro" type="text" value="Rebouças" name="bairro"/></div>
+                                            <input class="txti" id="bairro" type="text" name="bairro" placeholder="Bairro"/></div>
                                             <div class="endrcm"><label class="lblocal" for="logradouro">Logradouro</label>
-                                            <input class="txti" id="logradouro" type="text" value="Avenida Uniopet, 99" name="logradouro"/></div>
+                                            <input class="txti" id="logradouro" type="text" name="logradouro" placeholder="Logradouro"/></div>
                                             <div class="endrsm"><label class="lblocal" for="complemento">Complemento</label>
-                                            <input class="txti" id="complemento" type="text" value="Bloco A" name="complemento" value=""/></div>
+                                            <input class="txti" id="complemento" type="text" name="complemento" placeholder="Complemento"/></div>
                                             <button class="bta" type="button" onclick="fecharModal('#mdendereco'); exibeEndereco();" style="display: inline;">Alterar</button>
                                         </div>
                                     </dialog>
