@@ -2235,12 +2235,15 @@ form .dica {
 }
 
 @media print {
-    * {
-        font-family: Arial, Verdana, sans-serif;
-        float: none!important;
-        border: none!important;
+    *{
+        font-family: Arial, sans-serif, system-ui;
         background-color: #FFF!important;
-        margin: 5px 0!important;
+        border-radius: 0!important;
+        border-color: #000!important;
+    }
+
+    body, .container, .dsh {
+        margin: 0!important;
         padding: 0!important;
     }
 
@@ -2255,6 +2258,12 @@ form .dica {
     .log .tipo, .cobranca .tipo {
         width: 100%!important;
         display: block;
+        padding: 0!important;
+    }
+
+    .log, .cobranca, .observacao {
+        margin: 0!important;
+        padding: 7px!important;
     }
 
     #tblitens .cabecalho th {
@@ -2265,13 +2274,31 @@ form .dica {
         padding: 20px 0!important;
     }
 
-    #tblitens tr:last-child {
-        display: none;
-    }
-
     .pagamento {
         float: none;
         display: block;
         width: 100%;
+    }
+
+    .alerta {
+        width: 33.3333%;
+        padding: 5px!important;
+        margin: 0!important;
+        text-align: center;
+        display: block;
+    }
+
+    .titulor {
+        float: none!important;
+        margin-bottom: 5px!important;
+    }
+
+    .tabelamento {
+        margin: 0!important;
+        padding: 5px!important;
+    }
+
+    .tabela td, .tabela th {
+        padding: 0!important;
     }
 }
