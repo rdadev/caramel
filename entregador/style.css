@@ -436,6 +436,69 @@ body {
     color: var(--texto-tertiario);
 }
 
+.historico ul li:last-child {
+    border-bottom: none;
+}
+
+.btvoltar {
+    margin: 0 0 10px 0;
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--texto-tertiario);
+}
+
+.btvoltar svg {
+    float: left;
+    margin-right: 7px;
+}
+
+.btvoltar svg path {
+    fill: var(--texto-tertiario);
+}
+
+.rotas {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.rotas ul {
+    list-style: none;
+}
+
+.rotas ul li {
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--bordas);
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.rotas ul li h3 {
+    font-size: 13pt;
+    width: fit-content;
+    float: left;
+    margin-bottom: 5px;
+    color: var(--texto-secundario);
+}
+
+.rotas ul li p {
+    font-size: 11pt;
+    width: fit-content;
+}
+
+.rotas ul li .vlr {
+    float: right;
+    font-size: 13pt;
+    font-weight: 800;
+    color: var(--principal);
+}
+
+.rotas ul li .km {
+    color: var(--texto-tertiario);
+}
+
 @media screen and (max-width: 950px) { 
     body, .cadastramento{
         background-image: none;

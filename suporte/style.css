@@ -230,6 +230,7 @@ a {
     .secao {
         margin: 20px 0;
         width: 100%;
+        padding: 15px;
     }
 
     .secao:hover {

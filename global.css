@@ -773,6 +773,7 @@ dialog .obs {
     background-position-x: calc(100% - 5px);
     appearance: none;
     cursor: pointer;
+    padding: 0 20px!important;
 }
 
 .bta {
