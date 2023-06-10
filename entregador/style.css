@@ -492,11 +492,276 @@ body {
     float: right;
     font-size: 13pt;
     font-weight: 800;
-    color: var(--principal);
+    color: var(--texto-principal);
 }
 
 .rotas ul li .km {
     color: var(--texto-tertiario);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+}
+
+.btlink {
+    letter-spacing: -0.3px;
+    color: var(--principal);
+    background-color: var(--secundaria);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 10.5pt;
+    padding: 7px 12px;
+    display: block;
+    width: fit-content;
+}
+
+.inteiro {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.rotas .btlink {
+    margin-top: 10px;
+}
+
+.enderecos {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.enderecos ul {
+    list-style: none;
+}
+
+.enderecos ul li{
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--bordas);
+}
+
+.enderecos ul li:last-child {
+    border-bottom: none;
+}
+
+.ordenacao {
+    float: right;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.enderecos h3 {
+    width: fit-content;
+    float: left;
+    font-size: 13pt;
+}
+
+.enderecos .btl {
+    font-size: 11pt;
+}
+
+.enderecos p {
+    color: var(--texto-secundario);
+}
+
+.baixinho {
+    margin-bottom: 10px;
+}
+
+.minitem {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.minitem svg {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.minitem svg path {
+    fill: var(--texto-tertiario);
+}
+
+.endereco {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.endereco p {
+    text-align: center;
+    font-size: 12pt;
+}
+
+.endereco a {
+    font-size: 11pt;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.mapa {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.mapa iframe {
+    border: none;
+    width: 100%;
+    height: calc(100vh - 350px);
+    overflow: hidden;
+    border-top: 1px solid var(--bordas);
+    border-bottom: 1px solid var(--bordas);
+}
+
+.lateral {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #faf9f9;
+    position: fixed;
+    right: -110%;
+    top: 68px;
+    max-width: 450px;
+    border-left: 1px solid var(--bordas);
+    z-index: 1;
+    transition: ease all 0.3s;
+    overflow: auto;  
+    margin: 0;
+}
+
+.lateral .fechar {
+    width: 100%;
+    height: 60px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-bottom: 1px solid var(--bordas);
+}
+
+.lateral .fechar span {
+    float: right;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--texto-secundario);
+}
+
+.lateral .fechar button {
+    float: left;
+    border: none;
+    background: none;
+}
+
+.lateral .fechar svg {
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.lateral .fechar svg path {
+    fill: var(--texto-secundario);
+}
+
+.lateral .conteudo {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.fundo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: -110%;
+    padding: 20px;
+    transition: ease all 0.3s;
+    border: 1px solid var(--bordas);
+}
+
+.poslateral {
+    right: 0;
+}
+
+
+.introchat {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.introchat img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+}
+
+.introchat h2 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.dias, .mensagens { 
+    list-style: none;
+}
+
+.dia h6 {
+    text-align: center;
+    font-weight: 400;
+    color: var(--texto-tertiario);
+    font-size: 10pt;
+}
+
+.msgs {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.msloja, .msusuario {
+    display: block;
+    width: fit-content;
+    height: auto;
+    overflow: hidden;
+    font-size: 10pt;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 50px;
+}
+
+.msusuario {
+    max-width: 65%;
+    text-align: left;
+    background-color: var(--bordas);
+    color: #000;
+    margin: 5px auto 5px 0;
+}
+
+.msloja {
+    max-width: 65%;
+    text-align: left;
+    background-color: var(--principal);
+    color: #FFF;
+    margin: 5px 0 5px auto;
+}
+
+.lateral .comfundo {
+    margin-bottom: 125px;
 }
 
 @media screen and (max-width: 950px) { 

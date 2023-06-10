@@ -820,7 +820,7 @@ dialog .obs {
 }
 
 .sm {
-    margin: 0;
+    margin: 0!important;
 }
 
 .btl {

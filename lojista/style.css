@@ -571,7 +571,7 @@ footer {
 }
 
 .medidas .valor {
-    color: var(--texto-principal);
+    color: var(--texto-secundario);
 }
 
 #mdloja img {
@@ -1881,7 +1881,7 @@ form .dica {
 
 .promocionais h2 {
     font-size: 14pt;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 15px;
 }
 
