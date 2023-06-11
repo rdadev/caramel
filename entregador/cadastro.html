@@ -20,7 +20,7 @@
                     <div class="logotipo logo"><a href="../index.html">Caramel</a></div>
                     <h1>Seja um entregador</h1>
                     <p>Você pode começar hoje fazendo entregas para petshops pela plataforma, gerando renda extra</p>
-                    <form class="formulario" action="" autocomplete="off">
+                    <form class="formulario" action="conta.html" method="" autocomplete="off">
                         <fieldset>
                             <input class="entradas" type="text" placeholder="Nome completo"/>
                             <input class="entradas" type="text" maxlength="11" placeholder="CPF (somente números)"/>
@@ -40,6 +40,16 @@
                             <input class="entradas" type="text" maxlength="11" placeholder="CNH (somente números)"/>
                             <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Primeira habilitação"/>
                             <input class="entradas" type="text" onfocus="(this.type='date')" placeholder="Vencimento"/>
+                            <button class="prox botao smb" type="button">Próximo</button>
+                        </fieldset>
+                        <fieldset>
+                            <div class="entraf">
+                                <label class="lbs" for="imagem">CNH (Frente e verso)</label>
+                                <input type="file" id="ipimg" accept="image/*" onchange="mostraImagem('imgresult', 'ipimg', true)"/>
+                                <div class="arquivo" onclick="selecionaArquivo('ipimg')">
+                                    <img id="imgresult" src="../images/blank.svg" alt="Selecione um arquivo"/>
+                                </div>
+                            </div>
                             <span class="termos"><p>Ao clicar em confirmar você concorda com a <a href="../privacidade/index.html" target="_blank">política de privacidade</a> e os <a href="../termos/index.html" target="_blank">termos</a> da plataforma</p></span>
                             <input class="botao smb" type="submit" value="Confirmar"/>
                         </fieldset>

@@ -1018,6 +1018,36 @@ input:checked + .slider:before {
     overflow: hidden!important;
 }
 
+
+input[type='file'] {
+    display: none;
+}
+
+.arquivo {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    float: right;
+    cursor: pointer;
+}
+
+.arquivo img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 11px;
+    margin: 10px 0;
+    border: 2px dashed var(--bordas);
+}
+
+.entraf {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin: 0 25px;
+}
+
 /* O JUMP DO GATO NO RESPONSIVO */
 @media screen and (max-width: 1120px) {
     .container {

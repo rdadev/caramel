@@ -820,6 +820,10 @@ body {
     .entradas, .botao, .recuperacao {
         width: 100%;
     }
+
+    .entraf {
+        margin: 0;
+    }
 }
 
 /* Acima de 600px o site não exibe o conteúdo */
