@@ -764,6 +764,18 @@ body {
     margin-bottom: 125px;
 }
 
+.txtpass {
+    width: calc(100% - 160px);
+    float: left;
+    margin: 0 auto 10px auto;
+}
+
+.btpass {
+    width: 150px;
+    margin: 0 auto 10px auto;
+    float: right;
+}
+
 @media screen and (max-width: 950px) { 
     body, .cadastramento{
         background-image: none;
@@ -781,6 +793,10 @@ body {
     .formulario {
         width: 100%;
         margin: 30px auto;
+    }
+
+    .txtpass, .btpass {
+        width: 100%;
     }
 }
 
