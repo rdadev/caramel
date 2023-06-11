@@ -185,6 +185,10 @@ function passaPesquisa() {
     sessionStorage.setItem('termoBusca', busca.value);
 };
 
+function atualizaPesquisa(valor) {
+    sessionStorage.setItem('termoBusca', valor);
+}
+
 // Classificação da loja (jogo dos rádios)
 function classificaLoja() {
     if ($("#class1").prop("checked")) {
