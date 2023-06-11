@@ -573,6 +573,7 @@ function zeraUsuario() {
     cpf.value = "";
 };
 
+// Preenche promoções
 function preencherPromocao() {
     var nome = document.querySelector("#nome");
     var img = document.querySelector("#imgresult");
@@ -585,6 +586,7 @@ function preencherPromocao() {
 
 }
 
+// Zera promoção
 function zerarPromocao() {
     var nome = document.querySelector("#nome");
     var img = document.querySelector("#imgresult");
@@ -657,6 +659,7 @@ function consultarCEP() {
     });
 };
 
+// Esconde o valor do portal do entregador
 function escondeValor() {
     $('.escondido').toggleClass('escondervalor');
     $('#valor').toggleClass('dpnone');
