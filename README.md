@@ -3,7 +3,7 @@ Aplicativo de delivery web para petshops com integração de entregadores e loja
 
 ![image](https://github.com/rdadev/caramel/assets/77196313/dfa73f71-0208-4f21-8cf4-2a5d393102ca)
 
-Funcionalidades
+## Funcionalidades
 - Início do site e parte institucional
 - Login, cadastro e recuperação de senha para clientes
 - Login, cadastro e recuperação de senha para lojistas
@@ -47,7 +47,7 @@ Funcionalidades
 - Mapa com os destinos do entregador, com possibilidade de navegação e confirmação da entrega
 - Configurações do entregador, como nome, dados bancários, CPF e outros
 
-Frameworks e bibliotecas usadas
+## Frameworks e bibliotecas usadas
 - Chart.JS - Gráficos interativos.
 - CKEditor - Editor de texto na página para envio de mensagens.
 - Datatables - Tabelas com paginação e outras funcionalidades.
