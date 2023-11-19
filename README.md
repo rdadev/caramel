@@ -1,17 +1,11 @@
 # Caramel
 Aplicativo de delivery web para petshops com integração de entregadores e lojas parceiras
 
-![image](https://github.com/rdadev/caramel/assets/77196313/dfa73f71-0208-4f21-8cf4-2a5d393102ca)
-
 ## Funcionalidades
 - Início do site e parte institucional
 - Login, cadastro e recuperação de senha para clientes
 - Login, cadastro e recuperação de senha para lojistas
-- Login, cadastro e recuperação de senha para entregadores
-- Restrição para que o entregador use somente sua plataforma em ambiente mobile, para maior segurança
 - Central de suporte com tópicos e possibilidade de enviar mensagem para a equipe Caramel
-- Tela principal do cliente, com promoções, produtos e lojas próximas
-- Página de promoções promovidas por lojas
 - Página da loja com os produtos, contando com logotipo e capa para a loja
 - Carrinho dos produtos 
 - Página de informações do usuário para alteração de dados e senha
