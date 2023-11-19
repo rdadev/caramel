@@ -615,6 +615,14 @@ footer {
     overflow: hidden;
 }
 
+.filtragem .medio {
+    width: 79%;
+    margin-right: 1%;
+    float: left;
+    height: auto;
+    overflow: hidden;
+}
+
 .filtragem .menor {
     width: 19%;
     margin-right: 1%;
@@ -1060,10 +1068,6 @@ tr:nth-child(even) {
     margin-top: 25px;
 }
 
-.cobranca, .observacao {
-    display: none;
-}
-
 .log p, .cobranca p, .observacao p {
     font-size: 11pt;
 }
@@ -1092,13 +1096,11 @@ tr:nth-child(even) {
     width: fit-content;
     margin-left: 15px;
     float: right;
-    display: none;
 }
 
 .btimpressao {
     width: fit-content;
     float: left;
-    display: none;
 }
 
 .btimpressao svg {
@@ -1129,7 +1131,8 @@ tr:nth-child(even) {
 .btcontato {
     margin: 15px 0px 0 10px;
     font-size: 11pt;
-    display: none;
+    display: block;
+    float: left;
 }
 
 .statpos {
@@ -1631,10 +1634,6 @@ form .dica {
     font-size: 12pt;
 }
 
-#atendente {
-    display: none;
-}
-
 .dicazinha {
     font-size: 10pt;
     color: var(--texto-tertiario);
@@ -1945,6 +1944,10 @@ form .dica {
         width: 79%;
     }
 
+    .filtragem .medio {
+        width: 100%;
+    }
+
     #kbn {
         overflow-x: scroll;
     }
@@ -2122,7 +2125,7 @@ form .dica {
         line-height: 0;
     }
 
-    .filtragem .menor, .filtragem .grande {
+    .filtragem .menor, .filtragem .grande, .filtragem .medio {
         width: 100%;
     }
 

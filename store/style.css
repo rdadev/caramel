@@ -952,7 +952,7 @@ footer .container {
 }
 
 .pdatual {
-    width: 100%;
+    width: 99%;
     height: auto;
     overflow: hidden;
     border-radius: 13px;
@@ -977,7 +977,7 @@ footer .container {
 }
 
 .pbt {
-    width: 33.333%;
+    width: 50%;
     height: auto;
     overflow: hidden;
     line-height: 50px;
@@ -1138,6 +1138,7 @@ footer .container {
     border: 1px solid var(--bordas);
     border-radius: 13px;
     margin-top: 15px;
+    margin-right: 1%;
 }
 
 .historico .esquerda {
@@ -1237,6 +1238,7 @@ footer .container {
     font-size: 12pt;
     font-weight: 600;
     color: var(--texto-tertiario);
+    display: block;
 }
 
 .btvoltar svg {
